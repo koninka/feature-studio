@@ -150,9 +150,11 @@ html {
 }
 
 body {
-  background: #FFF;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-weight: normal;
   font-size: 16px;
   line-height: 1.4;
+  background: #0b1c2d;
 }
 
 .container {
