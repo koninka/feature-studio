@@ -25,6 +25,9 @@
 			margin-top: 65px 
 			padding: 0 8.5%
 			width: 50%
+		+xs
+			padding: 0 20%
+			width: 100%
 		&:first-child,
 		&:nth-child(2)
 			+sm
@@ -45,9 +48,11 @@
 			+f('black')
 
 .steps
-	padding: 155px 0 0
+	padding-top: 155px
 	+md
-		padding: 120px 0 0
+		padding-top: 120px
+	+sm
+		padding-top: 60px
 	&__topic
 		max-width: 460px
 		+f('lt', 24) 
@@ -71,7 +76,7 @@
 		+sm
 			padding-top: 307px
 		+xs
-			padding-top: 20px
+			padding-top: 60px
 	&__list
 		list-style-type: none
 		counter-reset: list
@@ -100,6 +105,8 @@
 				margin-left: 1%
 				padding-right: 16%
 				width: 52%
+			+xs
+				width: 100%
 		&:nth-child(even)
 			+md
 				margin-left: 10%
@@ -107,6 +114,9 @@
 				margin-left: 0
 				padding-right: 0
 				width: 47%
+			+xs
+				margin-top: 35px
+				width: 100%
 		&:nth-child(-n+9)
 			.steps__title
 				&:before
@@ -228,6 +238,8 @@
 				+f('black', 20)
 				counter-increment: list
 				content: (counter(list) ".")
+			+xs
+				left: -36px
 		.steps__logo &
 			&:before
 				display: none
