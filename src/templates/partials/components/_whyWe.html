@@ -75,9 +75,9 @@
 					{% for data in steps %}
 						<li class="steps__item steps__item_{{data.class}}">
 							<div class="steps__numb">{{ data.numb }}</div>
-							<div class="steps__title">{{ data.title }}</div>
-							{% if data.link %}<a href="#" class="steps__link">{{ data.link }}</a>{% endif %}
-							{% if data.text %}<p>{{ data.text }}</p>{% endif %}
+							<div class="steps__title">{{ data.title | safe }}</div>
+							{% if data.link %}<a href="#" class="steps__link">{{ data.link | safe }}</a>{% endif %}
+							{% if data.text %}<p>{{ data.text | safe }}</p>{% endif %}
 						</li>
 					{% endfor %}
 				</ul>
