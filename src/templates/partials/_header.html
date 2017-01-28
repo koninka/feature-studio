@@ -22,13 +22,31 @@
 	</div>
 	<div class="header__main">
 		<div class="inner">
-			<ul class="phones">
-				{% for item in header.phones %}
-					<li class="phones__item">
-						<a href="{{item.link}}" class="phones__link">{{item.text}}</a>
-					</li>
-				{% endfor %}
-			</ul>
+			<div class="header__inner">
+				<ul class="phones header__phones">
+					{% for item in header.phones %}
+						<li class="phones__item">
+							<a href="{{item.link}}" class="phones__link">{{item.text}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="social header__social">
+					<a href="mailto:{{header.mail}}" class="social__mail">{{header.mail}}</a>
+					<ul class="social__list">
+						{% for item in header.social %}
+							<li class="social__item">
+								<a href="#" class="social__link social__link_{{item.icon}}">{{mixins.icon(item.icon)}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="header__logo">
+					<div class="header__logo-circle"></div>
+					<a href="#" class="logo">
+						<img src="img/logo.png" alt="Featur-Studio">
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>
