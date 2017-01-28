@@ -1,0 +1,30 @@
++font("Lato Thin", lato-thin)
++font("Lato Light", lato-light)
++font("Lato Hairline", lato-hairline)
++font("Lato Bold", lato-bold)
++font("Lato Black", lato-black)
+
+=f($name: null, $font-size: null, $line-height: null, $letter-spacing: null)
+	$font-family: null
+	@if $name == "lt"
+		$font-family: "Lato Thin"
+	@if $name == "ll"
+		$font-family: "Lato Light"
+	@if $name == "lh"
+		$font-family: "Lato Hairline"
+	@if $name == "bold"
+		$font-family: "Lato Bold"
+	@if $name == "black"
+		$font-family: "Lato Black"
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+		font-weight: normal
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: (ceil(($line-height / $size)*100)/100)
+	@if $letter-spacing != null
+		letter-spacing: ($spacing / $size) + em
+
+=lh($line-height, $size)
+	line-height: (ceil(($line-height / $size)*100)/100)
