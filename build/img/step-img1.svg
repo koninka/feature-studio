@@ -1,0 +1,15 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="43.33mm" height="34.15mm" viewBox="0 0 122.82 96.79">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-3{fill:none;stroke:#fc0}.cls-1{stroke-linejoin:round;stroke-width:2.43px}.cls-2,.cls-3{stroke-width:2.43px;stroke-miterlimit:10}.cls-3{stroke-width:1.21px}
+        </style>
+    </defs>
+    <title>
+        step-img1
+    </title>
+    <path class="cls-1" d="M93.26 35.27h28.35V1.21H1.21v34.06h29.1"/>
+    <path class="cls-2" d="M10.97 17.87h100.91"/>
+    <path class="cls-2" d="M15.32 35.27v60.31m92.18-60.31v60.31m10.25 0h-20.5m-71.68 0H5.09"/>
+    <path class="cls-2" d="M30.31 17.87h62.2v70.38H48.18a18 18 0 0 1-17.87-18V17.87z"/>
+    <path class="cls-3" d="M33.42 66.26c0 7.58 7.53 7.28 11.45 7.28 0 4-.27 11.59 7.21 11.59"/>
+</svg>

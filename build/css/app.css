@@ -74,35 +74,35 @@ html {
 
 @font-face {
   font-family: "Lato Thin";
-  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff");
+  src: url("fonts/Lato-Thin.woff2") format("woff2"), url("fonts/Lato-Thin.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light";
-  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff");
+  src: url("fonts/Lato-Light.woff2") format("woff2"), url("fonts/Lato-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Hairline";
-  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff");
+  src: url("fonts/Lato-Hairline.woff2") format("woff2"), url("fonts/Lato-Hairline.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Bold";
-  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff");
+  src: url("fonts/Lato-Bold.woff2") format("woff2"), url("fonts/Lato-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Black";
-  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff");
+  src: url("fonts/Lato-Black.woff2") format("woff2"), url("fonts/Lato-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -129,18 +129,24 @@ html {
 }
 
 .btn {
-  padding: 10px 18px;
+  padding: 10px 23px;
   color: #fc0;
   font-family: "Lato Bold", Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
-  line-height: 1.15;
+  line-height: 1.05;
   text-align: center;
   text-transform: uppercase;
   border-radius: 2px;
-  border: 1px solid #fc0;
-  background: transparent;
+  border: 2px solid #fc0;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  background-color: transparent;
   display: inline-block;
+}
+
+.no-touch .btn:hover {
+  color: #000;
+  background-color: #fc0;
 }
 
 body {
