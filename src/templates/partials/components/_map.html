@@ -1,0 +1,28 @@
+{% import "../../data/_map.html" as map %}
+
+<!-- begin map  -->
+<div class="map">
+	<div class="map__img" id="map"></div>
+	<div class="map__content">
+		<div class="inner">
+			<div class="contacts">
+				<ul class="contacts-phones">
+					{% for item in map.phones %}
+						<li class="contacts-phones__item">
+							<a href="{{item.link}}" class="contacts-phones__link">{{item.text}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<ul class="contacts-info">
+					{% for item in map.info %}
+						<li class="contacts-info__item">{{item | safe}}</li>
+					{% endfor %}
+				</ul>
+				<div class="contacts__btn">
+					<a href="#form" class="btn">{{map.btn}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end map -->

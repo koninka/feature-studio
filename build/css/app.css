@@ -803,6 +803,45 @@ a {
   display: block;
 }
 
+.map {
+  position: relative;
+  min-height: 675px;
+}
+
+.map__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.map__content {
+  position: relative;
+  z-index: 10;
+}
+
+.contacts {
+  float: right;
+  padding: 75px 50px 55px;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.contacts-phones {
+  color: #000;
+}
+
+.contacts-phones__link {
+  display: inline-block;
+  vertical-align: top;
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 1201px) {
 
   .inner {
