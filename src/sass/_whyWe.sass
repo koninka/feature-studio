@@ -1,6 +1,10 @@
 .whywe
 	padding: 40px 0 85px
 	overflow: hidden
+	+md
+		padding: 67px 0 125px 
+	+sm
+		padding: 65px 0 70px 
 .quality
 	margin: 80px -3% 0
 	font-size: 0
@@ -35,6 +39,8 @@
 			display: block
 	&__text
 		margin-top: 30px
+		+sm
+			margin-top: 20px
 		strong
 			+f('black')
 
@@ -62,6 +68,10 @@
 			padding-top: 332px
 			font-size: 0
 			text-align: center
+		+sm
+			padding-top: 307px
+		+xs
+			padding-top: 20px
 	&__list
 		list-style-type: none
 		counter-reset: list
@@ -77,6 +87,8 @@
 			vertical-align: top
 			text-align: left
 			display: inline-block
+		+sm
+			margin-top: 35px
 		&:first-child,
 		&:nth-child(2)
 			+md
@@ -84,14 +96,25 @@
 		&:nth-child(odd)
 			+md
 				margin-left: 10%
+			+sm
+				margin-left: 1%
+				padding-right: 16%
+				width: 52%
 		&:nth-child(even)
 			+md
 				margin-left: 10%
+			+sm
+				margin-left: 0
+				padding-right: 0
+				width: 47%
 		&:nth-child(-n+9)
 			.steps__title
 				&:before
 					+md
 						content: "0" (counter(list) ".")
+		br
+			+sm
+				display: none
 		&_first
 			top: 243px
 			left: 37px
@@ -119,6 +142,11 @@
 			position: absolute
 			top: 142px
 			left: 408px
+		+sm
+			top: 120px
+			left: 276px  
+		+xs
+			display: none
 	&__numb
 		position: absolute
 		top: 0
@@ -132,6 +160,8 @@
 		+md
 			padding: 5px 7px 4px 12px
 			font-size: 23px
+		+xs
+			display: none
 		&:before
 			position: absolute
 			content: ""
@@ -152,18 +182,30 @@
 			+md
 				top: 180px
 				left: 147px
+			+sm
+				top: 158px
+				left: 9px
 		.steps__item_second &
 			+md
 				top: 117px
 				left: 259px
+			+sm
+				top: 96px
+				left: 120px
 		.steps__item_third &
 			+md
 				top: 128px
 				left: 537px
+			+sm
+				top: 106px
+				left: 404px
 		.steps__item_fourth &
 			+md
 				top: 49px
 				left: 641px
+			+sm
+				top: 30px
+				left: 506px
 	&__title
 		padding-top: 2px
 		+f('ll', 18, 24)
@@ -197,6 +239,8 @@
 		display: inline-block
 		+hover
 			border-color: transparent 
+		+sm
+			margin-top: 4px 
 	&__img
 		margin: 0 auto 12px
 		width: 93px
