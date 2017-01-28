@@ -1,9 +1,11 @@
 export const {
 	touch,
-	BODY
+	BODY,
+	ACTIVE
 } = {
 	touch() {
 		return 'ontouchstart' in window;
 	},
-	BODY: $('body')
+	BODY: $('body'),
+	ACTIVE: 'is-active'
 };
