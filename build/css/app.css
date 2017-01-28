@@ -154,6 +154,11 @@ a {
 
 .menu {
   background: #353c43;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 2.23;
+  text-transform: uppercase;
 }
 
 .block {
