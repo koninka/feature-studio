@@ -1,3 +1,5 @@
+.whywe
+	padding: 40px 0 85px
 .quality
 	margin: 80px -3% 0
 	font-size: 0
@@ -34,10 +36,28 @@
 		position: relative
 		padding-bottom: 430px 
 	&__item
-		position: relative
-		margin: 70px 0
+		position: absolute
 		padding-left: 98px
 		max-width: 393px
+		+f('lli', 15, 24)
+		&_first
+			top: 243px
+			left: 37px
+		&_second
+			top: 143px
+			left: 222px
+		&_third
+			top: 155px
+			left: 667px
+		&_fourth
+			top: 30px
+			left: 847px
+			min-width: 318px
+		&_logo
+			top: 266px
+			left: 455px
+			padding-left: 0
+			text-align: center
 	&__numb
 		position: absolute
 		top: 0
@@ -61,9 +81,25 @@
 			left: 100%
 			+arr(12,50,$lightBlue, tl)
 	&__title
+		padding-top: 2px
 		+f('ll', 18, 24)
+		&_lg
+			opacity: 0.4
+			color: $white
+			+f('black', 18, 24)
+			text-transform: uppercase
 	&__link
-		+f('lli', 15, 24)
+		margin-top: 12px
+		line-height: 20px
 		transition: border-color .2s ease-in-out
 		border-bottom: 1px solid rgba($white, 0.5)
+		display: inline-block
+		+hover
+			border-color: transparent 
+	&__img
+		margin: 0 auto 12px
+		width: 93px
+		img
+			width: 100%
+			display: block
 		
