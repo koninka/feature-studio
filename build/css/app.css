@@ -139,8 +139,14 @@ html {
   text-transform: uppercase;
   border-radius: 2px;
   border: 1px solid #fc0;
-  background: transparent;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  background-color: transparent;
   display: inline-block;
+}
+
+.no-touch .btn:hover {
+  color: #000;
+  background-color: #fc0;
 }
 
 body {
