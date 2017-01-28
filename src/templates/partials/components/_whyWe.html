@@ -1,7 +1,7 @@
 {% set quality = [
 	{
 		img: './img/step-img1.svg',
-		text: 'Высокие <strong>качество и скорость</strong> печати '
+		text: 'Высокие <strong>качество &emsp;и скорость</strong> печати '
 	},
 	{
 		img: './img/step-img2.svg',
@@ -13,14 +13,16 @@
 	},
 	{
 		img: './img/step-img4.svg',
-		text: '<strong>Доставка во все регионы</strong> России'
+		text: '<strong>Доставка во все&emsp; регионы</strong> России'
 	}
 ] %}
 
 <!-- whyWe -->
 <section class="whywe">
 	<div class="inner">
-		<h3 class="title-md">Почему мы?</h3>
+		<div class="heading">
+			<h3 class="title-md">Почему мы?</h3>
+		</div>
 		<!-- quality -->
 		<div class="quality">
 			{% for data in quality %}
