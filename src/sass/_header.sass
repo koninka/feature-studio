@@ -12,14 +12,32 @@
 	+hover
 		.btn-nav
 			&__icon
+				&:before,
+				&:after,
+				i
+					border-color: $yellow
 				&:before
 					transform: translate3d(0, -3px, 0)
 				&:after
 					transform: translate3d(0, 3px, 0)
+			&__text
+				color: $yellow
 	&.is-active
+		+hover
+			.btn-nav
+				&__icon
+					&:before
+						transform: translate3d(4px, -3px, 0) rotate(45deg)
+					&:after
+						transform: translate3d(4px, 3px, 0) rotate(-45deg)
 		.btn-nav
 			&__icon
-
+				&:before
+					transform: translate3d(4px, -3px, 0) rotate(45deg)
+				&:after
+					transform: translate3d(4px, 3px, 0) rotate(-45deg)
+				i
+					transform: scaleX(0)
 	&__icon
 		position: absolute
 		top: 16px
@@ -30,17 +48,19 @@
 		i
 			position: absolute
 			left: 0
-			width: 27px
+			width: 28px
 			border-bottom: 1px solid $white
+			transition: transform 0.175s ease, border-color 0.25s ease
 		&:before,
 		&:after
 			content: ""
 			+gpu
-			transition: transform 0.175s ease
 		&:before
 			top: 0
+			transform-origin: top left
 		&:after
 			bottom: 0
+			transform-origin: bottom left
 		i
 			top: 7px
 	&__text
@@ -48,6 +68,7 @@
 		color: $white
 		+f('lt', 18, 40)
 		text-transform: uppercase
+		+t(color)
 
 .menu
 	position: fixed
@@ -59,19 +80,38 @@
 	color: $white
 	background: $gray
 
-	+f('lt', 18, 40)
+	+f('ll', 18, 40)
 	text-transform: uppercase
 	a
 		color: inherit
 	&__link
+		float: right
 		display: none
+		padding: 5px 0
+		margin-right: 140px
+		+t(color)
 		+sm
-			display: inline-block
-			vertical-align: top
+			display: block
+		+xs
+			margin-right: 0
+		+hover
+			color: $yellow
 
 .nav
 	+sm
+		position: fixed
+		top: 50px
+		left: 0
+		bottom: 0
+		padding: 30px 0 20px
+		width: 90%
+		max-width: 300px
 		background: $gray
+		transform: translate3d(-100%, 0, 0)
+		transition: transform 0.25s ease
+	&.is-active
+		+sm
+			+gpu
 	&__list
 		font-size: 0.1px
 		text-align: justify
@@ -83,6 +123,12 @@
 		a
 			display: inline-block
 			vertical-align: top
+			+sm
+				display: block
+				padding: 0 20px
 		a
 			padding: 5px 0
 			font-size: 18px
+			+t(color)
+			+hover
+				color: $yellow
