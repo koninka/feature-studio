@@ -322,6 +322,10 @@ a {
     display: inline-block;
     vertical-align: top;
   }
+
+  .nav {
+    background: #353c43;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

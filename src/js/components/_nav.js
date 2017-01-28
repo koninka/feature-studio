@@ -1,4 +1,4 @@
-import {BODY, ACTIVE} from './_constants';
+import {BODY, ACTIVE} from './../_constants';
 
 export const NAV = {
 
@@ -7,24 +7,35 @@ export const NAV = {
 
 	_toggleOnClick() {
 		BODY.on('click', '.js-btn-nav', e => {
+			e.preventDefault();
 			if (this._container.hasClass(ACTIVE)) {
 				this.close();
 			} else {
 				this.open();
 			}
 		});
+		BODY.on('click', e => {
+			if (!this._container.hasClass(ACTIVE) ||
+				$(e.target).closest('.js-nav').length ||
+				$(e.target).closest('.js-btn-nav').length) return;
+			this.close();
+		});
 	},
 
 	open() {
-		NAV._btn
-			.add(NAV._container)
+		this._btn
+			.add(this._container)
 			.addClass(ACTIVE);
 	},
 
 	close() {
-		NAV._btn
-			.add(NAV._container)
+		this._btn
+			.add(this._container)
 			.removeClass(ACTIVE);
+	},
+
+	init() {
+		this._toggleOnClick();
 	}
 
 };
