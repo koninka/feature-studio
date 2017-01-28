@@ -1,7 +1,45 @@
+{% set quality = [
+	{
+		img: '',
+		text: 'Высокие <strong>качество и скорость</strong> печати '
+	},
+	{
+		img: '',
+		text: '<strong>Дорожим</strong> нашими <strong>клиентами</strong>'
+	},
+	{
+		img: '',
+		text: 'У нас самые <strong>доступные цены</strong>'
+	},
+	{
+		img: '',
+		text: '<strong>Доставка во все регионы</strong> России'
+	}
+] %}
+
 <!-- whyWe -->
-<section class="whyWe">
+<section class="whywe">
 	<div class="inner">
-		
+		<h3 class="title-md">Почему мы?</h3>
+		<!-- quality -->
+		<div class="quality">
+			{% for data in quality %}
+				<div class="quality__item">
+					<div class="quality__img">{{ data.img }}</div>
+					<div class="quality__text">{{ data.text | safe }}</div>
+				</div>
+			{% endfor %}
+		</div>
+		<!-- ¯\_(ツ)_/¯ -->
+		<!-- steps -->
+		<div class="steps">
+			<div class="steps__topic">
+				<h3 class="title-lg">4 шага</h3>
+				<p>к уникальному фирменному подарку для ваших клиентов, партнеров, сотрудников</p>
+				<button class="btn" type="button">Заказать услуги</button>
+			</div>
+		</div>
+		<!-- ¯\_(ツ)_/¯ -->
 	</div>
 </section>
 <!-- ¯\_(ツ)_/¯ -->
