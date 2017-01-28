@@ -1,5 +1,83 @@
 .header
-	padding-top: 50px
+	padding: 50px 0 130px
+	&__phones,
+	&__social
+		padding: 39px 0 42px
+		+sm
+			padding: 35px 0
+		+xs
+			padding-bottom: 0
+	&__main
+		overflow: hidden
+	&__inner
+		+md
+			overflow: hidden
+		+sm
+			overflow: visible
+	&__logo
+		position: relative
+		padding: 5px 0
+		margin: 0 auto
+		max-width: 360px
+		font-size: 0
+		text-align: center
+		+md
+			padding-top: 40px
+			max-width: 216px
+		+xs
+			padding-top: 0
+			clear: both
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 110px
+			margin: 0 20px
+			width: 3000px
+			border-bottom: 2px dashed $white
+			opacity: 0.2
+			+xs
+				top: 70px
+		&:before
+			right: 100%
+		&:after
+			left: 100%
+		&-circle
+			position: absolute
+			top: 60px
+			left: 0
+			right: 0
+			overflow: hidden
+			height: 100px
+			transform: translate3d(0,0,0)
+			+md
+				top: 80px
+				height: 60px
+			+xs
+				top: 40px
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				right: 0
+				border: 2px solid $white
+				border-radius: 50%
+				height: 360px
+				opacity: 0.09
+				transform: translate3d(0,-50%,0)
+				+md
+					height: 216px
+
+.logo
+	display: inline-block
+	vertical-align: top
+	width: 170px
+	+md
+		width: 115px
+	img
+		width: 100%
+
 
 .btn-nav
 	position: relative
@@ -132,3 +210,92 @@
 			+t(color)
 			+hover
 				color: $yellow
+
+.social
+	float: right
+	font-size: 0
+	&__mail
+		float: left
+		+f('ll', 18, 30)
+		text-decoration: underline
+		+t(color)
+		+md
+			+f(null, 16, 24)
+		+sm
+			margin: 12px 0
+		+xs
+			+f(null, 14, 24)
+		+hover
+			color: $yellow
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+	&__list
+		float: right
+		padding-left: 14px
+		+sm
+			display: none
+	&__item
+		padding-left: 10px
+	&__link
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		opacity: 0.25
+		background: $white
+		+vertical
+		transition: background 0.2s ease, opacity 0.2s ease
+		+hover
+			opacity: 1
+			.icon
+				fill: $white
+		&_fb
+			+hover
+				background: #38569a
+			.icon
+				font-size: 19px
+		&_vk
+			+hover
+				background: #41658b
+			.icon
+				font-size: 14px
+		&_inst
+			+hover
+				background: #3d6b92
+			.icon
+				font-size: 17px
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $black
+			transition: fill 0.2s ease
+
+.phones
+	float: left
+	font-size: 0
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+		+sm
+			display: block
+	&__item
+		padding-right: 5px
+		&:not(:last-child)
+			&:after
+				content: ","
+				display: inline-block
+				vertical-align: top
+				+f('ll', 18, 30)
+				+sm
+					display: none
+	&__link
+		+f('ll', 18, 30)
+		+t(color)
+		+md
+			+f(null, 16, 24)
+		+xs
+			+f(null, 14, 24)
+		+hover
+			color: $yellow
