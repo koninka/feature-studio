@@ -143,10 +143,22 @@ body {
   clear: both;
 }
 
-.block {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+h1, h2, h3, h4, h5, h6, strong, em, i, cite, th {
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  background: #353c43;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 2.23;
+  text-transform: uppercase;
 }
 
 .block {

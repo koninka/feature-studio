@@ -4,7 +4,7 @@
 +font("Lato Bold", lato-bold)
 +font("Lato Black", lato-black)
 
-=f($name: null, $font-size: null, $line-height: null, $letter-spacing: null)
+=f($name: null, $size: null, $line-height: null, $letter-spacing: null)
 	$font-family: null
 	@if $name == "lt"
 		$font-family: "Lato Thin"
@@ -19,8 +19,8 @@
 	font-family: $font-family, Arial, sans-serif
 	@if $font-family != null
 		font-weight: normal
-	@if $font-size != null
-		font-size: $font-size * 1px
+	@if $size != null
+		font-size: $size * 1px
 	@if $line-height != null
 		line-height: (ceil(($line-height / $size)*100)/100)
 	@if $letter-spacing != null

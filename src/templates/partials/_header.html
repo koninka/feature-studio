@@ -1,1 +1,30 @@
-<p>Hello from partials/_header.html</p>
+{% import "../data/_header.html" as header %}
+
+<!-- begin header  -->
+<header class="header">
+	<div class="menu">
+		<div class="inner">
+			<nav class="nav">
+				<ul class="nav__list">
+					{% for item in header.nav %}
+						<li class="nav__item">
+							<a href="{{item.href}}" class="nav__link">{{item.text}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="header__main">
+		<div class="inner">
+			<ul class="phones">
+				{% for item in header.phones %}
+					<li class="phones__item">
+						<a href="{{item.link}}" class="phones__link">{{item.text}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- end header -->
