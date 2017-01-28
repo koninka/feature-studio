@@ -50,7 +50,7 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\nvar _constants = __webpack_require__(3);\n\n$(document).ready(function (e) {\n\tif (!touch()) _constants.BODY.addClass('no-touch');\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvX2NvbW1vbi5qcz8wZGZhIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Qk9EWX0gZnJvbSAnLi9fY29uc3RhbnRzJztcclxuXHJcbiQoZG9jdW1lbnQpLnJlYWR5KGUgPT4ge1xyXG5cdGlmICghdG91Y2goKSkgQk9EWS5hZGRDbGFzcygnbm8tdG91Y2gnKTtcclxufSk7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9qcy9fY29tbW9uLmpzIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==");
+	eval("'use strict';\n\nvar _constants = __webpack_require__(3);\n\n$(document).ready(function (e) {\n\tif (!(0, _constants.touch)()) _constants.BODY.addClass('no-touch');\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvX2NvbW1vbi5qcz8wZGZhIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Qk9EWSwgdG91Y2h9IGZyb20gJy4vX2NvbnN0YW50cyc7XHJcblxyXG4kKGRvY3VtZW50KS5yZWFkeShlID0+IHtcclxuXHRpZiAoIXRvdWNoKCkpIEJPRFkuYWRkQ2xhc3MoJ25vLXRvdWNoJyk7XHJcbn0pO1xuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvanMvX2NvbW1vbi5qcyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 2 */
@@ -62,7 +62,7 @@
 /* 3 */
 /***/ function(module, exports) {
 
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\nvar _touch$BODY = {\n\ttouch: function touch() {\n\t\treturn 'ontouchstart' in window;\n\t},\n\n\tBODY: $('body')\n};\nvar touch = _touch$BODY.touch,\n    BODY = _touch$BODY.BODY;\nexports.touch = touch;\nexports.BODY = BODY;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvX2NvbnN0YW50cy5qcz84YjU3Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCB7XHJcblx0dG91Y2gsXHJcblx0Qk9EWVxyXG59ID0ge1xyXG5cdHRvdWNoKCkge1xyXG5cdFx0cmV0dXJuICdvbnRvdWNoc3RhcnQnIGluIHdpbmRvdztcclxuXHR9LFxyXG5cdEJPRFk6ICQoJ2JvZHknKVxyXG59O1xuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvanMvX2NvbnN0YW50cy5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFKQTtBQUZBO0FBQ0E7OyIsInNvdXJjZVJvb3QiOiIifQ==");
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\nvar _touch$BODY$ACTIVE = {\n\ttouch: function touch() {\n\t\treturn 'ontouchstart' in window;\n\t},\n\n\tBODY: $('body'),\n\tACTIVE: 'is-active'\n};\nvar touch = _touch$BODY$ACTIVE.touch,\n    BODY = _touch$BODY$ACTIVE.BODY,\n    ACTIVE = _touch$BODY$ACTIVE.ACTIVE;\nexports.touch = touch;\nexports.BODY = BODY;\nexports.ACTIVE = ACTIVE;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvX2NvbnN0YW50cy5qcz84YjU3Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCB7XHJcblx0dG91Y2gsXHJcblx0Qk9EWSxcclxuXHRBQ1RJVkVcclxufSA9IHtcclxuXHR0b3VjaCgpIHtcclxuXHRcdHJldHVybiAnb250b3VjaHN0YXJ0JyBpbiB3aW5kb3c7XHJcblx0fSxcclxuXHRCT0RZOiAkKCdib2R5JyksXHJcblx0QUNUSVZFOiAnaXMtYWN0aXZlJ1xyXG59O1xuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvanMvX2NvbnN0YW50cy5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUxBO0FBSEE7QUFDQTtBQUNBOzs7Iiwic291cmNlUm9vdCI6IiJ9");
 
 /***/ }
 /******/ ]);
