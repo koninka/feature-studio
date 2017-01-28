@@ -133,14 +133,15 @@ html {
 }
 
 body {
+  min-width: 320px;
   color: #fff;
+  background: #0b1c2d;
   font-family: "Lato Light", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
-  background: #0b1c2d;
 }
 
 .container {
