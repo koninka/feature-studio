@@ -34,10 +34,32 @@
 		position: relative
 		padding-bottom: 430px 
 	&__item
+		position: relative
+		margin: 70px 0
+		padding-left: 98px
+		max-width: 393px
 	&__numb
-		padding: 10px 15px 10px 20px
+		position: absolute
+		top: 0
+		left: 0
+		padding: 7px 15px 7px 20px
 		color: $black
 		+f('black', 36)
+		line-height: 1
 		text-transform: uppercase
+		background-color: $lightBlue 
+		&:before
+			position: absolute
+			content: ""
+			top: 100%
+			left: 0
+			+arr(6,24,$lightBlue, tl)
+		&:after
+			position: absolute
+			content: ""
+			top: 0
+			left: 100%
+			+arr(12,50,$lightBlue, tl)
 	&__title
+		+f('ll', 18, 24)
 	&__link
