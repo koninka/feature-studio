@@ -113,6 +113,21 @@ html {
   fill: #000;
 }
 
+.title-lg {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 1.5;
+}
+
+.title-md {
+  text-align: center;
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1.67;
+}
+
 body {
   background: #FFF;
   font-size: 16px;
