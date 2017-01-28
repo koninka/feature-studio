@@ -5,5 +5,5 @@
 	 viewBox="90 -3 300 353.9" enable-background="new 90 -3 300 353.9" xml:space="preserve">
 <circle cx="240" cy="147" r="150"/>
 <rect x="150" y="133.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -87.8417 235.2077)" width="180" height="180"/>
-<circle fill="currentColor" cx="236.5" cy="148.6" r="75"/>
+<circle fill="currentColor" cx="236.5" cy="148.6" r="55"/>
 </svg>
