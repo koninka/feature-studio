@@ -113,42 +113,6 @@ html {
   fill: #000;
 }
 
-.title-lg {
-  font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 1.5;
-}
-
-.title-md {
-  text-align: center;
-  font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 1.67;
-}
-
-.btn {
-  padding: 10px 23px;
-  color: #fc0;
-  font-family: "Lato Bold", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.05;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 2px;
-  border: 2px solid #fc0;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out;
-  background-color: transparent;
-  display: inline-block;
-}
-
-.no-touch .btn:hover {
-  color: #000;
-  background-color: #fc0;
-}
-
 body {
   color: #fff;
   font-family: "Lato Light", Arial, sans-serif;
@@ -309,6 +273,42 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.title-lg {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 1.5;
+}
+
+.title-md {
+  text-align: center;
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1.67;
+}
+
+.btn {
+  padding: 10px 23px;
+  color: #fc0;
+  font-family: "Lato Bold", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: 2px solid #fc0;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.no-touch .btn:hover {
+  color: #000;
+  background-color: #fc0;
 }
 
 @media only screen and (max-width: 1139px) {
