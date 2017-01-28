@@ -25,7 +25,11 @@
 		<div class="quality">
 			{% for data in quality %}
 				<div class="quality__item">
-					<div class="quality__img"><img src="{{ data.img }}" alt="img"></div>
+					<div class="quality__picture">
+						<div class="quality__img">
+							<img src="{{ data.img }}" alt="img">
+						</div>
+					</div>
 					<div class="quality__text">{{ data.text | safe }}</div>
 				</div>
 			{% endfor %}
