@@ -4,6 +4,11 @@
 <header class="header">
 	<div class="menu">
 		<div class="inner">
+			<button class="btn-nav">
+				<span class="btn-nav__icon"><i></i></span>
+				<span class="btn-nav__text">Меню</span>
+			</button>
+			<a href="{{header.nav[1].href}}" class="menu__link">{{header.nav[1].text}}</a>
 			<nav class="nav">
 				<ul class="nav__list">
 					{% for item in header.nav %}

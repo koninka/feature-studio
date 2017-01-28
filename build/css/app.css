@@ -152,13 +152,117 @@ a {
   text-decoration: none;
 }
 
-.menu {
-  background: #353c43;
+.header {
+  padding-top: 50px;
+}
+
+.btn-nav {
+  position: relative;
+  display: none;
+  vertical-align: top;
+  padding: 5px 10px 5px 40px;
+  background: none;
+}
+
+.no-touch .btn-nav:hover .btn-nav__icon:before {
+  -webkit-transform: translate3d(0, -3px, 0);
+  transform: translate3d(0, -3px, 0);
+}
+
+.no-touch .btn-nav:hover .btn-nav__icon:after {
+  -webkit-transform: translate3d(0, 3px, 0);
+  transform: translate3d(0, 3px, 0);
+}
+
+.btn-nav__icon {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  height: 15px;
+}
+
+.btn-nav__icon:before, .btn-nav__icon:after,
+.btn-nav__icon i {
+  position: absolute;
+  left: 0;
+  width: 27px;
+  border-bottom: 1px solid #fff;
+}
+
+.btn-nav__icon:before, .btn-nav__icon:after {
+  content: "";
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: -webkit-transform 0.175s ease;
+  transition: transform 0.175s ease;
+  transition: transform 0.175s ease, -webkit-transform 0.175s ease;
+}
+
+.btn-nav__icon:before {
+  top: 0;
+}
+
+.btn-nav__icon:after {
+  bottom: 0;
+}
+
+.btn-nav__icon i {
+  top: 7px;
+}
+
+.btn-nav__text {
+  display: block;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: "Lato Thin", Arial, sans-serif;
+  font-weight: normal;
   font-size: 18px;
   line-height: 2.23;
   text-transform: uppercase;
+}
+
+.menu {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background: #353c43;
+  font-family: "Lato Thin", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 2.23;
+  text-transform: uppercase;
+}
+
+.menu a {
+  color: inherit;
+}
+
+.menu__link {
+  display: none;
+}
+
+.nav__list {
+  font-size: 0.1px;
+  text-align: justify;
+}
+
+.nav__list:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.nav__list li,
+.nav__list a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.nav__list a {
+  padding: 5px 0;
+  font-size: 18px;
 }
 
 .block {
@@ -178,6 +282,15 @@ a {
 
   .inner {
     max-width: 590px;
+  }
+
+  .btn-nav {
+    display: inline-block;
+  }
+
+  .menu__link {
+    display: inline-block;
+    vertical-align: top;
   }
 }
 

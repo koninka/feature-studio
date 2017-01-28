@@ -1,3 +1,7 @@
-// example of simple includes for js
-//=include lib/jquery.js
-console.log('Hello, World!');
+import jQuery from 'jquery';
+import $ from "jquery";
+
+window.$ = $;
+window.jQuery = jQuery;
+
+require('./_common.js');
