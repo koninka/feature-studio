@@ -150,6 +150,7 @@ html {
 }
 
 body {
+  color: #fff;
   font-family: "Lato Light", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -188,6 +189,7 @@ h1, h2, h3, h4, h5, h6, strong, em, i, cite, th {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .header {
