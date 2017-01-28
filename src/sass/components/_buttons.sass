@@ -1,15 +1,21 @@
 .btn
 	padding: 10px 23px
-	color: $yellow 
+	color: $yellow
 	+f('bold', 18)
 	line-height: 1.05
 	text-align: center
 	text-transform: uppercase
-	border-radius: 2px 
-	border: 2px solid $yellow 
+	border-radius: 2px
+	border: 2px solid $yellow
 	transition: color .2s ease-in-out, background-color .2s ease-in-out
-	background-color: transparent 
+	background-color: transparent
 	display: inline-block
+	vertical-align: top
 	+hover
-		color: $black 
-		background-color: $yellow
+		color: $black
+		background: $yellow
+	&_fill
+		color: $black
+		background: $yellow
+		+hover
+			background: lighten($yellow, 10%)

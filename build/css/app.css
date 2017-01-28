@@ -114,6 +114,12 @@ html {
   font-style: normal;
 }
 
+.icon-clock {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-fb {
   width: 0.52em;
   height: 1em;
@@ -122,6 +128,18 @@ html {
 
 .icon-inst {
   width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-mail {
+  width: 1.56em;
+  height: 1em;
+  fill: #37404D;
+}
+
+.icon-marker {
+  width: 0.85em;
   height: 1em;
   fill: initial;
 }
@@ -582,11 +600,21 @@ a {
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
   background-color: transparent;
   display: inline-block;
+  vertical-align: top;
 }
 
 .no-touch .btn:hover {
   color: #000;
-  background-color: #fc0;
+  background: #fc0;
+}
+
+.btn_fill {
+  color: #000;
+  background: #fc0;
+}
+
+.no-touch .btn_fill:hover {
+  background: #ffd633;
 }
 
 .heading {
