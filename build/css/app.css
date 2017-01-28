@@ -119,6 +119,30 @@ body {
   line-height: 1.4;
 }
 
+.container {
+  *zoom: 1;
+}
+
+.container:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 1140px;
+  *zoom: 1;
+}
+
+.inner:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
 .block {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -129,6 +153,20 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 1139px) {
+
+  .inner {
+    max-width: 920px;
+  }
+}
+
+@media only screen and (max-width: 919px) {
+
+  .inner {
+    max-width: 590px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
