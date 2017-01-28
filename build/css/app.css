@@ -427,7 +427,7 @@ a {
 }
 
 .steps {
-  padding: 155px 0 430px;
+  padding: 155px 0 0;
 }
 
 .steps__topic {
@@ -435,6 +435,28 @@ a {
   font-family: "Lato Thin", Arial, sans-serif;
   font-weight: normal;
   font-size: 24px;
+}
+
+.steps .btn {
+  margin-top: 30px;
+}
+
+.steps__title-lg {
+  margin-bottom: 8px;
+}
+
+.steps__wrap {
+  position: relative;
+  padding-bottom: 430px;
+}
+
+.steps__numb {
+  padding: 10px 15px 10px 20px;
+  color: #000;
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1139px) {
