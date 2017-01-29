@@ -3,14 +3,19 @@
 	padding: 0 10px
 	border: 2px solid rgba(255, 255, 255, 0.33)
 	color: $white
-	+t(border-color)
+	transition: border-color 0.25s ease, box-shadow 0.25s ease
+	cursor: text
 	+clr
+	&.has-focus
+		border-color: $white
+		box-shadow: 0 0 21px rgba(0, 222, 255, 0.09)
 	&.has-error
 		border-color: $red
 	&__label
 		float: left
 		+f('lr', 16, 30)
 		padding: 4px 14px 4px 0
+		user-select: none
 	&__field
 		display: block
 		overflow: hidden
