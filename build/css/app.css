@@ -1063,16 +1063,53 @@ a {
   display: inline-block;
 }
 
+.is-active .product__link svg path,
+.is-active .product__link svg line,
+.is-active .product__link svg polyline {
+  stroke: #fff;
+}
+
+.is-active .product__link svg {
+  -webkit-filter: drop-shadow(0 0 8px #01dfff);
+  filter: drop-shadow(0 0 8px #01dfff);
+}
+
 .no-touch .product__link:hover svg path,
 .no-touch .product__link:hover svg line,
 .no-touch .product__link:hover svg polyline {
   stroke: #fff;
 }
 
+.no-touch .product__link:hover svg {
+  -webkit-filter: drop-shadow(0 0 8px #01dfff);
+  filter: drop-shadow(0 0 8px #01dfff);
+}
+
 .product__picture {
+  position: relative;
   height: 145px;
   line-height: 145px;
   display: block;
+}
+
+.product__picture:before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  margin: -159px 0 0 -145px;
+  width: 291px;
+  height: 318px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  background: url("../img/shadow-product.png") no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.is-active .product__picture:before {
+  opacity: 1;
 }
 
 .product__img {
@@ -1082,6 +1119,9 @@ a {
 }
 
 .product__img svg, .product__img img {
+  transition: -webkit-filter .2s ease-in-out;
+  transition: filter .2s ease-in-out;
+  transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
   display: block;
 }
 
@@ -1089,7 +1129,7 @@ a {
 .product__img svg line,
 .product__img svg polyline {
   stroke: #fc0;
-  stroke-width: 1.4px;
+  stroke-width: 1.6px;
   transition: stroke .2s ease-in-out;
 }
 
