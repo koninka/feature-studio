@@ -3,24 +3,169 @@
 	min-height: 675px
 	&__img
 		position: absolute
+		z-index: 5
 		top: 0
 		right: 0
 		bottom: 0
 		left: 0
+		+sm
+			position: relative
+			height: 420px
 	&__content
-		position: relative
-		z-index: 10
+		padding: 110px 0 0
+		+sm
+			padding: 0
+			background: $gray
 
 .contacts
+	position: relative
+	z-index: 10
 	float: right
 	padding: 75px 50px 55px
-	width: 40%
+	width: 455px
 	background: rgba($white, 0.85)
+	+md
+		padding: 75px 40px 55px
+		width: 427px
+	+sm
+		padding: 50px 0 45px
+		width: 100%
+		background: none
+	&__btn
+		clear: both
+		+sm
+			text-align: center
 
 .contacts-phones
+	margin-bottom: 14px
 	color: $black
+	+sm
+		margin-bottom: 34px
+		color: $white
+		text-align: center
+	&__item
+		+sm
+			display: inline-block
+			vertical-align: top
+			font-size: 0
+		+xs
+			display: block
+		&:not(:last-child)
+			&:after
+				content: ","
+				display: none
+				vertical-align: top
+				padding-right: 5px
+				+f('black', 25, 30)
+				+sm
+					display: inline-block
+				+xs
+					display: none
 	&__link
 		display: inline-block
 		vertical-align: top
 		+f('black', 30, 36)
 		text-transform: uppercase
+		+sm
+			+f(null, 25, 30)
+
+.contacts-info
+	margin-bottom: 12px
+	+sm
+		float: right
+		margin-bottom: 50px
+		width: 360px
+	+xs
+		float: none
+		width: 100%
+		max-width: 300px
+		margin: 0 auto 25px
+	&__item
+		position: relative
+		padding-left: 32px
+		color: $black
+		+f('ll', 18, 30)
+		+sm
+			color: $white
+		+xs
+			+f(null, 15, 30)
+		a
+			position: relative
+			+t(color)
+			+hover
+				color: $yellow
+				&:before
+					border-color: $yellow
+			&:before
+				content: ""
+				position: absolute
+				bottom: -2px
+				left: 0
+				right: 0
+				border-bottom: 1px solid currentColor
+				opacity: 0.3
+				+t(border-color)
+		.icon
+			position: absolute
+			top: 50%
+			left: 0
+			fill: $yellow
+			transform: translate3d(0,-50%,0)
+		.icon-mail
+			font-size: 11px
+		.icon-marker
+			left: 1px
+			color: $white
+			font-size: 16px
+		.icon-clock
+			font-size: 16px
+
+.contacts-social
+	margin-bottom: 26px
+	+sm
+		padding-top: 3px
+		width: 210px
+		text-align: center
+	+xs
+		clear: both
+		width: 100%
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+	&__item
+		margin-right: 10px
+	&__link
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		background: #cecece
+		+vertical
+		transition: background 0.2s ease
+		+sm
+			background: rgba($white, 0.3)
+		+hover
+			.icon
+				fill: $white
+		&_fb
+			+hover
+				background: #38569a
+			.icon
+				font-size: 19px
+		&_vk
+			+hover
+				background: #41658b
+			.icon
+				font-size: 14px
+		&_inst
+			+hover
+				background: #3d6b92
+			.icon
+				font-size: 17px
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $white
+			transition: fill 0.2s ease
+			+sm
+				fill: #2a2e33

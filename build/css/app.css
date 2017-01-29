@@ -133,13 +133,13 @@ html {
 }
 
 .icon-mail {
-  width: 1.56em;
+  width: 1.36em;
   height: 1em;
-  fill: #37404D;
+  fill: initial;
 }
 
 .icon-marker {
-  width: 0.85em;
+  width: 0.83em;
   height: 1em;
   fill: initial;
 }
@@ -442,17 +442,32 @@ a {
 }
 
 .social__mail {
+  position: relative;
   float: left;
   font-family: "Lato Light", Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
-  text-decoration: underline;
   transition: color 0.25s ease;
 }
 
 .no-touch .social__mail:hover {
   color: #fc0;
+}
+
+.no-touch .social__mail:hover:before {
+  border-color: #fc0;
+}
+
+.social__mail:before {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #fff;
+  opacity: 0.3;
+  transition: border-color 0.25s ease;
 }
 
 .social__item, .social__link {
@@ -838,6 +853,7 @@ a {
 
 .map__img {
   position: absolute;
+  z-index: 5;
   top: 0;
   right: 0;
   bottom: 0;
@@ -845,19 +861,36 @@ a {
 }
 
 .map__content {
-  position: relative;
-  z-index: 10;
+  padding: 110px 0 0;
 }
 
 .contacts {
+  position: relative;
+  z-index: 10;
   float: right;
   padding: 75px 50px 55px;
-  width: 40%;
+  width: 455px;
   background: rgba(255, 255, 255, 0.85);
 }
 
+.contacts__btn {
+  clear: both;
+}
+
 .contacts-phones {
+  margin-bottom: 14px;
   color: #000;
+}
+
+.contacts-phones__item:not(:last-child):after {
+  content: ",";
+  display: none;
+  vertical-align: top;
+  padding-right: 5px;
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 1.2;
 }
 
 .contacts-phones__link {
@@ -868,6 +901,133 @@ a {
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.contacts-info {
+  margin-bottom: 12px;
+}
+
+.contacts-info__item {
+  position: relative;
+  padding-left: 32px;
+  color: #000;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.contacts-info__item a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.no-touch .contacts-info__item a:hover {
+  color: #fc0;
+}
+
+.no-touch .contacts-info__item a:hover:before {
+  border-color: #fc0;
+}
+
+.contacts-info__item a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.3;
+  transition: border-color 0.25s ease;
+}
+
+.contacts-info__item .icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  fill: #fc0;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.contacts-info__item .icon-mail {
+  font-size: 11px;
+}
+
+.contacts-info__item .icon-marker {
+  left: 1px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contacts-info__item .icon-clock {
+  font-size: 16px;
+}
+
+.contacts-social {
+  margin-bottom: 26px;
+}
+
+.contacts-social__item, .contacts-social__link {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts-social__item {
+  margin-right: 10px;
+}
+
+.contacts-social__link {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #cecece;
+  text-align: center;
+  font-size: 0;
+  transition: background 0.2s ease;
+}
+
+.contacts-social__link:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.no-touch .contacts-social__link:hover .icon {
+  fill: #fff;
+}
+
+.no-touch .contacts-social__link_fb:hover {
+  background: #38569a;
+}
+
+.contacts-social__link_fb .icon {
+  font-size: 19px;
+}
+
+.no-touch .contacts-social__link_vk:hover {
+  background: #41658b;
+}
+
+.contacts-social__link_vk .icon {
+  font-size: 14px;
+}
+
+.no-touch .contacts-social__link_inst:hover {
+  background: #3d6b92;
+}
+
+.contacts-social__link_inst .icon {
+  font-size: 17px;
+}
+
+.contacts-social__link .icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: #fff;
+  transition: fill 0.2s ease;
 }
 
 @media only screen and (max-width: 1201px) {
@@ -899,13 +1059,11 @@ a {
   }
 
   .social__mail {
-    font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
   }
 
   .phones__link {
-    font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -1059,6 +1217,11 @@ a {
   .steps__img {
     width: 70px;
   }
+
+  .contacts {
+    padding: 75px 40px 55px;
+    width: 427px;
+  }
 }
 
 @media only screen and (max-width: 801px) {
@@ -1204,6 +1367,71 @@ a {
   .steps__link {
     margin-top: 4px;
   }
+
+  .map__img {
+    position: relative;
+    height: 420px;
+  }
+
+  .map__content {
+    padding: 0;
+    background: #353c43;
+  }
+
+  .contacts {
+    padding: 50px 0 45px;
+    width: 100%;
+    background: none;
+  }
+
+  .contacts__btn {
+    text-align: center;
+  }
+
+  .contacts-phones {
+    margin-bottom: 34px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .contacts-phones__item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+  }
+
+  .contacts-phones__item:not(:last-child):after {
+    display: inline-block;
+  }
+
+  .contacts-phones__link {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .contacts-info {
+    float: right;
+    margin-bottom: 50px;
+    width: 360px;
+  }
+
+  .contacts-info__item {
+    color: #fff;
+  }
+
+  .contacts-social {
+    padding-top: 3px;
+    width: 210px;
+    text-align: center;
+  }
+
+  .contacts-social__link {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .contacts-social__link .icon {
+    fill: #2a2e33;
+  }
 }
 
 @media only screen and (max-width: 589px) {
@@ -1230,13 +1458,11 @@ a {
   }
 
   .social__mail {
-    font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.72;
   }
 
   .phones__link {
-    font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.72;
   }
@@ -1269,6 +1495,31 @@ a {
 
   .steps__title:before {
     left: -36px;
+  }
+
+  .contacts-phones__item {
+    display: block;
+  }
+
+  .contacts-phones__item:not(:last-child):after {
+    display: none;
+  }
+
+  .contacts-info {
+    float: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 25px;
+  }
+
+  .contacts-info__item {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .contacts-social {
+    clear: both;
+    width: 100%;
   }
 }
 
