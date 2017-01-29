@@ -1,12 +1,12 @@
 .products
-	padding: 45px 0 100px
+	padding: 45px 0 65px
 	text-align: center
 	&__list
 		font-size: 0
 	.btn
 		margin-top: 28px
 .product
-	margin-top: 45px
+	padding: 35px 0
 	width: 20%
 	font-size: 18px
 	text-align: center
@@ -14,26 +14,53 @@
 	display: inline-block
 	&__link
 		display: inline-block
+		.is-active &
+			svg path,
+			svg line,
+			svg polyline
+				stroke: $white
+			svg
+				filter: drop-shadow( 0 0 8px #7eebfb)
 		+hover
 			svg path,
 			svg line,
 			svg polyline
 				stroke: $white
+			svg
+				filter: drop-shadow( 0 0 8px #7eebfb)
 	&__picture
+		position: relative
 		height: 145px
 		line-height: 145px
 		display: block
+		&:before
+			position: absolute
+			content: "" 
+			z-index: -1
+			top: 50%
+			left: 50%
+			margin: -159px 0 0 -145px
+			width: 291px
+			height: 318px
+			opacity: 0
+			transition: opacity .2s ease-in-out
+			background: url("../img/shadow-product.png") no-repeat
+			background-position: 50% 50% 
+			background-size: contain
+			.is-active &
+				opacity: 1
 	&__img
 		line-height: 1
 		vertical-align: middle
 		display: inline-block
 		svg, img
+			transition: filter .2s ease-in-out
 			display: block
 		svg path,
 		svg line,
 		svg polyline
 			stroke: $yellow
-			stroke-width: 1.4px
+			stroke-width: 1.6px
 			transition: stroke .2s ease-in-out
 	&__name
 		margin-top: 5px
