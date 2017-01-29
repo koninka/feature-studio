@@ -2,24 +2,30 @@
 	display: block
 	padding: 0 10px
 	border: 2px solid rgba(255, 255, 255, 0.33)
+	color: $white
+	+t(border-color)
 	+clr
+	&.has-error
+		border-color: $red
 	&__label
 		float: left
 		+f('lr', 16, 30)
-		padding: 4px 10px 4px 0
+		padding: 4px 14px 4px 0
 	&__field
-		&-input
-			display: block
-			overflow: hidden
-		&-textarea
-			clear: both
-			display: block
+		display: block
+		overflow: hidden
 	&__input,
 	&__textarea
 		display: block
+		border: none
 		width: 100%
-		+f('lr', 16, 30)
+		color: $white
+		background: none
 	&__input
 		height: 38px
+		+f('lr', 16, 30)
 	&__textarea
+		padding: 8px 0
 		height: 138px
+		resize: none
+		+f('lr', 16, 24)

@@ -3,19 +3,19 @@
 {% endmacro %}
 
 {% macro input(props) %}
-<label class="form-control">
+<label class="form-control js-form-parent">
 	<span class="form-control__label">{{props.label}}</span>
-	<span class="form-control__field-input">
-		<input type="text" class="form-control__input">
+	<span class="form-control__field">
+		<input type="text" class="form-control__input js-form-field" data-validation="{{props.validation}}" data-validation-error-msg="{{props.errorMsg}}">
 	</span>
 </label>
 {% endmacro %}
 
 {% macro textarea(props) %}
-<label class="form-control">
+<label class="form-control js-form-parent">
 	<span class="form-control__label">{{props.label}}</span>
-	<span class="form-control__field-textarea">
-		<textarea class="form-control__textarea"></textarea>
+	<span class="form-control__field">
+		<textarea class="form-control__textarea js-form-field" data-validation="{{props.validation}}" data-validation-error-msg="{{props.errorMsg}}"></textarea>
 	</span>
 </label>
 {% endmacro %}

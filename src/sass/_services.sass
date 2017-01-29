@@ -2,12 +2,72 @@
 	&__form
 		padding: 65px 138px 51px
 		background: rgba($blue, 0.4)
+		+md
+			padding: 48px 165px 52px
+		+sm
+			padding: 0
+			background: none
 	&__title
-		margin-bottom: 18px
+		margin-bottom: 12px
+		+md
+			margin-bottom: 17px
+	&__subtitle
+		margin: 0 auto 45px
+		max-width: 730px
+		+f('ll', 22, 36)
+		text-align: center
+		+md
+			margin-bottom: 30px
+			max-width: 550px
+			+f(null, 17, 28)
 	&__row
 		+clr
 	&__col
 		float: left
+		padding: 0 5px 10px
 		width: 100%
+		+md
+			padding: 0 5px 8px
 		&_sm
 			width: 33.33%
+			+md
+				width: 50%
+			+xs
+				width: 100%
+			&:nth-child(1)
+				+md
+					width: 100%
+	&__submit
+		padding: 10px 10px 0
+		text-align: center
+		+md
+			padding-top: 24px
+	&__container
+		position: relative
+	&__error
+		position: absolute
+		top: 0
+		left: 100%
+		padding: 6px 0 0 20px
+		margin-left: 5px
+		width: 95px
+		color: $red
+		+f('lli', 15, 20)
+		+sm
+			display: none
+
+.form-error
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 13px
+		height: 30px
+		background: url(../img/error-arrow.svg) no-repeat center center
+		background-size: contain
+	strong
+		display: none
+	li
+		&:not(:first-child)
+			display: none

@@ -4,19 +4,22 @@
 <div class="services">
 	<div class="inner">
 		<div class="services__form">
-			<form action="/">
-				<h2 class="title-md services__title">{{services.title}}</h2>
-				<div class="services__subtitle">{{services.subtitle}}</div>
-				<div class="services__row">
-					{% for item in services.fields %}
-						<div class="services__col services__col_sm">
-							{{mixins.input(item)}}
+			<h2 class="title-md services__title">{{services.title}}</h2>
+			<div class="services__subtitle">{{services.subtitle}}</div>
+			<form action="/" class="js-form">
+				<div class="services__container">
+					<div class="services__error js-error-msg"></div>
+					<div class="services__row">
+						{% for item in services.fields %}
+							<div class="services__col services__col_sm">
+								{{mixins.input(item)}}
+							</div>
+						{% endfor %}
+					</div>
+					<div class="services__row">
+						<div class="services__col">
+							{{mixins.textarea(services.textarea)}}
 						</div>
-					{% endfor %}
-				</div>
-				<div class="services__row">
-					<div class="services__col">
-						{{mixins.textarea(services.textarea)}}
 					</div>
 				</div>
 				<div class="services__submit">
