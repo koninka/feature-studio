@@ -1,0 +1,20 @@
+{% import "../../data/_products.html" as products %}
+
+<!-- products -->
+<section class="products">
+	<div class="products__inner inner">
+		<div class="heading">
+			<h3 class="title-md">Наша продукция</h3>
+			<a href="#" class="btn" download>Скачать оптовый прайс</a>
+		</div>
+		<div class="products__list">
+			{% for item in products.items %}
+				<a href="#" class="product">
+					<span class="product__picture">{% include item.svgLink %}</span>
+					<span class="product__name"><{{ item.text }}/span>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- ¯\_(ツ)_/¯ -->
