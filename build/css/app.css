@@ -114,6 +114,13 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Lato Regular";
+  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .icon-clock {
   width: 1em;
   height: 1em;
@@ -1028,6 +1035,69 @@ a {
   vertical-align: middle;
   fill: #fff;
   transition: fill 0.2s ease;
+}
+
+.products {
+  padding: 45px 0 100px;
+  text-align: center;
+}
+
+.products__list {
+  font-size: 0;
+}
+
+.products .btn {
+  margin-top: 28px;
+}
+
+.product {
+  margin-top: 45px;
+  width: 20%;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.product__link {
+  display: inline-block;
+}
+
+.no-touch .product__link:hover svg path,
+.no-touch .product__link:hover svg line,
+.no-touch .product__link:hover svg polyline {
+  stroke: #fff;
+}
+
+.product__picture {
+  height: 145px;
+  line-height: 145px;
+  display: block;
+}
+
+.product__img {
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.product__img svg, .product__img img {
+  display: block;
+}
+
+.product__img svg path,
+.product__img svg line,
+.product__img svg polyline {
+  stroke: #fc0;
+  stroke-width: 1.4px;
+  transition: stroke .2s ease-in-out;
+}
+
+.product__name {
+  margin-top: 5px;
+  max-width: 155px;
+  vertical-align: top;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 1201px) {

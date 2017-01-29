@@ -7,12 +7,16 @@
 			<h3 class="title-md">Наша продукция</h3>
 			<a href="#" class="btn" download>Скачать оптовый прайс</a>
 		</div>
-		<div class="products__list">
+		<div class="products__list js-product-list">
 			{% for item in products.items %}
-				<a href="#" class="product">
-					<span class="product__picture">{% include item.svgLink %}</span>
-					<span class="product__name"><{{ item.text }}/span>
-				</a>
+				<div class="product js-product">
+					<a href="#" class="product__link">
+						<span class="product__picture">
+							<span class="product__img">{% include item.svgLink %}</span>
+						</span>
+						<span class="product__name">{{ item.text }}</span>
+					</a>
+				</div>
 			{% endfor %}
 		</div>
 	</div>
