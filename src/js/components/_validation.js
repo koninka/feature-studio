@@ -20,6 +20,10 @@ const VALIDATION = () => {
 			onError(form) {
 				let input = form.find(`.js-form-field.${errorClass}`);
 				let parent = input.parents('.js-form-parent');
+				let firstErrorField = parent.get(parent.length-1);
+				let top = $(firstErrorField).position().top;
+
+				errorContainer.css('top', top);
 				parent.addClass(errorClass);
 			}
 		});
