@@ -4,11 +4,18 @@ import './../lib/jquery.form-validator.min';
 const VALIDATION = () => {
 	let form = $('.js-form');
 	let errorClass = 'has-error';
+	let formField = $('.js-form-field');
+
+	formField.on({
+		focus(e) {
+			$(this).parents('.js-form-parent').addClass('has-focus');
+		},
+		blur(e) {
+			$(this).parents('.js-form-parent').removeClass('has-focus');
+		}
+	});
 
 	form.each(function() {
-		$(this).submit(e => {
-			e.preventDefault();
-		});
 		let errorContainer = $(this).find('.js-error-msg');
 		$.validate({
 			form : this,

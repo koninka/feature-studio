@@ -764,7 +764,8 @@ a {
   padding: 0 10px;
   border: 2px solid rgba(255, 255, 255, 0.33);
   color: #fff;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: text;
   *zoom: 1;
 }
 
@@ -772,6 +773,11 @@ a {
   content: " ";
   display: table;
   clear: both;
+}
+
+.form-control.has-focus {
+  border-color: #fff;
+  box-shadow: 0 0 21px rgba(0, 222, 255, 0.09);
 }
 
 .form-control.has-error {
@@ -785,6 +791,10 @@ a {
   font-size: 16px;
   line-height: 1.88;
   padding: 4px 14px 4px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .form-control__field {
