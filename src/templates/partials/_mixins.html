@@ -1,3 +1,21 @@
 {% macro icon(i) %}
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
+
+{% macro input(props) %}
+<label class="form-control">
+	<span class="form-control__label">{{props.label}}</span>
+	<span class="form-control__field-input">
+		<input type="text" class="form-control__input">
+	</span>
+</label>
+{% endmacro %}
+
+{% macro textarea(props) %}
+<label class="form-control">
+	<span class="form-control__label">{{props.label}}</span>
+	<span class="form-control__field-textarea">
+		<textarea class="form-control__textarea"></textarea>
+	</span>
+</label>
+{% endmacro %}

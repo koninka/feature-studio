@@ -1,0 +1,77 @@
+.team
+	padding-bottom: 70px
+	+xs
+		padding-bottom: 35px
+	&__content
+		margin: 0 -10px
+		+clr
+		+sm
+			margin: 0
+	&__item
+		float: left
+		padding: 0 10px
+		width: 50%
+		+sm
+			float: none
+			padding: 35px 0
+			margin: 0 auto
+			width: 100%
+			max-width: 500px
+	&__heading
+		margin-bottom: 75px
+		+md
+			margin-bottom: 100px
+		+xs
+			margin-bottom: 65px
+
+.member
+	position: relative
+	padding-left: 190px
+	+xs
+		padding-left: 0
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		border-radius: 50%
+		width: 170px
+		height: 170px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		box-shadow: 0 0 68px rgba(0, 246, 255, 0.1)
+		+xs
+			position: relative
+			float: left
+			width: 100px
+			height: 100px
+	&__content
+		max-width: 320px
+		+md
+			max-width: 245px
+		+sm
+			max-width: 320px
+		+xs
+			max-width: 100%
+	&__name,
+	&__position
+		+xs
+			padding-left: 120px
+	&__name
+		margin-bottom: 10px
+		+f('black', 22, 30)
+		+xs
+			padding-top: 10px
+			font-size: 18px
+	&__position
+		margin-bottom: 20px
+		+f('ll', 20, 30)
+		+xs
+			margin-bottom: 0
+			font-size: 16px
+	&__description
+		+f('ll', 16, 30)
+		+xs
+			clear: both
+			padding: 20px 0 0
+			+f(null, 14, 24)
