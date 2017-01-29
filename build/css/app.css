@@ -1381,13 +1381,13 @@ a {
   display: inline-block;
 }
 
-.is-active .product__link svg path,
-.is-active .product__link svg line,
-.is-active .product__link svg polyline {
+.product__link.is-active svg path,
+.product__link.is-active svg line,
+.product__link.is-active svg polyline {
   stroke: #fff;
 }
 
-.is-active .product__link svg {
+.product__link.is-active svg {
   -webkit-filter: drop-shadow(0 0 8px #7eebfb);
   filter: drop-shadow(0 0 8px #7eebfb);
 }
@@ -1420,7 +1420,12 @@ a {
   width: 291px;
   height: 318px;
   opacity: 0;
-  transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
   background: url("../img/shadow-product.png") no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -1428,6 +1433,9 @@ a {
 
 .is-active .product__picture:before {
   opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .product__img {
@@ -1491,7 +1499,7 @@ a {
 .modal__title {
   position: relative;
   margin: 0 12px 26px 0;
-  padding: 8px 20px 6px 30px;
+  padding: 7px 20px 7px 30px;
   color: #000;
   font-family: "Lato Black", Arial, sans-serif;
   font-weight: normal;
