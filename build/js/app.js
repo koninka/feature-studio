@@ -284,7 +284,7 @@
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\nvar _slickCarousel = __webpack_require__(41);\n\nvar _slickCarousel2 = _interopRequireDefault(_slickCarousel);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconsole.log(_slickCarousel2.default);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDAuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc3JjL2pzL2NvbXBvbmVudHMvX21vZGFsLXNsaWRlci5qcz9kYTZmIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBzbGljayBmcm9tICdzbGljay1jYXJvdXNlbCc7XG5jb25zb2xlLmxvZyhzbGljayk7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9qcy9jb21wb25lbnRzL19tb2RhbC1zbGlkZXIuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTs7Ozs7QUFBQSIsInNvdXJjZVJvb3QiOiIifQ==");
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _slickCarousel = __webpack_require__(41);\n\nvar _slickCarousel2 = _interopRequireDefault(_slickCarousel);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar slickModal = function slickModal() {};\n\nexports.default = slickModal;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDAuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc3JjL2pzL2NvbXBvbmVudHMvX21vZGFsLXNsaWRlci5qcz9kYTZmIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBzbGljayBmcm9tICdzbGljay1jYXJvdXNlbCc7XG5cbmNvbnN0IHNsaWNrTW9kYWwgPSAoKSA9PiB7XG5cbn07XG5cbmV4cG9ydCBkZWZhdWx0IHNsaWNrTW9kYWw7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9qcy9jb21wb25lbnRzL19tb2RhbC1zbGlkZXIuanMiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBO0FBQ0E7Ozs7O0FBQ0E7QUFDQTtBQUdBIiwic291cmNlUm9vdCI6IiJ9");
 
 /***/ },
 /* 41 */
