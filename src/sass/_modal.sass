@@ -1,0 +1,54 @@
+.modal
+	padding: 87px 0 74px
+	font-size: 18px
+	+clr
+	&__left
+		float: left
+		padding-right: 50px
+		width: 476px
+	&__right
+		float: right
+		width: calc(100% - 476px) 
+		text-align: left
+		.btn
+			margin-top: 38px
+	&__title
+		position: relative
+		margin: 0 12px 26px 0
+		padding: 6px 20px 8px 30px
+		color: $black
+		+f('black', 30)
+		line-height: 1.2
+		text-transform: uppercase
+		vertical-align: top
+		background: $yellow 
+		display: inline-block
+		&:before
+			position: absolute
+			content: ""
+			top: 0
+			left: 100%
+			+arr(12, 50, $yellow, tl) 
+
+.characteristics
+	margin-top: 35px
+	&__row
+		+clr
+		&:not(:first-child)
+			margin-top: 12px
+	&__name
+		float: left
+		width: 107px
+		+f('black')
+	&__data
+		float: right
+		width: calc(100% - 107px) 
+		+clr
+	&__color
+		float: left
+		width: 26px
+		height: 24px
+		vertical-align: top
+		display: inline-block
+		&:not(:first-child)
+			margin-left: 9px
