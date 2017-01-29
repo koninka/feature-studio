@@ -1,2 +1,7 @@
 import slick from 'slick-carousel';
-console.log(slick);
+
+const slickModal = () => {
+
+};
+
+export default slickModal;

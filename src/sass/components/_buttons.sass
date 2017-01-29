@@ -5,15 +5,17 @@
 	line-height: 1.05
 	text-align: center
 	text-transform: uppercase
-	border-radius: 2px
+	border-radius: 3px
 	border: 2px solid $yellow
-	transition: color .2s ease-in-out, background-color .2s ease-in-out
+	transition: color .2s ease-in-out, background-color .2s ease-in-out, box-shadow .2s ease-in-out
 	background-color: transparent
 	display: inline-block
 	vertical-align: top
 	+hover
 		color: $black
 		background: $yellow
+	&:active
+		box-shadow: 0 0 21px rgba(198, 255, 0, 0.23)
 	&_fill
 		color: $black
 		background: $yellow
