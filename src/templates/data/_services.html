@@ -3,18 +3,30 @@
 
 {% set fields = [
 	{
-		label: 'ФИО:'
+		label: 'ФИО:',
+		type: 'text',
+		validation: 'required',
+		errorMsg: 'Не указано ФИО'
 	},
 	{
-		label: 'Телефон:'
+		label: 'Телефон:',
+		type: 'text',
+		validation: 'number',
+		errorMsg: 'Не указан телефон'
 	},
 	{
-		label: 'E-mail:'
+		label: 'E-mail:',
+		type: 'email',
+		validation: 'email',
+		errorMsg: 'Не указан e-mail'
 	}
 ] %}
 
 {% set textarea = {
-	label: 'Комментарий:'
+	label: 'Комментарий:',
+	type: 'comment',
+	validation: 'required',
+	errorMsg: 'Не указан комментарий'
 } %}
 
 {% set submit = 'Оставить заявку' %}
