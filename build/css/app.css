@@ -656,6 +656,55 @@ a {
   background: #fff;
 }
 
+.form-control {
+  display: block;
+  padding: 0 10px;
+  border: 2px solid rgba(255, 255, 255, 0.33);
+  *zoom: 1;
+}
+
+.form-control:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.form-control__label {
+  float: left;
+  font-family: "Lato Regular", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.88;
+  padding: 4px 10px 4px 0;
+}
+
+.form-control__field-input {
+  display: block;
+  overflow: hidden;
+}
+
+.form-control__field-textarea {
+  clear: both;
+  display: block;
+}
+
+.form-control__input, .form-control__textarea {
+  display: block;
+  width: 100%;
+  font-family: "Lato Regular", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.form-control__input {
+  height: 38px;
+}
+
+.form-control__textarea {
+  height: 138px;
+}
+
 .whywe {
   padding: 40px 0 85px;
   overflow: hidden;
@@ -1037,6 +1086,104 @@ a {
   transition: fill 0.2s ease;
 }
 
+.team {
+  padding-bottom: 70px;
+}
+
+.team__content {
+  margin: 0 -10px;
+  *zoom: 1;
+}
+
+.team__content:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.team__item {
+  float: left;
+  padding: 0 10px;
+  width: 50%;
+}
+
+.team__heading {
+  margin-bottom: 75px;
+}
+
+.member {
+  position: relative;
+  padding-left: 190px;
+}
+
+.member__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 68px rgba(0, 246, 255, 0.1);
+}
+
+.member__content {
+  max-width: 320px;
+}
+
+.member__name {
+  margin-bottom: 10px;
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.37;
+}
+
+.member__position {
+  margin-bottom: 20px;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.member__description {
+  font-family: "Lato Light", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.services__form {
+  padding: 65px 138px 51px;
+  background: rgba(23, 67, 112, 0.4);
+}
+
+.services__title {
+  margin-bottom: 18px;
+}
+
+.services__row {
+  *zoom: 1;
+}
+
+.services__row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.services__col {
+  float: left;
+  width: 100%;
+}
+
+.services__col_sm {
+  width: 33.33%;
+}
+
 .products {
   padding: 45px 0 100px;
   text-align: center;
@@ -1332,9 +1479,17 @@ a {
     padding: 75px 40px 55px;
     width: 427px;
   }
+
+  .team__heading {
+    margin-bottom: 100px;
+  }
+
+  .member__content {
+    max-width: 245px;
+  }
 }
 
-@media only screen and (max-width: 801px) {
+@media only screen and (max-width: 930px) {
 
   .inner {
     max-width: 590px;
@@ -1542,6 +1697,22 @@ a {
   .contacts-social__link .icon {
     fill: #2a2e33;
   }
+
+  .team__content {
+    margin: 0;
+  }
+
+  .team__item {
+    float: none;
+    padding: 35px 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .member__content {
+    max-width: 320px;
+  }
 }
 
 @media only screen and (max-width: 589px) {
@@ -1630,6 +1801,50 @@ a {
   .contacts-social {
     clear: both;
     width: 100%;
+  }
+
+  .team {
+    padding-bottom: 35px;
+  }
+
+  .team__heading {
+    margin-bottom: 65px;
+  }
+
+  .member {
+    padding-left: 0;
+  }
+
+  .member__img {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+
+  .member__content {
+    max-width: 100%;
+  }
+
+  .member__name, .member__position {
+    padding-left: 120px;
+  }
+
+  .member__name {
+    padding-top: 10px;
+    font-size: 18px;
+  }
+
+  .member__position {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .member__description {
+    clear: both;
+    padding: 20px 0 0;
+    font-size: 14px;
+    line-height: 1.72;
   }
 }
 

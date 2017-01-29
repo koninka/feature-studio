@@ -1,0 +1,25 @@
+.form-control
+	display: block
+	padding: 0 10px
+	border: 2px solid rgba(255, 255, 255, 0.33)
+	+clr
+	&__label
+		float: left
+		+f('lr', 16, 30)
+		padding: 4px 10px 4px 0
+	&__field
+		&-input
+			display: block
+			overflow: hidden
+		&-textarea
+			clear: both
+			display: block
+	&__input,
+	&__textarea
+		display: block
+		width: 100%
+		+f('lr', 16, 30)
+	&__input
+		height: 38px
+	&__textarea
+		height: 138px
