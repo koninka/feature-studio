@@ -1,3 +1,5 @@
+import {touch} from './../_constants';
+
 const MAP = () => {
 	ymaps.ready(function () {
 		const map = new ymaps.Map('map', {
@@ -5,6 +7,9 @@ const MAP = () => {
 				zoom: 16,
 				controls: []
 			});
+
+		map.behaviors.disable('scrollZoom');
+		if (touch()) map.behaviors.disable('drag');
 
 		let	marker = new ymaps.Placemark(map.getCenter(), {
 				iconContent: 'ул. Батарейная 6а '

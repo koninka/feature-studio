@@ -18,6 +18,13 @@
 						<li class="contacts-info__item">{{mixins.icon(item.icon)}} {{item.text | safe}}</li>
 					{% endfor %}
 				</ul>
+				<ul class="contacts-social">
+					{% for item in map.social %}
+						<li class="contacts-social__item">
+							<a href="#" class="contacts-social__link contacts-social__link_{{item}}">{{mixins.icon(item)}}</a>
+						</li>
+					{% endfor %}
+				</ul>
 				<div class="contacts__btn">
 					<a href="#form" class="btn btn_fill">{{map.btn}}</a>
 				</div>

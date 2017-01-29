@@ -217,9 +217,9 @@
 	float: right
 	font-size: 0
 	&__mail
+		position: relative
 		float: left
 		+f('ll', 18, 30)
-		text-decoration: underline
 		+t(color)
 		+md
 			+f(null, 16, 24)
@@ -229,6 +229,17 @@
 			+f(null, 14, 24)
 		+hover
 			color: $yellow
+			&:before
+				border-color: $yellow
+		&:before
+			content: ""
+			position: absolute
+			bottom: 3px
+			left: 0
+			right: 0
+			border-bottom: 1px solid $white
+			opacity: 0.3
+			+t(border-color)
 	&__item,
 	&__link
 		display: inline-block
