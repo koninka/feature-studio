@@ -23,3 +23,17 @@ const SLICKMODAL = () => {
 };
 
 export default SLICKMODAL;
+
+// export default class Modal {
+// constructor(config) {
+// 		this._wrapper = config.wrapper;
+// 		this._element = this._wrapper.querySelector(config.element);
+// 		this._activeName = config.activeName;
+// 		this._init();
+// 	}
+
+// 	_init() {
+// 		this._createController();
+// 		this._createScene();
+// 	}
+// };
