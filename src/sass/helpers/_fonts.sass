@@ -4,6 +4,7 @@
 +font("Lato Hairline", Lato-Hairline)
 +font("Lato Bold", Lato-Bold)
 +font("Lato Black", Lato-Black)
++font("Lato Regular", Lato-Regular)
 
 =f($name: null, $size: null, $line-height: null, $letter-spacing: null)
 	$font-family: null
@@ -11,6 +12,8 @@
 		$font-family: "Lato Thin"
 	@if $name == "ll"
 		$font-family: "Lato Light"
+	@if $name == "lr"
+		$font-family: "Lato Regular"
 	@if $name == "lli"
 		$font-family: "Lato Light Italic"
 	@if $name == "lh"

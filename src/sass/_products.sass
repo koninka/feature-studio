@@ -1,0 +1,42 @@
+.products
+	padding: 45px 0 100px
+	text-align: center
+	&__list
+		font-size: 0
+	.btn
+		margin-top: 28px
+.product
+	margin-top: 45px
+	width: 20%
+	font-size: 18px
+	text-align: center
+	vertical-align: top
+	display: inline-block
+	&__link
+		display: inline-block
+		+hover
+			svg path,
+			svg line,
+			svg polyline
+				stroke: $white
+	&__picture
+		height: 145px
+		line-height: 145px
+		display: block
+	&__img
+		line-height: 1
+		vertical-align: middle
+		display: inline-block
+		svg, img
+			display: block
+		svg path,
+		svg line,
+		svg polyline
+			stroke: $yellow
+			stroke-width: 1.4px
+			transition: stroke .2s ease-in-out
+	&__name
+		margin-top: 5px
+		max-width: 155px
+		vertical-align: top
+		display: inline-block
