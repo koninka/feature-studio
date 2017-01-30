@@ -1,0 +1,53 @@
+.counters
+	margin-bottom: 40px
+	+md 
+		margin-bottom: 5px
+	+sm
+		margin-bottom: 0
+	&__heading
+		margin-bottom: 75px
+		+md
+			margin-bottom: 65px
+		+sm
+			margin-bottom: 25px
+	&__row
+		margin: 0 -10px 20px
+		+clr
+		+md 
+			margin: 0 -10px
+		+xs
+			margin-bottom: 20px
+	&__col
+		float: left
+		padding: 0 10px 50px
+		width: 25%
+		+md 
+			padding-bottom: 50px
+		+sm 
+			padding: 40px 10px
+			width: 50%
+		+xs
+			padding: 40px 10px 20px
+			width: 100%
+	&__btn
+		text-align: center
+		+md
+			display: none
+
+.counter
+	text-align: center
+	&__numbers
+		margin-bottom: 20px
+		color: $yellow
+		+f('lt', 100, 72)
+		text-transform: uppercase
+	&__description
+		margin: 0 auto
+		max-width: 230px
+		color: $white
+		+f('ll', 24, 30)
+		+md
+			max-width: 190px
+			+f(null, 20, 24)
+		strong
+			+f('black')
