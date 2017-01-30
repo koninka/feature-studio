@@ -1466,11 +1466,16 @@ a {
   display: inline-block;
 }
 
+.products-modal {
+  display: none;
+}
+
 .modal {
   padding: 87px 0 74px;
   font-size: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: none;
   *zoom: 1;
 }
 
@@ -1570,6 +1575,29 @@ a {
 
 .characteristics__color:not(:first-child) {
   margin-left: 9px;
+}
+
+.slider-for,
+.slider-nav {
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity .2s ease-in-out;
+  transition-delay: .3s;
+}
+
+.slider-for.is-loaded,
+.slider-nav.is-loaded {
+  opacity: 1;
+}
+
+.slider-for__slide:not(:first-child),
+.slider-nav__slide:not(:first-child) {
+  display: none;
+}
+
+.is-loaded .slider-for__slide:not(:first-child), .is-loaded
+.slider-nav__slide:not(:first-child) {
+  display: block;
 }
 
 @media only screen and (max-width: 1201px) {

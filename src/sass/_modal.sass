@@ -3,6 +3,7 @@
 	font-size: 18px
 	border-top: 1px solid rgba($white, 0.06) 
 	border-bottom: 1px solid rgba($white, 0.06) 
+	display: none
 	+clr
 	&__left
 		float: left
@@ -54,3 +55,17 @@
 		display: inline-block
 		&:not(:first-child)
 			margin-left: 9px
+
+.slider-for,
+.slider-nav
+	opacity: 0
+	overflow: hidden
+	transition: opacity .2s ease-in-out
+	transition-delay: .3s 
+	&.is-loaded
+		opacity: 1
+	&__slide
+		&:not(:first-child)
+			display: none
+			.is-loaded &
+				display: block
