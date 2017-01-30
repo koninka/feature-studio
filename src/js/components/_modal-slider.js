@@ -34,7 +34,7 @@ const MODAL = (link) => {
 		sliderFor = activeModal.find('.js-modal-slider-for'),
 		sliderNav = activeModal.find('.js-modal-slider-nav'),
 		windowWidth = $(window).width(),
-		parentPrevAll = parent.prevAll().length;
+		productPrevAll = parent.prevAll().length;
 	
 	if (!sliderFor.hasClass('slick-initialized') && !sliderNav.hasClass('slick-initialized')) {
 		sliderFor.slick({
@@ -53,7 +53,7 @@ const MODAL = (link) => {
 			dots: false,
 			focusOnSelect: true
 		});
-	}
+	};
 	
 	let counter = () => {
 		if (windowWidth > 900) {
@@ -65,10 +65,10 @@ const MODAL = (link) => {
 	};
 
 	let getIndex = () => {
-		return ( Math.floor( parentPrevAll/counter() ) * counter() + counter() ) - 1;
+		return ( Math.floor( productPrevAll/counter() + 1 ) * counter() ) - 1;
 	};
 
-	console.log(getIndex());
+	console.log(Math.floor( productPrevAll/counter() ) * counter(), getIndex());
 
 	// modalWrap.remove();
 	// parents.find('.js-product').eq(getIndex()).after('<div class="js-modal-wrap"></div>');
