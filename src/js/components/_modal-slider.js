@@ -34,11 +34,9 @@ const MODAL = (link) => {
 		sliderFor = activeModal.find('.js-modal-slider-for'),
 		sliderNav = activeModal.find('.js-modal-slider-nav'),
 		windowWidth = $(window).width(),
-		parentPrevAll = parent.prevAll().length,
-		rowCounter,
-		row;
+		parentPrevAll = parent.prevAll().length;
 	
-	if (!sliderFor.hasClass('slick-initialized')) {
+	if (!sliderFor.hasClass('slick-initialized') && !sliderNav.hasClass('slick-initialized')) {
 		sliderFor.slick({
 			lazyLoad: 'ondemand',
 			slidesToShow: 1,
@@ -47,9 +45,6 @@ const MODAL = (link) => {
 			fade: true,
 			asNavFor: '.js-modal-slider-nav'
 		});
-	}
-	
-	if (!sliderNav.hasClass('slick-initialized')) {
 		sliderNav.slick({
 			lazyLoad: 'ondemand',
 			slidesToShow: 5,
@@ -60,32 +55,22 @@ const MODAL = (link) => {
 		});
 	}
 	
-	function whole(num) {
-		return (num ^ 0) === num;
-	}
-
-	if (windowWidth > 900) {
-		rowCounter = 5;
-	}
-	else {
-		rowCounter = 3;
-	};
-
-	row = parentPrevAll/rowCounter;
-	
-	if (whole(row)) {
-		if (row == 0) {
-			row = 0;
+	let counter = () => {
+		if (windowWidth > 900) {
+			return 5;
 		}
-	}
-	else {
-		row = Math.floor(row);
+		else {
+			return 3;
+		}
 	};
 
-	row = row*rowCounter+rowCounter;
-	modalWrap.remove();
+	let getIndex = () => {
+		return ( Math.floor( parentPrevAll/counter() ) * counter() + counter() ) - 1;
+	};
 
-	console.log(row-1);
-	// parents.find('.js-product').eq(row-1).after('<div class="js-modal-wrap"></div>');
+	console.log(getIndex());
+
+	// modalWrap.remove();
+	// parents.find('.js-product').eq(getIndex()).after('<div class="js-modal-wrap"></div>');
 	// activeModal.appendTo('.js-modal-wrap');
 };
