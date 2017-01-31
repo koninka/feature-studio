@@ -63,7 +63,7 @@ const MODAL = (link) => {
 	}
 
 	let hideModal = () => {
-		
+
 		openModal.slideUp(delay);
 		setTimeout(() => {
 			modalWrap.remove();
@@ -97,18 +97,18 @@ const MODAL = (link) => {
 				slidesToScroll: 1,
 				arrows: false,
 				fade: true,
-				asNavFor: slickNav
+				asNavFor: '.js-product-list .js-modal-slider-nav'
 			},
 
 			sliderNavOptions = {
 				lazyLoad: 'ondemand',
-				slidesToShow: 5,
+				slidesToShow: 4,
 				slidesToScroll: 1,
-				asNavFor: slickFor,
+				asNavFor: '.js-product-list .js-modal-slider-for',
 				dots: false,
 				focusOnSelect: true
 			};
-
+			
 		sliderFor.on('init', function() {
 			sliderFor.addClass(loaded);
 		});

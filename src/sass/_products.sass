@@ -1,19 +1,39 @@
 .products
+	position: relative
 	padding: 45px 0 65px
 	text-align: center
+	z-index: 10
 	&__list
 		font-size: 0
 	.btn
 		margin-top: 28px
 .product
+	position: relative
 	padding: 35px 0
 	width: 20%
+	min-height: 270px
 	font-size: 18px
 	text-align: center
 	vertical-align: top
 	display: inline-block
 	&__link
 		display: inline-block
+		&:before,
+		&:after
+			position: absolute
+			content: ""
+			bottom: 0
+			opacity: 0
+		&:before
+			left: 0
+			right: 0
+			height: 3px
+			background: $yellow
+		&:after
+			left: 50%
+			bottom: -12px
+			margin-left: -14px
+			+arr(28,15,$yellow,b)
 		&.is-active
 			svg path,
 			svg line,
@@ -21,6 +41,11 @@
 				stroke: $white
 			svg
 				filter: drop-shadow( 0 0 8px #7eebfb)
+			.product__name:before,
+			&:before,
+			&:after
+				visibility: visible
+				opacity: 1
 		+hover
 			svg path,
 			svg line,
@@ -69,6 +94,14 @@
 		max-width: 155px
 		vertical-align: top
 		display: inline-block
-
+		&:before
+			position: absolute
+			content: "" 
+			left: 50%
+			bottom: -8px
+			margin-left: -12px
+			z-index: 1
+			opacity: 0
+			+arr(24,12,$bodyBg,b)
 .products-modal
 	display: none
