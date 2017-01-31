@@ -285,7 +285,6 @@ body {
 
 .out {
   overflow: hidden;
-  background: url(../img/hero-bg.png) no-repeat top center;
 }
 
 .container {
@@ -2005,6 +2004,7 @@ a {
 .souvenir__title, .souvenir__description {
   max-width: 200px;
   margin: 0 auto;
+  color: #29577f;
   text-align: center;
 }
 
@@ -2023,24 +2023,32 @@ a {
 
 @-webkit-keyframes fly {
   0%, 100% {
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
+    -webkit-transform: translate3d(0, -15px, 0) rotate(0);
+    transform: translate3d(0, -15px, 0) rotate(0);
   }
   50% {
-    -webkit-transform: translate3d(0, 15px, 0);
-    transform: translate3d(0, 15px, 0);
+    -webkit-transform: translate3d(0, 15px, 0) rotate(-5deg);
+    transform: translate3d(0, 15px, 0) rotate(-5deg);
   }
 }
 
 @keyframes fly {
   0%, 100% {
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
+    -webkit-transform: translate3d(0, -15px, 0) rotate(0);
+    transform: translate3d(0, -15px, 0) rotate(0);
   }
   50% {
-    -webkit-transform: translate3d(0, 15px, 0);
-    transform: translate3d(0, 15px, 0);
+    -webkit-transform: translate3d(0, 15px, 0) rotate(-5deg);
+    transform: translate3d(0, 15px, 0) rotate(-5deg);
   }
+}
+
+.souvenirs-bg {
+  position: absolute;
+  top: -290px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
 }
 
 .souvenirs-background {
@@ -2048,7 +2056,6 @@ a {
   top: -100px;
   left: 0;
   right: 0;
-  display: none;
 }
 
 .souvenirs-background img {
@@ -2076,6 +2083,10 @@ a {
 
 .souvenirs-background__shadow {
   top: 277px;
+}
+
+.souvenirs-background__light1, .souvenirs-background__light2 {
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 1201px) {

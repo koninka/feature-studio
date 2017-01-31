@@ -63,7 +63,7 @@
 	&__description
 		max-width: 200px
 		margin: 0 auto
-		// color: $darkBlue
+		color: $darkBlue
 		text-align: center
 	&__title
 		+f('black', 14, 36)
@@ -73,20 +73,28 @@
 
 @keyframes fly
 	0%, 100%
-		transform: translate3d(0,-15px,0)
+		transform: translate3d(0,-15px,0) rotate(0)
 	50%
-		transform: translate3d(0,15px,0)
+		transform: translate3d(0,15px,0) rotate(-5deg)
+
+.souvenirs-bg
+	position: absolute
+	top: -290px
+	left: 50%
+	transform: translate3d(-50%,0,0)
 
 .souvenirs-background
 	position: absolute
 	top: -100px
 	left: 0
 	right: 0
-	display: none
+	// z-index: -1
+	// display: none
 	img
 		position: absolute
 		left: 50%
 		transform: translate3d(-50%,0,0)
+		// opacity: 0.5
 	&__shining2
 		top: -230px
 	&__shining1
@@ -97,3 +105,7 @@
 		top: 55px
 	&__shadow
 		top: 277px
+	&__light1,
+	&__light2
+		// z-index: -1
+		opacity: 0.5
