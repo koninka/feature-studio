@@ -1,0 +1,33 @@
+{% import "../../data/_clients.html" as clients %}
+
+<!-- begin clients  -->
+<div class="clients">
+	<div class="clients-background">
+		<img src="img/clients-background/clients-dark.png" alt="bg-dark" class="clients-background__dark">
+		<img src="img/clients-background/clients-shadow.png" alt="bg-shadow" class="clients-background__shadow">
+		<img src="img/clients-background/clients-light.png" alt="bg-light" class="clients-background__light">
+	</div>
+	<div class="clients__inner">
+		<div class="heading clients__heading">
+			<h2 class="title-md">{{clients.title}}</h2>
+		</div>
+		<div class="clients__container js-clients">
+			<button class="clients__prev js-clients-prev">
+				{{mixins.icon('prev')}}
+			</button>
+			<button class="clients__next js-clients-next">
+				{{mixins.icon('next')}}
+			</button>
+			<div class="clients__slider js-clients-slider">
+				{% for item in clients.items %}
+					<div class="clients__item">
+						<a href="#" class="client">
+							<img src="img/{{item.img}}" alt="{{item.title}}" class="client__logo">
+						</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end clients -->

@@ -151,6 +151,18 @@ html {
   fill: initial;
 }
 
+.icon-next {
+  width: 0.43em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-prev {
+  width: 0.43em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-vk {
   width: 0.8em;
   height: 1em;
@@ -266,6 +278,10 @@ body {
   line-height: 1.4;
 }
 
+.out {
+  overflow: hidden;
+}
+
 .container {
   *zoom: 1;
 }
@@ -301,6 +317,8 @@ a {
 }
 
 .header {
+  position: relative;
+  z-index: 1000;
   padding: 50px 0 130px;
 }
 
@@ -1027,6 +1045,7 @@ a {
 
 .map {
   position: relative;
+  z-index: 10;
   min-height: 675px;
 }
 
@@ -1205,6 +1224,8 @@ a {
 }
 
 .team {
+  position: relative;
+  z-index: 10;
   padding-bottom: 70px;
 }
 
@@ -1272,6 +1293,11 @@ a {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
+}
+
+.services {
+  position: relative;
+  z-index: 10;
 }
 
 .services__form {
@@ -1661,7 +1687,9 @@ a {
 }
 
 .counters {
-  margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
+  margin: 40px 0;
 }
 
 .counters__heading {
@@ -1716,6 +1744,143 @@ a {
 .counter__description strong {
   font-family: "Lato Black", Arial, sans-serif;
   font-weight: normal;
+}
+
+.clients {
+  position: relative;
+  z-index: 1;
+}
+
+.clients__inner {
+  position: relative;
+  z-index: 10;
+}
+
+.clients__container {
+  position: relative;
+  padding: 0 160px;
+  *zoom: 1;
+}
+
+.clients__container:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.clients__item {
+  float: left;
+  height: 222px;
+  text-align: center;
+}
+
+.clients__prev, .clients__next {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 111px;
+  height: 222px;
+  background: none;
+  text-align: center;
+  font-size: 0;
+}
+
+.clients__prev:before, .clients__next:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.no-touch .clients__prev:hover:after, .no-touch .clients__next:hover:after {
+  opacity: 0.8;
+}
+
+.clients__prev:after, .clients__next:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  width: 200%;
+  opacity: 0.4;
+  background: #174370;
+  transition: opacity 0.25s ease;
+}
+
+.clients__prev .icon, .clients__next .icon {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  vertical-align: middle;
+  fill: #fff;
+  font-size: 82px;
+}
+
+.clients__prev .icon-prev, .clients__next .icon-prev {
+  margin-left: 22px;
+}
+
+.clients__prev .icon-next, .clients__next .icon-next {
+  margin-right: 22px;
+}
+
+.clients__prev {
+  left: 0;
+  text-align: left;
+}
+
+.clients__prev:after {
+  right: 0;
+}
+
+.clients__next {
+  right: 0;
+  text-align: right;
+}
+
+.clients__next:after {
+  left: 0;
+}
+
+.client {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  height: 100%;
+  text-align: center;
+  font-size: 0;
+}
+
+.client:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.client img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 50px;
+}
+
+.clients-background {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+}
+
+.clients-background__dark, .clients-background__shadow, .clients-background__light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
 
 @media only screen and (max-width: 1201px) {
@@ -1951,7 +2116,7 @@ a {
   }
 
   .counters {
-    margin-bottom: 5px;
+    margin: 0 0 5px;
   }
 
   .counters__heading {
@@ -1974,6 +2139,18 @@ a {
     max-width: 190px;
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  .clients__prev .icon, .clients__next .icon {
+    font-size: 44px;
+  }
+
+  .clients__prev .icon-prev, .clients__next .icon-prev {
+    margin-left: 12px;
+  }
+
+  .clients__prev .icon-next, .clients__next .icon-next {
+    margin-right: 12px;
   }
 }
 
@@ -2222,6 +2399,27 @@ a {
   .counters__col {
     padding: 40px 10px;
     width: 50%;
+  }
+
+  .clients {
+    margin: 20px 0;
+  }
+
+  .clients__heading {
+    margin-bottom: 10px;
+  }
+
+  .clients__container {
+    padding: 0 70px;
+  }
+
+  .clients__item {
+    height: 120px;
+  }
+
+  .clients__prev, .clients__next {
+    width: 60px;
+    height: 120px;
   }
 }
 
