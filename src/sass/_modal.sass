@@ -32,6 +32,8 @@
 			top: 0
 			left: 100%
 			+arr(12, 50, $yellow, tl) 
+			+md
+				display: none
 
 .characteristics
 	margin-top: 35px
@@ -58,18 +60,66 @@
 
 .slider-for,
 .slider-nav
-	opacity: 0
 	overflow: hidden
 	transition: opacity .2s ease-in-out
-	transition-delay: .3s 
+	transition-delay: .5s 
 	&.is-loaded
 		opacity: 1
 	&__slide
-		padding: 0 10px
 		width: 33%
 		&:not(:first-child)
 			display: none
 			.is-loaded &
 				display: block
 		img
-			max-width: 100%
+			margin: 0 auto
+			display: block
+.slider-nav-out
+	overflow: hidden
+.slider-nav-wrap
+	position: relative
+	margin-top: 15px
+	opacity: 0
+	transition: opacity .2s ease-in-out
+	transition-delay: .5s
+	&.is-loaded
+			opacity: 1
+	&:before,
+	&:after
+		position: absolute
+		content: ""
+		top: -9px
+		bottom: -9px
+		width: 1px
+		background: #5B6772  
+	&:before
+		left: 0
+	&:after
+		right: 0
+	.slider-nav-prev,
+	.slider-nav-next
+		position: absolute
+		top: 50%
+		margin-top: -17px
+		width: 14px
+		height: 34px
+		font-size: 0
+		z-index: 2
+		background-color: transparent 
+	.slider-nav-prev
+		left: -22px
+		background: url(../img/slider-nav-prev.svg) no-repeat 
+		background-size: contain
+	.slider-nav-next
+		right: -22px
+		background: url(../img/slider-nav-next.svg) no-repeat 
+		background-size: contain
+.slider-for
+	opacity: 0
+.slider-nav
+	margin: 0 -5px
+	&__slide
+		padding: 0 5px
+	img
+		width: 100%
+	
