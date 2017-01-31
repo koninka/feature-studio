@@ -4,6 +4,7 @@ import MAP from './components/_map';
 import VALIDATION from './components/_validation';
 import {COUNTER} from './components/_counter';
 import './components/_modal-slider';
+import {CLIENTS} from './components/_clients';
 
 $(document).ready(e => {
 	if (!touch()) BODY.addClass('no-touch');
@@ -11,4 +12,5 @@ $(document).ready(e => {
 	MAP();
 	VALIDATION();
 	COUNTER();
+	CLIENTS();
 });
