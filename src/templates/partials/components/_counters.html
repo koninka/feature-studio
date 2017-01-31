@@ -1,0 +1,24 @@
+{% import "../../data/_counters.html" as counters %}
+
+<!-- begin counters -->
+<div class="counters">
+	<div class="inner">
+		<div class="heading counters__heading">
+			<h2 class="title-md">{{counters.title}}</h2>
+		</div>
+		<div class="counters__row js-counters">
+			{% for item in counters.items %}
+				<div class="counters__col">
+					<div class="counter">
+						<div class="counter__numbers"><span class="js-counter" data-number="{{item.number}}">0</span>{{item.plus}}</div>
+						<div class="counter__description">{{item.description | safe}}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="counters__btn">
+			<a href="#" class="btn">{{counters.btn}}</a>
+		</div>
+	</div>
+</div>
+<!-- end counters -->
