@@ -1382,8 +1382,10 @@ a {
 }
 
 .products {
+  position: relative;
   padding: 45px 0 65px;
   text-align: center;
+  z-index: 10;
 }
 
 .products__list {
@@ -1395,8 +1397,10 @@ a {
 }
 
 .product {
+  position: relative;
   padding: 35px 0;
   width: 20%;
+  min-height: 270px;
   font-size: 18px;
   text-align: center;
   vertical-align: top;
@@ -1405,6 +1409,31 @@ a {
 
 .product__link {
   display: inline-block;
+}
+
+.product__link:before, .product__link:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  opacity: 0;
+}
+
+.product__link:before {
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #fc0;
+}
+
+.product__link:after {
+  left: 50%;
+  bottom: -12px;
+  margin-left: -14px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 15px 14px 0 14px;
+  border-color: #fc0 transparent transparent transparent;
 }
 
 .product__link.is-active svg path,
@@ -1416,6 +1445,11 @@ a {
 .product__link.is-active svg {
   -webkit-filter: drop-shadow(0 0 8px #7eebfb);
   filter: drop-shadow(0 0 8px #7eebfb);
+}
+
+.product__link.is-active .product__name:before, .product__link.is-active:before, .product__link.is-active:after {
+  visibility: visible;
+  opacity: 1;
 }
 
 .no-touch .product__link:hover svg path,
@@ -1490,6 +1524,21 @@ a {
   max-width: 155px;
   vertical-align: top;
   display: inline-block;
+}
+
+.product__name:before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -8px;
+  margin-left: -12px;
+  z-index: 1;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #0b1c2d transparent transparent transparent;
 }
 
 .products-modal {
@@ -1616,6 +1665,12 @@ a {
   opacity: 1;
 }
 
+.slider-for__slide,
+.slider-nav__slide {
+  padding: 0 10px;
+  width: 33%;
+}
+
 .slider-for__slide:not(:first-child),
 .slider-nav__slide:not(:first-child) {
   display: none;
@@ -1624,6 +1679,11 @@ a {
 .is-loaded .slider-for__slide:not(:first-child), .is-loaded
 .slider-nav__slide:not(:first-child) {
   display: block;
+}
+
+.slider-for__slide img,
+.slider-nav__slide img {
+  max-width: 100%;
 }
 
 .counters {
