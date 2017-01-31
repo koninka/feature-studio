@@ -3,11 +3,21 @@ import slick from 'slick-carousel';
 
 ;(function(){
 
-	let productLink = $('.js-product-link');
+	let productLink = $('.js-product-link'),
+		slickNav = $('.js-product-link .js-modal-slider-nav'),
+		sliderPrev = $('.js-slider-nav-prev'),
+		sliderNext = $('.js-slider-nav-next');
 
 	productLink.on('click', function() {
 		MODAL($(this));
 		return false;
+	});
+
+	$('.js-product-list').on('click', '.js-slider-nav-prev', function(){
+	    $('.js-product-list .js-modal-slider-for').slick('slickPrev');
+	});
+	$('.js-product-list').on('click', '.js-slider-nav-next', function(){
+	    $('.js-product-list .js-modal-slider-for').slick('slickNext');
 	});
 
 })();
@@ -105,6 +115,7 @@ const MODAL = (link) => {
 				slidesToShow: 4,
 				slidesToScroll: 1,
 				asNavFor: '.js-product-list .js-modal-slider-for',
+				arrows: false,
 				dots: false,
 				focusOnSelect: true
 			};
@@ -113,7 +124,7 @@ const MODAL = (link) => {
 			sliderFor.addClass(loaded);
 		});
 		sliderNav.on('init', function() {
-			sliderNav.addClass(loaded);
+			sliderNav.parents('.slider-nav-wrap').addClass(loaded);
 		});
 
 		if ( !sliderFor.hasClass(slickActive) && !sliderNav.hasClass(slickActive) ) {
