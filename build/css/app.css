@@ -2117,10 +2117,10 @@ a {
 
 .souvenirs-bg {
   position: absolute;
+  z-index: -1;
   top: -290px;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, 0, 0);
-  transform: translate3d(-50%, 0, 0);
+  left: -444px;
+  width: 2000px;
 }
 
 .souvenirs-background {
@@ -2128,6 +2128,7 @@ a {
   top: -100px;
   left: 0;
   right: 0;
+  display: none;
 }
 
 .souvenirs-background img {
