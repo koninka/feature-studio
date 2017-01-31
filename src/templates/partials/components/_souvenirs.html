@@ -1,0 +1,52 @@
+{% import "../../data/_souvenirs.html" as souvenirs %}
+
+<!-- begin souvenirs  -->
+<div class="souvenirs js-souvenirs">
+	<div class="souvenirs__container">
+		<div class="inner">
+			<div class="souvenirs__content">
+				<h2 class="souvenirs__title title-md title-md_thin">{{souvenirs.title | safe}}</h2>
+				<div class="souvenirs__description">{{souvenirs.description}}</div>
+				<div class="souvenirs__button">
+					<a href="#" class="btn">{{souvenirs.btn}}</a>
+				</div>
+			</div>
+			<div class="souvenirs__items">
+				<div class="souvenirs__items-in">
+					<div class="souvenirs-background">
+						<img src="img/souvenirs/souvenirs-shining2.png" alt="shining" class="souvenirs-background__shining2">
+						<img src="img/souvenirs/souvenirs-shining1.png" alt="shining" class="souvenirs-background__shining1">
+						<img src="img/souvenirs/souvenirs-light2.png" alt="light" class="souvenirs-background__light2">
+						<img src="img/souvenirs/souvenirs-light1.png" alt="light" class="souvenirs-background__light1">
+						<img src="img/souvenirs/souvenirs-shadow.png" alt="shadow" class="souvenirs-background__shadow">
+					</div>
+					<button class="souvenirs__prev js-souvenirs-prev">
+						{{mixins.icon('prev')}}
+					</button>
+					<button class="souvenirs__next js-souvenirs-next">
+						{{mixins.icon('next')}}
+					</button>
+					<div class="souvenirs__slider js-souvenirs-slider">
+						{% for item in souvenirs.items %}
+							<div class="souvenir">
+								<div class="souvenir__img">
+									<img src="img/souvenirs/{{item.img}}{{loop.index}}.png" alt="">
+								</div>
+								<div class="souvenir__content">
+									<div class="souvenir__title">{{item.title}}</div>
+									<div class="souvenir__description">{{item.description}}</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="souvenirs__down">
+		<button class="btn-scrolldown">
+			{{mixins.icon('arrow-down')}}
+		</button>
+	</div>
+</div>
+<!-- end souvenirs -->

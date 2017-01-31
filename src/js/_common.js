@@ -5,6 +5,7 @@ import VALIDATION from './components/_validation';
 import {COUNTER} from './components/_counter';
 import './components/_modal-slider';
 import {CLIENTS} from './components/_clients';
+import {SOUVENIRS} from './components/_souvenirs';
 
 $(document).ready(e => {
 	if (!touch()) BODY.addClass('no-touch');
@@ -13,4 +14,5 @@ $(document).ready(e => {
 	VALIDATION();
 	COUNTER();
 	CLIENTS();
+	SOUVENIRS();
 });

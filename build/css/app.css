@@ -121,6 +121,12 @@ html {
   font-style: normal;
 }
 
+.icon-arrow-down {
+  width: 0.35em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-clock {
   width: 1em;
   height: 1em;
@@ -271,7 +277,6 @@ body {
   color: #fff;
   background: #0b1c2d;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -280,6 +285,7 @@ body {
 
 .out {
   overflow: hidden;
+  background: url(../img/hero-bg.png) no-repeat top center;
 }
 
 .container {
@@ -319,7 +325,7 @@ a {
 .header {
   position: relative;
   z-index: 1000;
-  padding: 50px 0 130px;
+  padding: 50px 0 30px;
 }
 
 .header__phones, .header__social {
@@ -493,7 +499,6 @@ a {
   display: block;
   color: #fff;
   font-family: "Lato Thin", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 2.23;
   text-transform: uppercase;
@@ -510,7 +515,6 @@ a {
   color: #fff;
   background: #353c43;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 2.23;
   text-transform: uppercase;
@@ -568,7 +572,6 @@ a {
   position: relative;
   float: left;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
   transition: color 0.25s ease;
@@ -684,14 +687,12 @@ a {
   display: inline-block;
   vertical-align: top;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
 }
 
 .phones__link {
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
   transition: color 0.25s ease;
@@ -709,7 +710,6 @@ a {
 
 .title-lg {
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 48px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -718,17 +718,23 @@ a {
 .title-md {
   text-align: center;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 36px;
   line-height: 1.67;
   text-transform: uppercase;
+}
+
+.title-md_thin {
+  font-family: "Lato Thin", Arial, sans-serif;
+}
+
+.title-md_thin strong {
+  font-family: "Lato Black", Arial, sans-serif;
 }
 
 .btn {
   padding: 10px 23px;
   color: #fc0;
   font-family: "Lato Bold", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 1.05;
   text-align: center;
@@ -758,6 +764,38 @@ a {
 .no-touch .btn_fill:hover {
   color: #fc0;
   background: transparent;
+}
+
+.btn-scrolldown {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 27px;
+  border-radius: 50%;
+  width: 154px;
+  height: 154px;
+  background: rgba(23, 67, 112, 0.4);
+  text-align: center;
+  font-size: 0;
+  transition: background 0.25s ease;
+}
+
+.btn-scrolldown:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.no-touch .btn-scrolldown:hover {
+  background: rgba(23, 67, 112, 0.8);
+}
+
+.btn-scrolldown .icon {
+  display: inline-block;
+  vertical-align: top;
+  fill: #fff;
+  font-size: 85px;
 }
 
 .heading {
@@ -805,7 +843,6 @@ a {
 .form-control__label {
   float: left;
   font-family: "Lato Regular", Arial, sans-serif;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
   padding: 4px 14px 4px 0;
@@ -831,7 +868,6 @@ a {
 .form-control__input {
   height: 38px;
   font-family: "Lato Regular", Arial, sans-serif;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
 }
@@ -841,7 +877,6 @@ a {
   height: 138px;
   resize: none;
   font-family: "Lato Regular", Arial, sans-serif;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -861,7 +896,6 @@ a {
   padding: 0 3%;
   width: 25%;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 24px;
   vertical-align: top;
   display: inline-block;
@@ -887,7 +921,6 @@ a {
 
 .quality__text strong {
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
 }
 
 .steps {
@@ -897,7 +930,6 @@ a {
 .steps__topic {
   max-width: 460px;
   font-family: "Lato Thin", Arial, sans-serif;
-  font-weight: normal;
   font-size: 24px;
 }
 
@@ -923,7 +955,6 @@ a {
   position: absolute;
   padding-left: 98px;
   font-family: "Lato Light Italic", Arial, sans-serif;
-  font-weight: normal;
   font-size: 15px;
   line-height: 1.6;
 }
@@ -968,7 +999,6 @@ a {
   padding: 7px 15px 7px 20px;
   color: #000;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 36px;
   line-height: 1;
   text-transform: uppercase;
@@ -1002,7 +1032,6 @@ a {
 .steps__title {
   padding-top: 2px;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 1.34;
 }
@@ -1011,7 +1040,6 @@ a {
   opacity: 0.4;
   color: #fff;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 1.34;
   text-transform: uppercase;
@@ -1086,7 +1114,6 @@ a {
   vertical-align: top;
   padding-right: 5px;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 25px;
   line-height: 1.2;
 }
@@ -1095,7 +1122,6 @@ a {
   display: inline-block;
   vertical-align: top;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -1110,7 +1136,6 @@ a {
   padding-left: 32px;
   color: #000;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
 }
@@ -1275,7 +1300,6 @@ a {
 .member__name {
   margin-bottom: 10px;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 22px;
   line-height: 1.37;
 }
@@ -1283,14 +1307,12 @@ a {
 .member__position {
   margin-bottom: 20px;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 20px;
   line-height: 1.5;
 }
 
 .member__description {
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
 }
@@ -1313,7 +1335,6 @@ a {
   margin: 0 auto 45px;
   max-width: 730px;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 22px;
   line-height: 1.64;
   text-align: center;
@@ -1357,7 +1378,6 @@ a {
   width: 95px;
   color: #e94f4f;
   font-family: "Lato Light Italic", Arial, sans-serif;
-  font-weight: normal;
   font-size: 15px;
   line-height: 1.34;
 }
@@ -1582,7 +1602,6 @@ a {
   padding: 7px 20px 7px 30px;
   color: #000;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -1625,7 +1644,6 @@ a {
   float: left;
   width: 107px;
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
 }
 
 .characteristics__data {
@@ -1725,7 +1743,6 @@ a {
   margin-bottom: 20px;
   color: #fc0;
   font-family: "Lato Thin", Arial, sans-serif;
-  font-weight: normal;
   font-size: 100px;
   line-height: 0.72;
   text-transform: uppercase;
@@ -1736,14 +1753,12 @@ a {
   max-width: 230px;
   color: #fff;
   font-family: "Lato Light", Arial, sans-serif;
-  font-weight: normal;
   font-size: 24px;
   line-height: 1.25;
 }
 
 .counter__description strong {
   font-family: "Lato Black", Arial, sans-serif;
-  font-weight: normal;
 }
 
 .clients {
@@ -1881,6 +1896,186 @@ a {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
+}
+
+.souvenirs {
+  margin-bottom: 217px;
+}
+
+.souvenirs__container {
+  padding-bottom: 80px;
+}
+
+.souvenirs__content {
+  float: right;
+  padding-top: 100px;
+  width: 54%;
+  text-align: left;
+}
+
+.souvenirs__items {
+  float: right;
+  width: 46%;
+  padding-right: 20px;
+}
+
+.souvenirs__items-in {
+  position: relative;
+  margin: -30px 0 0 -45px;
+  max-width: 500px;
+}
+
+.souvenirs__title {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.souvenirs__description {
+  margin-bottom: 32px;
+  font-family: "Lato Thin", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.64;
+}
+
+.souvenirs__prev, .souvenirs__next {
+  position: absolute;
+  z-index: 10;
+  top: 280px;
+  opacity: 0.35;
+  background: none;
+  transition: opacity 0.25s ease;
+}
+
+.no-touch .souvenirs__prev:hover, .no-touch .souvenirs__next:hover {
+  opacity: 1;
+}
+
+.souvenirs__prev .icon, .souvenirs__next .icon {
+  fill: #fff;
+  font-size: 82px;
+}
+
+.souvenirs__prev {
+  left: 0;
+}
+
+.souvenirs__next {
+  right: 0;
+}
+
+.souvenirs__down {
+  text-align: center;
+}
+
+.souvenir {
+  position: relative;
+}
+
+.souvenir__img {
+  height: 560px;
+  text-align: center;
+  font-size: 0;
+}
+
+.souvenir__img:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.souvenir__img img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-animation: fly 4s infinite ease;
+  animation: fly 4s infinite ease;
+}
+
+.souvenir__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.souvenir__title, .souvenir__description {
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.souvenir__title {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 2.58;
+  text-transform: uppercase;
+}
+
+.souvenir__description {
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.34;
+}
+
+@-webkit-keyframes fly {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
+  }
+}
+
+@keyframes fly {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
+  }
+}
+
+.souvenirs-background {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.souvenirs-background img {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+}
+
+.souvenirs-background__shining2 {
+  top: -230px;
+}
+
+.souvenirs-background__shining1 {
+  top: 45px;
+}
+
+.souvenirs-background__light2 {
+  top: 65px;
+}
+
+.souvenirs-background__light1 {
+  top: 55px;
+}
+
+.souvenirs-background__shadow {
+  top: 277px;
 }
 
 @media only screen and (max-width: 1201px) {
@@ -2061,7 +2256,6 @@ a {
     left: -40px;
     color: #fc0;
     font-family: "Lato Black", Arial, sans-serif;
-    font-weight: normal;
     font-size: 20px;
     counter-increment: list;
     content: counter(list) ".";
