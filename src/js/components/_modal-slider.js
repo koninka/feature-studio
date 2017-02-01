@@ -47,8 +47,11 @@ const MODAL = (link) => {
 		if (windowWidth > 900) {
 			return 5;
 		}
-		else {
+		else if (windowWidth > 589) {
 			return 3;
+		}
+		else {
+			return 1;
 		}
 	};
 
@@ -117,7 +120,15 @@ const MODAL = (link) => {
 				asNavFor: '.js-product-list .js-modal-slider-for',
 				arrows: false,
 				dots: false,
-				focusOnSelect: true
+				focusOnSelect: true,
+				responsive: [
+					{
+						breakpoint: 589,
+						settings: {
+							slidesToShow: 3
+						}
+					}
+				]
 			};
 			
 		sliderFor.on('init', function() {

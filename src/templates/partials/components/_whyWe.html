@@ -22,29 +22,42 @@
 		class: 'first',
 		numb: '01',
 		title: 'Подберите товары <br>в нашем каталоге',
-		link: 'Перейти в каталог'
+		link: 'Перейти в каталог',
+		arr: 'ar1',
+		arrNumb: '1',
+		arr2: 'ar2',
+		arrNumb2: '2'
 	},
 	{
 		class: 'second',
 		numb: '02',
 		title: 'Подготовьте макеты к печати',
-		text: 'Или выберите один из готовых вариантов'
+		text: 'Или выберите один из готовых вариантов',
+		arr: 'ar3',
+		arrNumb: '3'
 	},
 	{
 		class: 'third',
 		numb: '03',
 		title: 'Ждите доставки',
-		text: 'Доставим по всей территории РФ'
+		text: 'Доставим по всей территории РФ',
+		arr: 'ar4',
+		arrNumb: '4'
 	},
 	{
 		class: 'fourth',
 		numb: '04',
-		title: 'Дарите ваши фирменные сувениры клиентам, партнерам, сотрудникам'
+		title: 'Дарите ваши фирменные сувениры клиентам, партнерам, сотрудникам',
+		arr: 'ar5',
+		arrNumb: '5',
+		arr2: 'ar6',
+		arrNumb2: '6'
 	}
 ] %}
 
 <!-- whyWe -->
 <section class="whywe">
+	<div class="whywe__planet"><img src="./img/step_planet.png" alt="img"></div>
 	<div class="inner">
 		<div class="heading">
 			<h3 class="title-md">Почему мы?</h3>
@@ -71,11 +84,14 @@
 				<a href="#" class="btn" type="button">Заказать услуги</a>
 			</div>
 			<div class="steps__wrap">
+				<div class="steps__nlo"><img src="./img/nlo.png" alt="img"></div>
 				<ul class="steps__list">
 					{% for data in steps %}
 						<li class="steps__item steps__item_{{data.class}}">
 							<div class="steps__numb">{{ data.numb }}</div>
 							<div class="steps__title">{{ data.title | safe }}</div>
+							<img class="steps__arr steps__arr_{{ data.arrNumb }}" src="./img/{{ data.arr }}.svg" alt="img">
+							{% if data.arr2 %}<img class="steps__arr steps__arr_{{ data.arrNumb2 }}" src="./img/{{ data.arr2 }}.svg" alt="img">{% endif %}
 							{% if data.link %}<a href="#" class="steps__link">{{ data.link | safe }}</a>{% endif %}
 							{% if data.text %}<p>{{ data.text | safe }}</p>{% endif %}
 						</li>

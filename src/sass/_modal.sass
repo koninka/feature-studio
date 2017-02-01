@@ -5,14 +5,27 @@
 	border-bottom: 1px solid rgba($white, 0.06) 
 	display: none
 	+clr
+	+sm
+		padding: 57px 0 72px
 	&__left
 		float: left
 		padding-right: 50px
 		width: 476px
+		+sm
+			float: none
+			padding-right: 0
+			margin: 0 auto
+			width: 428px
+		+xs
+			width: 300px
 	&__right
 		float: right
 		width: calc(100% - 476px) 
 		text-align: left
+		+sm
+			float: none
+			margin-top: 97px
+			width: 100%
 		.btn
 			margin-top: 38px
 	&__title
@@ -34,7 +47,8 @@
 			+arr(12, 50, $yellow, tl) 
 			+md
 				display: none
-
+		+md
+			padding: 7px 20px
 .characteristics
 	margin-top: 35px
 	&__row
@@ -53,10 +67,12 @@
 		float: left
 		width: 26px
 		height: 24px
-		vertical-align: top
-		display: inline-block
 		&:not(:first-child)
 			margin-left: 9px
+			+md
+				margin-left: 0
+		+xs
+			margin: 5px 5px 0 0
 
 .slider-for,
 .slider-nav
@@ -82,6 +98,9 @@
 	opacity: 0
 	transition: opacity .2s ease-in-out
 	transition-delay: .5s
+	+xs
+		margin: 25px auto 0
+		width: 250px
 	&.is-loaded
 			opacity: 1
 	&:before,
@@ -105,7 +124,10 @@
 		height: 34px
 		font-size: 0
 		z-index: 2
+		transition: opacity .2s ease-in-out
 		background-color: transparent 
+		+hover
+			opacity: 0.7
 	.slider-nav-prev
 		left: -22px
 		background: url(../img/slider-nav-prev.svg) no-repeat 
@@ -116,6 +138,8 @@
 		background-size: contain
 .slider-for
 	opacity: 0
+	img
+		max-width: 100%
 .slider-nav
 	margin: 0 -5px
 	&__slide

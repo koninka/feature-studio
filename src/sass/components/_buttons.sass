@@ -26,7 +26,7 @@
 .btn-scrolldown
 	display: inline-block
 	vertical-align: top
-	padding-top: 27px
+	padding-top: 34px
 	border-radius: 50%
 	width: 154px
 	height: 154px
@@ -40,3 +40,12 @@
 		vertical-align: top
 		fill: $white
 		font-size: 85px
+		animation: goTo 2s infinite ease-in-out
+		
+@keyframes goTo
+	0%
+		transform: translateY(8px)
+	50%
+		transform: translateY(-8px)
+	100%
+		transform: translateY(8px)

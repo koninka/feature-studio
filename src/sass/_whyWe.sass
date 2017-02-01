@@ -1,6 +1,22 @@
 .whywe
+	position: relative
 	padding: 40px 0 85px
-	overflow: hidden
+	&__planet
+		position: absolute
+		top: 50px
+		right: 0
+		width: 950px
+		+md
+			top: 500px
+			width: 550px
+		+sm
+			top: 787px
+			right: -88px
+		+xs
+			display: none
+		img
+			max-width: 100%
+			display: block
 	+md
 		padding: 67px 0 125px 
 	+sm
@@ -143,7 +159,7 @@
 	&__logo
 		position: absolute
 		top: 266px
-		left: 455px
+		left: 460px
 		padding-left: 0
 		text-align: center
 		&:before
@@ -216,6 +232,76 @@
 			+sm
 				top: 30px
 				left: 506px
+	&__arr 
+		position: absolute
+		+xs
+			display: none
+		&_1
+			top: 100%
+			left: -85px
+			width: 75px
+			+md
+				top: 231px
+				left: 97px
+				width: 45px
+			+sm
+				top: 211px
+				left: -41px
+		&_2
+			width: 64px
+			top: -34px
+			left: 107px
+			+md
+				width: 40px
+				top: 160px
+				left: 213px
+			+sm
+				top: 140px
+				left: 72px
+		&_3
+			width: 234px
+			top: 60px
+			left: 20px
+			+md
+				width: 145px
+				top: 158px
+				left: 267px
+			+sm
+				top: 140px
+				left: 134px
+		&_4
+			width: 102px
+			top: 82px
+			left: -102px
+			+md
+				width: 63px 
+				top: 182px
+				left: 470px
+			+sm
+				top: 161px
+				left: 338px
+		&_5
+			top: 83px
+			left: -124px
+			width: 120px
+			+md
+				width: 75px 
+				top: 100px
+				left: 564px
+			+sm
+				top: 80px
+				left: 427px
+		&_6
+			width: 33px
+			top: -130px
+			left: 45px
+			+md
+				width: 21px 
+				top: -30px
+				left: 668px
+			+sm
+				top: -52px
+				left: 536px
 	&__title
 		padding-top: 2px
 		+f('ll', 18, 24)
@@ -260,5 +346,20 @@
 			width: 70px
 		img
 			width: 100%
+			display: block
+	&__nlo
+		position: absolute
+		top: -397px
+		right: 50px
+		width: 575px 
+		+md
+			top: -408px
+			right: -150px
+		+sm
+			right: -309px
+		+xs
+			display: none
+		img
+			max-width: 100%
 			display: block
 		
