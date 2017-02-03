@@ -1,3 +1,4 @@
+import {initSlider} from './../_constants';
 
 export const SOUVENIRS = () => {
 
@@ -9,7 +10,7 @@ export const SOUVENIRS = () => {
 		let prev = _this.find('.js-souvenirs-prev');
 		let next = _this.find('.js-souvenirs-next');
 
-		slider.slick({
+		initSlider(slider, {
 			prevArrow: prev,
 			nextArrow: next,
 			fade: true,

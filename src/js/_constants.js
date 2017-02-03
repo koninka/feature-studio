@@ -1,5 +1,6 @@
 export const {
 	touch,
+	initSlider,
 	BODY,
 	WIN,
 	ACTIVE,
@@ -9,6 +10,12 @@ export const {
 } = {
 	touch() {
 		return 'ontouchstart' in window;
+	},
+	initSlider(slider, options) {
+		slider.on('init', () => {
+			slider.addClass('is-loaded');
+		});
+		slider.slick(options);
 	},
 	BODY: $('body'),
 	WIN: $(window),
