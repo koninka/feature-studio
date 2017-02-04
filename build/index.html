@@ -25,32 +25,32 @@
 				<span class="btn-nav__icon"><i></i></span>
 				<span class="btn-nav__text">Меню</span>
 			</button>
-            <a href="#" class="menu__link">Заказать услуги</a>
+            <a href="#services" class="menu__link">Заказать услуги</a>
             <nav class="nav js-nav">
               <ul class="nav__list">
 
                 <li class="nav__item">
-                  <a href="#" class="nav__link">О компании</a>
+                  <a href="#souvenirs" class="nav__link js-go-to">О компании</a>
                 </li>
 
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Заказать услуги</a>
+                  <a href="#services" class="nav__link js-go-to">Заказать услуги</a>
                 </li>
 
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Почему мы</a>
+                  <a href="#whywe" class="nav__link js-go-to">Почему мы</a>
                 </li>
 
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Клиенты</a>
+                  <a href="#clients" class="nav__link js-go-to">Клиенты</a>
                 </li>
 
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Продукция</a>
+                  <a href="#products" class="nav__link js-go-to">Продукция</a>
                 </li>
 
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Контакты</a>
+                  <a href="#map" class="nav__link js-go-to">Контакты</a>
                 </li>
 
               </ul>
@@ -108,7 +108,7 @@
       <!-- end header -->
 
       <!-- begin souvenirs  -->
-      <div class="souvenirs js-souvenirs">
+      <div class="souvenirs js-souvenirs" id="souvenirs">
         <div class="souvenirs__container">
           <div class="inner">
             <img src="img/hero-bg-2.png" alt="" class="souvenirs-bg">
@@ -116,7 +116,7 @@
               <h2 class="souvenirs__title title-md title-md_thin">наши <strong>космические Технологии</strong> для создания вашего идеального сувенира</h2>
               <div class="souvenirs__description">Подберите товар в нашем каталоге и напечатайте на нем уникальный фирменный подарок для ваших клиентов, партнеров, сотрудников</div>
               <div class="souvenirs__button">
-                <a href="#" class="btn">Заказать услуги</a>
+                <a href="#services" class="btn js-go-to">Заказать услуги</a>
               </div>
             </div>
             <div class="souvenirs__items">
@@ -226,17 +226,17 @@
           </div>
         </div>
         <div class="souvenirs__down">
-          <button class="btn-scrolldown">
-			
-<svg class="icon icon-arrow-down"><use xlink:href="img/sprite.svg#icon-arrow-down"></use></svg>
+          <a href="#services" class="btn-scrolldown js-go-to">
 
-		</button>
+            <svg class="icon icon-arrow-down"><use xlink:href="img/sprite.svg#icon-arrow-down"></use></svg>
+
+          </a>
         </div>
       </div>
       <!-- end souvenirs -->
 
       <!-- begin services  -->
-      <div class="services">
+      <div class="services" id="services">
         <div class="inner">
           <div class="services__form">
             <h2 class="title-md services__title">Заказать услуги</h2>
@@ -303,7 +303,7 @@
       <!-- end services -->
 
       <!-- whyWe -->
-      <section class="whywe">
+      <section class="whywe" id="whywe">
         <div class="whywe__planet"><img src="./img/step_planet.png" alt="img"></div>
         <div class="inner">
           <div class="heading">
@@ -453,7 +453,7 @@
       <!-- end counters -->
 
       <!-- begin clients  -->
-      <div class="clients">
+      <div class="clients" id="clients">
         <div class="clients-background">
           <img src="img/clients-background/clients-dark.png" alt="bg-dark" class="clients-background__dark">
           <img src="img/clients-background/clients-shadow.png" alt="bg-shadow" class="clients-background__shadow">
@@ -555,7 +555,7 @@
       <!-- end clients -->
 
       <!-- products -->
-      <section class="products">
+      <section class="products" id="products">
         <div class="products__inner inner">
           <div class="heading">
             <h3 class="title-md">Наша продукция</h3>

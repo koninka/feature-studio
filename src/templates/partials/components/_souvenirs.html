@@ -1,7 +1,7 @@
 {% import "../../data/_souvenirs.html" as souvenirs %}
 
 <!-- begin souvenirs  -->
-<div class="souvenirs js-souvenirs">
+<div class="souvenirs js-souvenirs" id="souvenirs">
 	<div class="souvenirs__container">
 		<div class="inner">
 			<img src="img/hero-bg-2.png" alt="" class="souvenirs-bg">
@@ -9,7 +9,7 @@
 				<h2 class="souvenirs__title title-md title-md_thin">{{souvenirs.title | safe}}</h2>
 				<div class="souvenirs__description">{{souvenirs.description}}</div>
 				<div class="souvenirs__button">
-					<a href="#" class="btn">{{souvenirs.btn}}</a>
+					<a href="#services" class="btn js-go-to">{{souvenirs.btn}}</a>
 				</div>
 			</div>
 			<div class="souvenirs__items">
@@ -45,9 +45,9 @@
 		</div>
 	</div>
 	<div class="souvenirs__down">
-		<button class="btn-scrolldown">
+		<a href="#services" class="btn-scrolldown js-go-to">
 			{{mixins.icon('arrow-down')}}
-		</button>
+		</a>
 	</div>
 </div>
 <!-- end souvenirs -->
