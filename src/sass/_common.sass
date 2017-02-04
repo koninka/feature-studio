@@ -24,6 +24,14 @@ body
 	+sm
 		max-width: 590px
 
+.slider-loaded
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.3s ease, visibility 0.3s ease
+	&.is-loaded
+		opacity: 1
+		visibility: visible
+
 h1, h2, h3, h4, h5, h6, strong, em, i, cite, th
 	font-weight: normal
 	font-style: normal

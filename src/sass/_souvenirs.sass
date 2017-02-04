@@ -1,20 +1,42 @@
 .souvenirs
 	margin-bottom: 217px
+	+xs
+		margin-bottom: 50px
 	&__container
 		padding-bottom: 80px
 	&__content
+		position: relative
+		z-index: 2
 		float: right
 		padding-top: 100px
 		width: 54%
 		text-align: left
+		+md
+			float: none
+			padding-top: 80px
+			margin: 0 auto
+			width: 100%
+			max-width: 700px
 	&__items
-		float: right
+		float: left
 		width: 46%
 		padding-right: 20px
+		+md
+			float: none
+			padding: 0
+			margin: 0 auto
+			width: 100%
+			max-width: 500px
+		+sm
+			max-width: 320px
 	&__items-in
 		position: relative
 		margin: -30px 0 0 -45px
 		max-width: 500px
+		+md
+			margin: -50px 0 0
+		+sm
+			margin-top: -80px
 	&__slider
 	&__title
 		margin-bottom: 10px
@@ -22,6 +44,8 @@
 	&__description
 		margin-bottom: 32px
 		+f('lt', 22, 36)
+		+md
+			+f(null, 20, 36)
 	&__prev,
 	&__next
 		position: absolute
@@ -30,23 +54,31 @@
 		opacity: 0.35
 		background: none
 		+t(opacity)
+		+sm
+			top: 240px
 		+hover
 			opacity: 1
 		.icon
 			fill: $white
 			font-size: 82px
+			+sm
+				font-size: 52px
 	&__prev
 		left: 0
 	&__next
 		right: 0
 	&__down
 		text-align: center
+		+md
+			display: none
 
 .souvenir
 	position: relative
 	&__img
 		height: 560px
 		+vertical
+		+sm
+			height: 500px
 		img
 			display: inline-block
 			vertical-align: middle
@@ -65,6 +97,8 @@
 		margin: 0 auto
 		color: $darkBlue
 		text-align: center
+		+xs
+			color: $white
 	&__title
 		+f('black', 14, 36)
 		text-transform: uppercase
@@ -83,6 +117,13 @@
 	top: -290px
 	left: -444px
 	width: 2000px
+	+md
+		top: -205px
+		left: -200px
+	+sm
+		left: -350px
+	+xs
+		display: none
 
 .souvenirs-background
 	position: absolute

@@ -1,4 +1,4 @@
-import {slickMD, slickSM, slickXS} from './../_constants';
+import {slickMD, slickSM, slickXS, initSlider} from './../_constants';
 
 export const CLIENTS = () => {
 
@@ -10,7 +10,7 @@ export const CLIENTS = () => {
 		let prev = _this.find('.js-clients-prev');
 		let next = _this.find('.js-clients-next');
 
-		slider.slick({
+		initSlider(slider, {
 			prevArrow: prev,
 			nextArrow: next,
 			slidesToShow: 7,
