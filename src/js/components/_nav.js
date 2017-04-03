@@ -20,6 +20,9 @@ export const NAV = {
 				$(e.target).closest('.js-btn-nav').length) return;
 			this.close();
 		});
+		$(".js-go-to").on('click', e => {
+			this.close();
+		});
 	},
 
 	open() {
