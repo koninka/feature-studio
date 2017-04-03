@@ -1,4 +1,5 @@
 import {WIN} from './../_constants';
+import './../lib/odometer.min';
 
 export const COUNTER = () => {
 	let counter = $('.js-counter');
@@ -6,19 +7,16 @@ export const COUNTER = () => {
 	let counting = () => {
 		if (counters.offset().top + counters.outerHeight() <= WIN.scrollTop() + WIN.outerHeight()) {
 			WIN.off('scroll', counting);
+			WIN.odometerOptions = {
+ 				auto: true,
+ 				format: 'd',
+ 				duration: 1000,
+ 				animation: 'count'
+			};
 			counter.each(function() {
 				let _this = $(this);
 				let numbers = _this.data('number');
-
-				_this.prop('counter', 0).animate({
-					counter: numbers
-				}, {
-					duration: 2000,
-					easing: 'swing',
-					step(i) {
-						_this.text(Math.ceil(i));
-					}
-				});
+				$(this).html(numbers);
 			});
 		};
 	};
