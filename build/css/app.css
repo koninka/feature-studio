@@ -1683,6 +1683,10 @@ a {
   width: 476px;
 }
 
+.modal__left--mobile {
+  display: none;
+}
+
 .modal__right {
   float: right;
   width: calc(100% - 476px);
@@ -1879,6 +1883,10 @@ a {
 
 .slider-nav img {
   width: 100%;
+}
+
+.slider-nav-wrap:before, .slider-nav-wrap:after {
+  width: 0 !important;
 }
 
 .counters {
@@ -2969,10 +2977,26 @@ a {
     width: 428px;
   }
 
+  .modal__left--desktop {
+    display: none;
+  }
+
+  .modal__left--mobile {
+    display: block;
+  }
+
   .modal__right {
     float: none;
     margin-top: 97px;
     width: 100%;
+  }
+
+  .slider-for {
+    margin-top: 25px;
+  }
+
+  .slider-for__slide {
+    height: 100% !important;
   }
 
   .counters {

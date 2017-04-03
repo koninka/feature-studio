@@ -18,6 +18,13 @@
 			width: 428px
 		+xs
 			width: 300px
+		&--desktop
+			+sm
+				display: none
+		&--mobile
+			display: none
+			+sm
+				display: block
 	&__right
 		float: right
 		width: calc(100% - 476px) 
@@ -138,6 +145,8 @@
 		background-size: contain
 .slider-for
 	opacity: 0
+	+sm
+		margin-top: 25px
 	img
 		max-width: 100%
 .slider-nav
@@ -146,4 +155,11 @@
 		padding: 0 5px
 	img
 		width: 100%
+.slider-for__slide
+	+sm
+		height: 100% !important
 	
+.slider-nav-wrap
+	&:before,
+	&:after
+		width: 0 !important
