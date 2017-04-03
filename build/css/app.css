@@ -517,19 +517,26 @@ a {
 }
 
 .menu a {
-  color: inherit;
+  color: #fc0;
 }
 
 .menu__link {
   float: right;
   display: none;
   padding: 5px 0;
+  line-height: .7;
   margin-right: 140px;
-  transition: color 0.25s ease;
+  font-weight: 600;
+  border: 2px solid #fc0;
+  border-radius: 4px;
+  margin: 5px 0;
+  padding: 10px 10px;
+  color: #fc0;
 }
 
-.no-touch .menu__link:hover {
-  color: #fc0;
+.menu__link:hover {
+  color: #fff;
+  border: 0;
 }
 
 .nav__list {
@@ -553,6 +560,7 @@ a {
   padding: 5px 0;
   font-size: 1rem;
   line-height: 1.8;
+  color: inherit;
   transition: color 0.25s ease;
 }
 
@@ -2342,12 +2350,12 @@ a {
   }
 
   .header__logo {
-    padding-top: 40px;
+    padding-top: 25px;
     max-width: 216px;
   }
 
   .header__logo-circle {
-    top: 80px;
+    top: 40px;
     height: 60px;
   }
 
@@ -2738,10 +2746,6 @@ a {
     padding: 0 20px;
   }
 
-  .social__mail {
-    margin: 12px 0;
-  }
-
   .social__list {
     display: none;
   }
@@ -2951,6 +2955,10 @@ a {
 
   .member__content {
     max-width: 320px;
+  }
+
+  #services {
+    top: -75px;
   }
 
   .services__form {

@@ -25,7 +25,7 @@
 		font-size: 0
 		text-align: center
 		+md
-			padding-top: 40px
+			padding-top: 25px
 			max-width: 216px
 		+xs
 			padding-top: 0
@@ -54,7 +54,7 @@
 			height: 100px
 			transform: translate3d(0,0,0)
 			+md
-				top: 80px
+				top: 40px
 				height: 60px
 			+xs
 				top: 40px
@@ -169,19 +169,26 @@
 	+f('ll', 18, 40)
 	text-transform: uppercase
 	a
-		color: inherit
+		color: #fc0
 	&__link
 		float: right
 		display: none
 		padding: 5px 0
+		line-height: .7
 		margin-right: 140px
-		+t(color)
+		font-weight: 600
+		border: 2px solid #fc0
+		border-radius: 4px
+		margin: 5px 0
+		padding: 10px 10px
+		color: #fc0
+		&:hover
+			color: #fff
+			border: 0
 		+sm
 			display: block
 		+xs
 			margin-right: 0
-		+hover
-			color: $yellow
 
 .nav
 	+sm
@@ -216,6 +223,7 @@
 			padding: 5px 0
 			font-size: 1rem
 			line-height: 1.8
+			color: inherit
 			+t(color)
 			+hover
 				color: $yellow
@@ -230,8 +238,6 @@
 		+t(color)
 		+md
 			+f(null, 16, 24)
-		+sm
-			margin: 12px 0
 		+xs
 			+f(null, 14, 24)
 		+hover
