@@ -144,5 +144,9 @@ const MODAL = (link) => {
 		};
 	};
 	initSlider();
+
+	let classForWidth = $(".slider-for__slide");
+	let sliderWidth = classForWidth.width();
+	classForWidth.css('height', sliderWidth + 'px' );
 	
 };

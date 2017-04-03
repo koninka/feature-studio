@@ -1,3 +1,7 @@
+#whywe
+	position: relative
+	visibility: hidden
+	top: -35px
 .whywe
 	position: relative
 	padding: 40px 0 85px
@@ -30,6 +34,8 @@
 	&__item
 		padding: 0 3%
 		width: 25%
+		position: relative;
+		top: 350px
 		+f('ll', 24)
 		vertical-align: top
 		display: inline-block
@@ -48,6 +54,9 @@
 		&:nth-child(2)
 			+sm
 				margin-top: 0
+		&--animate
+			top: 0px
+			transition: all 1s ease
 	&__picture
 		height: 108px
 		line-height: 108px 
@@ -308,8 +317,7 @@
 		+md
 			position: relative
 		&_lg
-			opacity: 0.4
-			color: $white
+			color: #fc0
 			+f('black', 18, 24)
 			text-transform: uppercase
 			+md

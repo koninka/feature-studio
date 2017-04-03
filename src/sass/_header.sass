@@ -2,10 +2,10 @@
 	position: relative
 	z-index: 1000
 	// padding: 50px 0 130px
-	padding: 50px 0 30px
+	padding: 40px 0 20px
 	&__phones,
 	&__social
-		padding: 39px 0 42px
+		padding: 20px 0
 		+sm
 			padding: 35px 0
 		+xs
@@ -34,7 +34,7 @@
 		&:after
 			content: ""
 			position: absolute
-			top: 110px
+			top: 70px
 			margin: 0 20px
 			width: 3000px
 			border-bottom: 2px dashed $white
@@ -47,7 +47,7 @@
 			left: 100%
 		&-circle
 			position: absolute
-			top: 60px
+			top: 20px
 			left: 0
 			right: 0
 			overflow: hidden
@@ -78,6 +78,7 @@
 	display: inline-block
 	vertical-align: top
 	width: 170px
+	top: 4px
 	+md
 		width: 115px
 	img
@@ -213,7 +214,8 @@
 				padding: 0 20px
 		a
 			padding: 5px 0
-			font-size: 18px
+			font-size: 1rem
+			line-height: 1.8
 			+t(color)
 			+hover
 				color: $yellow
