@@ -1,19 +1,17 @@
 .souvenirs
-	margin-bottom: 217px
+	margin-bottom: 175px
 	+xs
 		margin-bottom: 50px
-	&__container
-		padding-bottom: 80px
 	&__content
 		position: relative
 		z-index: 2
 		float: right
-		padding-top: 100px
+		padding-top: 45px
 		width: 54%
 		text-align: left
 		+md
 			float: none
-			padding-top: 80px
+			padding-top: 45px
 			margin: 0 auto
 			width: 100%
 			max-width: 700px
@@ -21,6 +19,8 @@
 		float: left
 		width: 46%
 		padding-right: 20px
+		position: relative
+		top: -45px
 		+md
 			float: none
 			padding: 0
@@ -41,16 +41,17 @@
 	&__title
 		margin-bottom: 10px
 		text-align: left
+		font-size: 23px
 	&__description
 		margin-bottom: 32px
-		+f('lt', 22, 36)
+		+f('lt', 18, 36)
 		+md
 			+f(null, 20, 36)
 	&__prev,
 	&__next
 		position: absolute
 		z-index: 10
-		top: 280px
+		top: 230px
 		opacity: 0.35
 		background: none
 		+t(opacity)
@@ -75,14 +76,14 @@
 .souvenir
 	position: relative
 	&__img
-		height: 560px
+		height: 400px
 		+vertical
 		+sm
 			height: 500px
 		img
 			display: inline-block
 			vertical-align: middle
-			max-width: 100%
+			max-width: 65%
 			max-height: 100%
 			animation: fly 4s infinite ease
 	&__content

@@ -2268,18 +2268,14 @@ a {
 }
 
 .souvenirs {
-  margin-bottom: 217px;
-}
-
-.souvenirs__container {
-  padding-bottom: 80px;
+  margin-bottom: 175px;
 }
 
 .souvenirs__content {
   position: relative;
   z-index: 2;
   float: right;
-  padding-top: 100px;
+  padding-top: 45px;
   width: 54%;
   text-align: left;
 }
@@ -2288,6 +2284,8 @@ a {
   float: left;
   width: 46%;
   padding-right: 20px;
+  position: relative;
+  top: -45px;
 }
 
 .souvenirs__items-in {
@@ -2299,19 +2297,20 @@ a {
 .souvenirs__title {
   margin-bottom: 10px;
   text-align: left;
+  font-size: 23px;
 }
 
 .souvenirs__description {
   margin-bottom: 32px;
   font-family: "Lato Thin", Arial, sans-serif;
-  font-size: 22px;
-  line-height: 1.64;
+  font-size: 18px;
+  line-height: 2;
 }
 
 .souvenirs__prev, .souvenirs__next {
   position: absolute;
   z-index: 10;
-  top: 280px;
+  top: 230px;
   opacity: 0.35;
   background: none;
   transition: opacity 0.25s ease;
@@ -2343,7 +2342,7 @@ a {
 }
 
 .souvenir__img {
-  height: 560px;
+  height: 400px;
   text-align: center;
   font-size: 0;
 }
@@ -2359,7 +2358,7 @@ a {
 .souvenir__img img {
   display: inline-block;
   vertical-align: middle;
-  max-width: 100%;
+  max-width: 65%;
   max-height: 100%;
   animation: fly 4s infinite ease;
 }
@@ -2375,7 +2374,7 @@ a {
 .souvenir__title, .souvenir__description {
   max-width: 200px;
   margin: 0 auto;
-  color: #29577f;
+  color: #223b50;
   text-align: center;
 }
 
@@ -2776,7 +2775,7 @@ a {
 
   .souvenirs__content {
     float: none;
-    padding-top: 80px;
+    padding-top: 45px;
     margin: 0 auto;
     width: 100%;
     max-width: 700px;
