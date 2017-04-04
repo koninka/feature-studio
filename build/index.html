@@ -562,7 +562,29 @@
         <div class="products__inner inner">
           <div class="heading">
             <h3 class="title-md">Наша продукция</h3>
-            <a href="#" class="btn" download>Скачать оптовый прайс</a>
+            <a href="#modals" class="btn">Скачать оптовый прайс</a>
+            <aside class="modals" id="modals">
+              <div class="headers">
+                <h3 class="modals__title">Заголовок модального окна</h2>
+              </div>
+              <section>
+                <p class="modals__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis euismod tortor et pulvinar. Sed ac dapibus tellus. Morbi a tincidunt libero, ac luctus ex. Fusce ut pellentesque tortor. Nulla vehicula sed leo at ultricies. Duis ultricies iaculis
+                  ante ac convallis. Aliquam ac nunc sit amet enim vulputate mollis. Suspendisse maximus ante purus, vitae malesuada leo laoreet a. Integer vulputate, turpis vitae sollicitudin laoreet, dui neque pharetra sem
+                </p>
+                <form name="download_price">
+                  <div class="wrapper_inp">
+                    <input type="text" class="modals__inp" placeholder="Имя">
+                    <input type="email" class="modals__inp" placeholder="Email">
+                    <input type="number" class="modals__inp" placeholder="Телефон">
+                  </div>
+                  <button type="submit" class="btn">Получить</button>
+                </form>
+              </section>
+              <div class="footers">
+                <a href="#" class="btn_close">Закрыть</a>
+              </div>
+            </aside>
           </div>
           <div class="products__list js-product-list">
 
