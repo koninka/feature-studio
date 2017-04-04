@@ -718,6 +718,7 @@ a {
 .tel--hidden, .tel--visible {
   margin: 8px 0;
   padding: 3px 10px;
+  transition: all .4s ease;
 }
 
 .tel--hidden {
@@ -1470,8 +1471,8 @@ a {
   margin: 0 auto 45px;
   max-width: 730px;
   font-family: "Lato Light", Arial, sans-serif;
-  font-size: 22px;
-  line-height: 1.64;
+  font-size: 18px;
+  line-height: 2;
   text-align: center;
 }
 
@@ -1534,6 +1535,21 @@ a {
 
 .form-error li:not(:first-child) {
   display: none;
+}
+
+.form-control__input::-webkit-input-placeholder,
+.form-control__textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form-control__input::-moz-placeholder,
+.form-control__textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form-control__input:-ms-input-placeholder,
+.form-control__textarea:-ms-input-placeholder {
+  color: #ffffff;
 }
 
 #products {

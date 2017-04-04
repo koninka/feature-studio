@@ -22,7 +22,7 @@
 	&__subtitle
 		margin: 0 auto 45px
 		max-width: 730px
-		+f('ll', 22, 36)
+		+f('ll', 18, 36)
 		text-align: center
 		+md
 			margin-bottom: 30px
@@ -79,3 +79,12 @@
 	li
 		&:not(:first-child)
 			display: none
+
+.form-control__input,
+.form-control__textarea
+	&::-webkit-input-placeholder
+		color: #ffffff
+	&::-moz-placeholder
+		color: #ffffff
+	&:-ms-input-placeholder
+		color: #ffffff
