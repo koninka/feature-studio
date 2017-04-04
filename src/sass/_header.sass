@@ -1,9 +1,7 @@
 .header
 	position: relative
 	z-index: 1000
-	// padding: 50px 0 130px
 	padding: 40px 0 20px
-	&__phones,
 	&__social
 		padding: 20px 0
 		+sm
@@ -311,7 +309,6 @@
 
 .phones
 	float: left
-	font-size: 0
 	&__item,
 	&__link
 		display: inline-block
@@ -337,3 +334,30 @@
 			+f(null, 14, 24)
 		+hover
 			color: $yellow
+	
+.tel
+	&--hidden,
+	&--visible
+		margin: 8px 0
+		padding: 3px 10px
+		transition: all .4s ease
+
+	&--hidden
+		background-color: rgba(255, 255, 255, .1)
+		border-radius: 4px
+		border: 1px dotted #fff
+
+	&--visible
+		display: none
+
+.hidden__content
+	display: block
+	text-align: center
+	color: #ffffff
+	font-size: 1.2rem
+	text-transform: uppercase
+
+.tel__text--hidden
+	font-size: 1.2rem
+	text-transform: uppercase
+	color: $yellow

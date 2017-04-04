@@ -337,7 +337,7 @@ a {
   padding: 40px 0 20px;
 }
 
-.header__phones, .header__social {
+.header__social {
   padding: 20px 0;
 }
 
@@ -684,7 +684,6 @@ a {
 
 .phones {
   float: left;
-  font-size: 0;
 }
 
 .phones__item, .phones__link {
@@ -713,6 +712,35 @@ a {
 }
 
 .no-touch .phones__link:hover {
+  color: #fc0;
+}
+
+.tel--hidden, .tel--visible {
+  margin: 8px 0;
+  padding: 3px 10px;
+}
+
+.tel--hidden {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  border: 1px dotted #fff;
+}
+
+.tel--visible {
+  display: none;
+}
+
+.hidden__content {
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.tel__text--hidden {
+  font-size: 1.2rem;
+  text-transform: uppercase;
   color: #fc0;
 }
 
@@ -2814,7 +2842,7 @@ a {
     max-width: 590px;
   }
 
-  .header__phones, .header__social {
+  .header__social {
     padding: 35px 0;
   }
 
@@ -3192,7 +3220,7 @@ a {
 
 @media only screen and (max-width: 589px) {
 
-  .header__phones, .header__social {
+  .header__social {
     padding-bottom: 0;
   }
 
