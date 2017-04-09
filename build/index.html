@@ -54,13 +54,13 @@
                   <a href="#map" class="nav__link js-go-to">Контакты</a>
                 </li>
 
-                <li>
+                <li class="tel--mobile">
                   <a href="#services" class="menu__link">Заказать услуги</a>
                 </li>
                 <li class="tel--mobile">
                   <div class="tel--hidden">
                     <p>
-                      Подсмотреть и позвонить
+                      Посмотреть и позвонить
                     </p>
                     <p class="tel__text--hidden">
                       +7 (914) xxx-xx-xx
@@ -68,7 +68,7 @@
                   </div>
                   <div class="tel--visible">
                     <p>
-                      Подсмотреть и позвонить
+                      Посмотреть и позвонить
                     </p>
                     <a href="tel:+79147006877" class="hidden__content">+7 (914) 700-68-77</a>
                   </div>
@@ -446,7 +446,7 @@
           <div class="services__form">
             <h2 class="title-md services__title">Заказать услуги</h2>
             <div class="services__subtitle">Оставьте ваши контактные данные и наш менеджер обязательно свяжется с вами, чтобы обсудить условия заказа и доставки сувениров</div>
-            <form action="#" class="js-form">
+            <form action="#services" class="js-form">
               <div class="services__container">
                 <div class="services__error js-error-msg"></div>
                 <div class="services__row">
@@ -524,6 +524,13 @@
                 <button class="btn" type="submit">Оставить заявку</button>
               </div>
             </form>
+            <div class="okay__wrap">
+              <svg class="okay__item" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+					<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+					<g><path d="M500,10C229.4,10,10,229.4,10,500c0,270.6,219.4,490,490,490s490-219.4,490-490C990,229.4,770.6,10,500,10z M500,964.2C243.6,964.2,35.8,756.4,35.8,500C35.8,243.6,243.6,35.8,500,35.8c256.4,0,464.2,207.8,464.2,464.2C964.2,756.4,756.4,964.2,500,964.2z"/><path d="M431.6,632.2L267.5,468.1l-18.2,18.2l164.1,164.1l18.2,18.2l18.2-18.2l300.9-300.9l-18.2-18.2L431.6,632.2z"/></g>
+				</svg>
+              <p>Успешно отправлено</p>
+            </div>
           </div>
         </div>
       </div>
@@ -831,7 +838,21 @@
               <ul class="contacts-phones">
 
                 <li class="contacts-phones__item">
-                  <a href="+79147006877" class="contacts-phones__link">+7 (914) 700-68-77</a>
+
+                  <div class="tel--hidden tel--black">
+                    <p>
+                      Посмотреть и позвонить
+                    </p>
+                    <p class="tel__text--hidden">
+                      +7 (914) xxx-xx-xx
+                    </p>
+                  </div>
+                  <div class="tel--visible  tel--black">
+                    <p>
+                      Посмотреть и позвонить
+                    </p>
+                    <a href="tel:+79147006877" class="hidden__content">+7 (914) 700-68-77</a>
+                  </div>
                 </li>
 
               </ul>

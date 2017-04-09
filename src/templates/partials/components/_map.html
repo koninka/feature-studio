@@ -9,7 +9,21 @@
 				<ul class="contacts-phones">
 					{% for item in map.phones %}
 						<li class="contacts-phones__item">
-							<a href="{{item.link}}" class="contacts-phones__link">{{item.text}}</a>
+							{#<a href="{{item.link}}" class="contacts-phones__link">{{item.text}}</a>#}
+							<div class="tel--hidden tel--black">
+								<p>
+									Посмотреть и позвонить
+								</p>
+								<p class="tel__text--hidden">
+									+7 (914) xxx-xx-xx
+								</p>
+							</div>
+							<div class="tel--visible  tel--black">
+								<p>
+									Посмотреть и позвонить
+								</p>
+								<a href="tel:+79147006877" class="hidden__content">+7 (914) 700-68-77</a>
+							</div>
 						</li>
 					{% endfor %}
 				</ul>
