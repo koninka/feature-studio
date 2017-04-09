@@ -7,7 +7,7 @@
 		<div class="services__form">
 			<h2 class="title-md services__title">{{services.title}}</h2>
 			<div class="services__subtitle">{{services.subtitle}}</div>
-			<form action="/" class="js-form">
+			<form action="#" class="js-form">
 				<div class="services__container">
 					<div class="services__error js-error-msg"></div>
 					<div class="services__row">
@@ -24,8 +24,8 @@
 						</div>
 						<div class="services__col services__col_sm">
 							<label class="form-control js-form-parent">
-								<input type="text" class="form-control__input js-form-field" placeholder="Телефон:"
-								data-validation="number" data-validation-error-msg="Не указан телефон">
+								<input type="text" id="phone_mask" class="form-control__input js-form-field" placeholder="Телефон:"
+								data-validation="custom" data-validation-regexp="([/+0-9]+)$" data-validation-error-msg="Не указан телефон">
 							</label>
 						</div>
 						<div class="services__col services__col_sm">

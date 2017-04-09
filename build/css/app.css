@@ -408,11 +408,17 @@ a {
   width: 100%;
 }
 
+.logo_sm {
+  display: none;
+  width: 80px;
+}
+
 .btn-nav {
   position: relative;
   display: none;
   vertical-align: top;
   padding: 5px 10px 5px 40px;
+  margin-top: 10px;
   background: none;
 }
 
@@ -522,7 +528,7 @@ a {
 
 .menu__link {
   float: right;
-  display: none;
+  display: none !important;
   padding: 5px 0;
   line-height: .7;
   margin-right: 140px;
@@ -575,6 +581,10 @@ a {
 .nav .tel--mobile a {
   color: #fc0;
   font-size: 1.1rem;
+}
+
+.nav .menu__link {
+  display: none;
 }
 
 .social {
@@ -2322,6 +2332,7 @@ a {
   padding-top: 45px;
   width: 54%;
   text-align: left;
+  margin-top: 50px;
 }
 
 .souvenirs__items {
@@ -2341,7 +2352,7 @@ a {
 .souvenirs__title {
   margin-bottom: 10px;
   text-align: left;
-  font-size: 23px;
+  font-size: 26px;
 }
 
 .souvenirs__description {
@@ -2379,6 +2390,7 @@ a {
 
 .souvenirs__down {
   text-align: center;
+  margin-top: 110px;
 }
 
 .souvenir {
@@ -2496,6 +2508,10 @@ a {
     max-width: 920px;
   }
 
+  .header__main .header__logo:before, .header__main .header__logo:after {
+    display: none;
+  }
+
   .header__inner {
     overflow: hidden;
   }
@@ -2508,19 +2524,16 @@ a {
   .header__logo-circle {
     top: 40px;
     height: 60px;
+    display: none;
   }
 
   .header__logo-circle:before {
     height: 216px;
   }
 
-  .logo {
-    width: 115px;
-  }
-
   .social__mail {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   .phones__link {
@@ -2862,8 +2875,21 @@ a {
     padding: 35px 0;
   }
 
+  .header__main .phones__item {
+    display: none;
+  }
+
   .header__inner {
     overflow: visible;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo_sm {
+    display: block;
+    float: right;
   }
 
   .btn-nav {
@@ -2871,7 +2897,7 @@ a {
   }
 
   .menu__link {
-    display: block;
+    display: block !important;
   }
 
   .nav {
@@ -2902,6 +2928,32 @@ a {
     position: absolute;
     bottom: 50px;
     font-weight: 600;
+  }
+
+  .nav .tel--mobile p:first-child {
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 10px;
+  }
+
+  .nav .tel--mobile .tel__text--hidden {
+    line-height: 1.4;
+  }
+
+  .nav .menu__link {
+    display: block;
+    position: absolute;
+    bottom: 120px;
+    color: #fc0;
+  }
+
+  .social {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 50px;
   }
 
   .social__list {

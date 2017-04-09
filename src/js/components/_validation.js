@@ -35,6 +35,11 @@ const VALIDATION = () => {
 			}
 		});
 	});
+	form.submit(function(e) {
+		if ( form.find('.has-error').length === 0 ) {
+			console.log("Привет мир");
+		};
+	});
 };
 
 export default VALIDATION;
