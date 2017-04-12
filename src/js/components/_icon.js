@@ -14,6 +14,9 @@ export const ICON = () => {
 		};
 	};
 
+	let oneProduct = $('.product__link');
+	oneProduct[0].click();
+
 	WIN.on('scroll', counting);
 
 };

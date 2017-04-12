@@ -35,6 +35,14 @@ const VALIDATION = () => {
 			}
 		});
 	});
+	form.submit(function(e) {
+		if ( form.find('.has-error').length === 0 ) {
+			$('.okay__wrap').fadeIn();
+			setTimeout(function(){
+				$('.okay__wrap').fadeOut();
+			}, 1500);
+		};
+	});
 };
 
 export default VALIDATION;

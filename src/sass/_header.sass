@@ -10,6 +10,14 @@
 			padding-bottom: 0
 	&__main
 		overflow: hidden
+		.phones__item
+			+sm
+				display: none
+		.header__logo
+			+md
+				&:before,
+				&:after
+					display: none
 	&__inner
 		+md
 			overflow: hidden
@@ -54,6 +62,7 @@
 			+md
 				top: 40px
 				height: 60px
+				display: none
 			+xs
 				top: 40px
 			&:before
@@ -77,10 +86,17 @@
 	vertical-align: top
 	width: 170px
 	top: 4px
-	+md
-		width: 115px
+	+sm
+		display: none
 	img
 		width: 100%
+
+.logo_sm
+	display: none
+	width: 80px
+	+sm
+		display: block
+		float: right
 
 
 .btn-nav
@@ -88,6 +104,7 @@
 	display: none
 	vertical-align: top
 	padding: 5px 10px 5px 40px
+	margin-top: 10px
 	background: none
 	+sm
 		display: inline-block
@@ -170,7 +187,7 @@
 		color: #fc0
 	&__link
 		float: right
-		display: none
+		display: none !important
 		padding: 5px 0
 		line-height: .7
 		margin-right: 140px
@@ -184,7 +201,7 @@
 			color: #fff
 			border: 0
 		+sm
-			display: block
+			display: block !important
 		+xs
 			margin-right: 0
 
@@ -237,17 +254,37 @@
 			position: absolute
 			bottom: 50px
 			font-weight: 600
+			p:first-child
+				font-size: 14px
+				line-height: 1
+				margin-top: 10px
+			.tel__text--hidden
+				line-height: 1.4
+	.menu__link
+		display: none
+		+sm
+			display: block
+			position: absolute
+			bottom: 120px
+			color: $yellow
+			width: 210px
+
 
 .social
 	float: right
 	font-size: 0
+	+sm
+		width: 100%
+		display: flex
+		justify-content: center
+		margin-top: 50px
 	&__mail
 		position: relative
 		float: left
 		+f('ll', 18, 30)
 		+t(color)
 		+md
-			+f(null, 16, 24)
+			+f(null, 20, 24)
 		+xs
 			+f(null, 14, 24)
 		+hover

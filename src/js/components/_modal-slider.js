@@ -63,16 +63,25 @@ const MODAL = (link) => {
 		let wrapper = '.js-modal-wrap',
 			tamplate = '<div class="js-modal-wrap"></div>';
 
+
 		modalWrap.remove();
 		item.eq( getIndex() ).after(tamplate);
 
-		if (openModal.length) {
+		if (openModal.length <= 2) {
 			modal.clone().appendTo(wrapper).show();
 		}
 		else {
-			modal.clone().appendTo(wrapper).slideDown(delay);
+			if(openModal.length > 2) {
+
+			} else {
+				modal.clone().appendTo(wrapper).slideDown(delay);
+			}
 		}
 
+		if (modal.length === 2) {
+			let modalsJs = $('[data-modal="exemple_first"]');
+			modalsJs[1].remove();
+		}
 	}
 
 	let hideModal = () => {
@@ -84,6 +93,10 @@ const MODAL = (link) => {
 	};
 
 	let createActiveItem = () => {
+		if (openModal.length === 2) {
+			let modalsJs = $('.modal');
+			modalsJs[1].remove();
+		}
 		
 		if (link.hasClass(ACTIVE)) {
 			productLink.removeClass(ACTIVE);

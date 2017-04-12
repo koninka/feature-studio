@@ -133,7 +133,9 @@ a { text-decoration: none; color: inherit; }
 
 .logo img { width: 100%; }
 
-.btn-nav { position: relative; display: none; vertical-align: top; padding: 5px 10px 5px 40px; background: none; }
+.logo_sm { display: none; width: 80px; }
+
+.btn-nav { position: relative; display: none; vertical-align: top; padding: 5px 10px 5px 40px; margin-top: 10px; background: none; }
 
 .no-touch .btn-nav:hover .btn-nav__icon:before, .no-touch .btn-nav:hover .btn-nav__icon:after, .no-touch .btn-nav:hover .btn-nav__icon i { border-color: #fc0; }
 
@@ -171,7 +173,7 @@ a { text-decoration: none; color: inherit; }
 
 .menu a { color: #fc0; }
 
-.menu__link { float: right; display: none; padding: 5px 0; line-height: .7; margin-right: 140px; font-weight: 600; border: 2px solid #fc0; border-radius: 4px; margin: 5px 0; padding: 10px 10px; color: #fc0; }
+.menu__link { float: right; display: none !important; padding: 5px 0; line-height: .7; margin-right: 140px; font-weight: 600; border: 2px solid #fc0; border-radius: 4px; margin: 5px 0; padding: 10px 10px; color: #fc0; }
 
 .menu__link:hover { color: #fff; border: 0; }
 
@@ -188,6 +190,8 @@ a { text-decoration: none; color: inherit; }
 .nav .tel--mobile { display: none; }
 
 .nav .tel--mobile a { color: #fc0; font-size: 1.1rem; }
+
+.nav .menu__link { display: none; }
 
 .social { float: right; font-size: 0; }
 
@@ -451,6 +455,12 @@ a { text-decoration: none; color: inherit; }
 
 .contacts-social__link .icon { display: inline-block; vertical-align: middle; fill: #fff; transition: fill 0.2s ease; }
 
+.tel--black { border: 0; padding-left: 0; }
+
+.tel--black .tel__text--hidden { font-size: 30px; color: #000; font-weight: 600; }
+
+.tel--black .hidden__content { font-size: 30px; color: #000; font-weight: 600; text-align: left; }
+
 .team { position: relative; z-index: 10; padding-bottom: 70px; }
 
 .team__content { margin: 0 -10px; *zoom: 1; }
@@ -477,7 +487,7 @@ a { text-decoration: none; color: inherit; }
 
 .services { position: relative; z-index: 10; }
 
-.services__form { padding: 65px 138px 51px; background: rgba(23, 67, 112, 0.4); }
+.services__form { padding: 65px 138px 51px; position: relative; background: rgba(23, 67, 112, 0.4); }
 
 .services__title { margin-bottom: 12px; }
 
@@ -508,6 +518,12 @@ a { text-decoration: none; color: inherit; }
 .form-control__input::-moz-placeholder, .form-control__textarea::-moz-placeholder { color: #ffffff; }
 
 .form-control__input:-ms-input-placeholder, .form-control__textarea:-ms-input-placeholder { color: #ffffff; }
+
+.okay__wrap { text-align: center; padding: 40px 20px; border-radius: 5px; background-color: #0b1c2d; position: absolute; top: 26%; left: 25%; box-shadow: 0 0 10px 0 #000; display: none; }
+
+.okay__wrap .okay__item { width: 150px; fill: #fc0; }
+
+.okay__wrap p { color: #fff; font-size: 24px; }
 
 #products { position: relative; visibility: hidden; top: -35px; }
 
@@ -755,13 +771,13 @@ a { text-decoration: none; color: inherit; }
 
 .souvenirs { margin-bottom: 175px; }
 
-.souvenirs__content { position: relative; z-index: 2; float: right; padding-top: 45px; width: 54%; text-align: left; }
+.souvenirs__content { position: relative; z-index: 2; float: right; padding-top: 45px; width: 54%; text-align: left; margin-top: 50px; }
 
 .souvenirs__items { float: left; width: 46%; padding-right: 20px; position: relative; top: -45px; }
 
 .souvenirs__items-in { position: relative; margin: -30px 0 0 -45px; max-width: 500px; }
 
-.souvenirs__title { margin-bottom: 10px; text-align: left; font-size: 23px; }
+.souvenirs__title { margin-bottom: 10px; text-align: left; font-size: 26px; }
 
 .souvenirs__description { margin-bottom: 32px; font-family: "Lato Thin", Arial, sans-serif; font-size: 18px; line-height: 2; }
 
@@ -775,7 +791,7 @@ a { text-decoration: none; color: inherit; }
 
 .souvenirs__next { right: 0; }
 
-.souvenirs__down { text-align: center; }
+.souvenirs__down { text-align: center; margin-top: 110px; }
 
 .souvenir { position: relative; }
 
@@ -818,17 +834,17 @@ a { text-decoration: none; color: inherit; }
 
  .inner { max-width: 920px; }
 
+ .header__main .header__logo:before, .header__main .header__logo:after { display: none; }
+
  .header__inner { overflow: hidden; }
 
  .header__logo { padding-top: 25px; max-width: 216px; }
 
- .header__logo-circle { top: 40px; height: 60px; }
+ .header__logo-circle { top: 40px; height: 60px; display: none; }
 
  .header__logo-circle:before { height: 216px; }
 
- .logo { width: 115px; }
-
- .social__mail { font-size: 16px; line-height: 1.5; }
+ .social__mail { font-size: 20px; line-height: 1.2; }
 
  .phones__link { font-size: 16px; line-height: 1.5; }
 
@@ -966,11 +982,17 @@ a { text-decoration: none; color: inherit; }
 
  .header__social { padding: 35px 0; }
 
+ .header__main .phones__item { display: none; }
+
  .header__inner { overflow: visible; }
+
+ .logo { display: none; }
+
+ .logo_sm { display: block; float: right; }
 
  .btn-nav { display: inline-block; }
 
- .menu__link { display: block; }
+ .menu__link { display: block !important; }
 
  .nav { position: fixed; top: 50px; left: 0; bottom: 0; padding: 30px 0 20px; width: 90%; max-width: 300px; background: #353c43; transform: translate3d(-100%, 0, 0); transition: transform 0.25s ease; }
 
@@ -979,6 +1001,14 @@ a { text-decoration: none; color: inherit; }
  .nav__list li, .nav__list a { display: block; padding: 0 20px; }
 
  .nav .tel--mobile { display: block; position: absolute; bottom: 50px; font-weight: 600; }
+
+ .nav .tel--mobile p:first-child { font-size: 14px; line-height: 1; margin-top: 10px; }
+
+ .nav .tel--mobile .tel__text--hidden { line-height: 1.4; }
+
+ .nav .menu__link { display: block; position: absolute; bottom: 120px; color: #fc0; width: 210px; }
+
+ .social { width: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; margin-top: 50px; }
 
  .social__list { display: none; }
 
@@ -1062,6 +1092,14 @@ a { text-decoration: none; color: inherit; }
 
  .contacts-social__link .icon { fill: #2a2e33; }
 
+ .tel--black { background-color: transparent; border: 1px dotted #fff; padding: 0px 15px; }
+
+ .tel--black p:first-child { font-size: 20px; }
+
+ .tel--black .tel__text--hidden { color: #fc0; }
+
+ .tel--black .hidden__content { color: #fc0; }
+
  .team__content { margin: 0; }
 
  .team__item { float: none; padding: 35px 0; margin: 0 auto; width: 100%; max-width: 500px; }
@@ -1091,8 +1129,6 @@ a { text-decoration: none; color: inherit; }
  .modal__right { float: none; margin-top: 97px; width: 100%; }
 
  .slider-for { margin-top: 25px; }
-
- .slider-for__slide { height: 100% !important; }
 
  .counters { margin-bottom: 0; }
 

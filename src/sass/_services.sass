@@ -9,6 +9,7 @@
 	z-index: 10
 	&__form
 		padding: 65px 138px 51px
+		position: relative
 		background: rgba($blue, 0.4)
 		+md
 			padding: 48px 165px 52px
@@ -88,3 +89,20 @@
 		color: #ffffff
 	&:-ms-input-placeholder
 		color: #ffffff
+
+.okay__wrap
+	text-align: center
+	padding: 40px 20px
+	border-radius: 5px
+	background-color: #0b1c2d
+	position: absolute
+	top: 26%
+	left: 25%
+	box-shadow: 0 0 10px 0 #000
+	display: none
+	.okay__item
+		width: 150px
+		fill: $yellow
+	p
+		color: #fff
+		font-size: 24px

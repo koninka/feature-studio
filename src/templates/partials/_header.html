@@ -6,9 +6,10 @@
 		<div class="inner">
 			<button class="btn-nav js-btn-nav">
 				<span class="btn-nav__icon"><i></i></span>
-				<span class="btn-nav__text">Меню</span>
 			</button>
-			<a href="{{header.nav[1].href}}" class="menu__link">{{header.nav[1].text}}</a>
+			<a href="#" class="logo logo_sm">
+				<img src="img/logo.png" alt="Featur-Studio">
+			</a>
 			<nav class="nav js-nav">
 				<ul class="nav__list">
 					{% for item in header.nav %}
@@ -17,15 +18,23 @@
 						</li>
 					{% endfor %}
 					<li class="tel--mobile">
+						<a href="{{header.nav[1].href}}" class="menu__link">{{header.nav[1].text}}</a>
+					</li>
+					<li class="tel--mobile">
 						<div class="tel--hidden">
 							<p>
-								Хотит нампозвонить клик
+								Посмотреть и позвонить
 							</p>
-							<p>
+							<p class="tel__text--hidden">
 								+7 (914) xxx-xx-xx
 							</p>
 						</div>
-						<!--<a href="tel:+79147006877">+7 (914) 700-68-77</a>-->
+						<div class="tel--visible">
+							<p>
+								Посмотреть и позвонить
+							</p>
+							<a href="tel:+79147006877" class="hidden__content">+7 (914) 700-68-77</a>
+						</div>
 					</li>
 				</ul>
 			</nav>
