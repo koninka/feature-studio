@@ -1,8 +1,11 @@
-import { ACTIVE } from './../_constants';
+import { ACTIVE, products } from './../_constants';
+import { productModalContent } from './../_templates';
 import slick from 'slick-carousel';
+import nunjucks from 'nunjucks';
+
+var template = nunjucks.compile(productModalContent);
 
 ;(function(){
-
 	let productLink = $('.js-product-link'),
 		slickNav = $('.js-product-link .js-modal-slider-nav'),
 		sliderPrev = $('.js-slider-nav-prev'),
@@ -30,19 +33,20 @@ const MODAL = (link) => {
 		productLink = $('.js-product-link'),
 
 		name = link.data('name'),
+		type = link.data('type'),
 		modals = $('.js-modal'),
 		modalWrap = $('.js-modal-wrap'),
 		modal = $("[data-modal="+name+"]"),
 		openModal = $(".js-product-list .js-modal"),
 		delay = 300,
-		
+
 		windowWidth = $(window).width(),
 		productPrevAll = parent.prevAll().length,
 
 		slickFor = '.js-modal-slider-for',
 		slickNav = '.js-modal-slider-nav';
-	
-	
+
+
 	let counter = () => {
 		if (windowWidth > 900) {
 			return 5;
@@ -67,19 +71,24 @@ const MODAL = (link) => {
 		modalWrap.remove();
 		item.eq( getIndex() ).after(tamplate);
 
+		let data = typeof products[type] !== 'undefined' ? products[type] : {};
+		console.log(data);
+
+		let content = modal.clone().html(template.render(data)).appendTo(wrapper);
+
 		if (openModal.length <= 2) {
-			modal.clone().appendTo(wrapper).show();
+			content.show();
 		}
 		else {
 			if(openModal.length > 2) {
 
 			} else {
-				modal.clone().appendTo(wrapper).slideDown(delay);
+				content.slideDown(delay);
 			}
 		}
 
 		if (modal.length === 2) {
-			let modalsJs = $('[data-modal="exemple_first"]');
+			let modalsJs = $('[data-modal="product-modal"]');
 			modalsJs[1].remove();
 		}
 	}
@@ -97,7 +106,7 @@ const MODAL = (link) => {
 			let modalsJs = $('.modal');
 			modalsJs[1].remove();
 		}
-		
+
 		if (link.hasClass(ACTIVE)) {
 			productLink.removeClass(ACTIVE);
 			hideModal();
@@ -143,7 +152,7 @@ const MODAL = (link) => {
 					}
 				]
 			};
-			
+
 		sliderFor.on('init', function() {
 			sliderFor.addClass(loaded);
 		});
@@ -161,5 +170,5 @@ const MODAL = (link) => {
 	let classForWidth = $(".slider-for__slide");
 	let sliderWidth = classForWidth.width();
 	classForWidth.css('height', sliderWidth + 'px' );
-	
+
 };

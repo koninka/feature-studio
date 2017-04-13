@@ -35,7 +35,10 @@ function createConfig(env) {
             new webpack.NoErrorsPlugin()
         ],
         resolve: {
-            extensions: ['', '.js']
+            extensions: ['', '.js'],
+            alias: {
+                'handlebars': 'handlebars/dist/handlebars.js'
+            }
         },
         module: {
             loaders: [

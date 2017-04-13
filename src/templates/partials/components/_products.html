@@ -36,7 +36,7 @@
     <div class="products__list js-product-list">
       {% for item in products.items %}
       <div class="product js-product">
-        <a href="#" class="product__link js-product-link" data-name="{{ item.name }}">
+        <a href="#" class="product__link js-product-link" data-name="product-modal" data-type="{{ item.type }}">
           <span class="product__picture">
 							<span class="product__img">{% include item.svgLink %}</span>
           </span>
