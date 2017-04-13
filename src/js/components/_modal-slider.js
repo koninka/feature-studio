@@ -72,7 +72,6 @@ const MODAL = (link) => {
 		item.eq( getIndex() ).after(tamplate);
 
 		let data = typeof products[type] !== 'undefined' ? products[type] : {};
-		console.log(data);
 
 		let content = modal.clone().html(template.render(data)).appendTo(wrapper);
 
