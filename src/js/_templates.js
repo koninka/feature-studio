@@ -1,7 +1,7 @@
 export const {
    productModalContent
 } = {
-   productModalContent: `
+        productModalContent: `
       {% if images|length > 0 %}
         <div class="modal__left modal__left--desktop">
             <div class="slider-for js-modal-slider-for">
@@ -89,7 +89,24 @@ export const {
                 </div>
             </div>
           {% endif %}
-          <a href="#services" class="btn">Заказать услугу</a>
+          <a href="#services" class="btn js-go-to">Заказать услуги</a>
+          <script>
+            $(document).ready(function(){
+	let goToBtn = $(".js-go-to"),
+		htmlBody = $('html, body');
+	goToBtn.click(function () {
+		var id = $(this).attr("href"),
+			posTop = $(id).offset().top;
+		scrollTo(posTop);
+		return false;
+	});
+	let scrollTo = (position) => {
+		htmlBody.animate({
+			scrollTop: position
+		}, 700);
+	};
+})
+          </script>
       </div>
   `
-};
+    };

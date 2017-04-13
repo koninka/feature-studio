@@ -39,6 +39,9 @@ const VALIDATION = () => {
 		if ( form.find('.has-error').length === 0 ) {
 			e.preventDefault();
 			$('.okay__wrap').fadeIn();
+			var inputAll = form.find('.js-form-field');
+			inputAll.prop('disabled', true);
+			form.find('.btn').text('Отправлено');
 			setTimeout(function(){
 				$('.okay__wrap').fadeOut();
 			}, 1500);
