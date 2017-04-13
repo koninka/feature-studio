@@ -1,0 +1,2 @@
+!function(n){function r(o){if(e[o])return e[o].exports;var t=e[o]={exports:{},id:o,loaded:!1};return n[o].call(t.exports,t,t.exports,r),t.loaded=!0,t.exports}var e={};return r.m=n,r.c=e,r.p="js/",r(0)}([function(n,r){"use strict";window.handlers={},window.handlers.service=function(n,r){n()},window.handlers.price=function(n,r){n()}}]);
+//# sourceMappingURL=form.js.map

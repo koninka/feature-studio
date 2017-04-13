@@ -36,13 +36,17 @@ const VALIDATION = () => {
 		});
 	});
 	form.submit(function(e) {
-		if ( form.find('.has-error').length === 0 ) {
+		if ( form.find('.has-error').length !== 0 ) {
+			return;
+		};
+
+		window.handlers.service(function (response) {
 			e.preventDefault();
 			$('.okay__wrap').fadeIn();
 			setTimeout(function(){
 				$('.okay__wrap').fadeOut();
 			}, 1500);
-		};
+		})
 	});
 };
 
