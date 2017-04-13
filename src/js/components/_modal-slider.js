@@ -72,6 +72,11 @@ const MODAL = (link) => {
 		item.eq( getIndex() ).after(tamplate);
 
 		let data = typeof products[type] !== 'undefined' ? products[type] : {};
+		let images = typeof window.productImages[type] !== 'undefined' ? window.productImages[type] : {};
+
+		console.log(data.images);
+
+		data.images = images;
 
 		let content = modal.clone().html(template.render(data)).appendTo(wrapper);
 
