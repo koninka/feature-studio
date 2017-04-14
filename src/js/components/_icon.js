@@ -20,12 +20,12 @@ export const ICON = () => {
 	WIN.on('scroll', counting);
 
 	$('.btn--fade_modal').on('click', function(){
-		event.preventDefault();
+		// event.preventDefault();
 		$('.modals').fadeIn();
 	})
 
 	$('.btn_close').on('click', function(){
-		event.preventDefault();
+		// event.preventDefault();
 		$('.modals').fadeOut();
 	});
 };

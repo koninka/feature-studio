@@ -461,7 +461,7 @@ a { text-decoration: none; color: inherit; }
 
 .tel--black .hidden__content { font-size: 30px; color: #000; font-weight: 600; text-align: left; }
 
-.tel--border { border: 1px dotted #000000; padding: 5px 10px; background-color: rgba(0, 27, 75, 0.7); }
+.tel--border { border: 1px dotted #a18101; padding: 5px 10px; background-color: #fc0; }
 
 .team { position: relative; z-index: 10; padding-bottom: 70px; }
 

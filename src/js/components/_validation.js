@@ -48,8 +48,10 @@ const VALIDATION = () => {
 		window.handlers.service(data, function (response) {
 			$('.okay__wrap').fadeIn();
 			var inputAll = form.find('.js-form-field');
+			inputAll.css('opacity','0.3');
 			inputAll.prop('disabled', true);
-			form.find('.btn').text('Отправлено');
+			form.find('.btn_text--hide').html('Отправлено');
+			form.find('.galka').fadeIn();
 			setTimeout(function(){
 				$('.okay__wrap').fadeOut();
 			}, 1500);
