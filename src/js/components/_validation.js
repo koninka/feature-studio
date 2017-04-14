@@ -45,6 +45,8 @@ const VALIDATION = () => {
 			return m;
 		}, {});
 
+		// block btn
+
 		window.handlers.service(data, function (response) {
 			e.preventDefault();
 			$('.okay__wrap').fadeIn();

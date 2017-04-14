@@ -1628,6 +1628,7 @@ a {
 
 .products .btn {
   margin-top: 28px;
+  cursor: pointer;
 }
 
 .product {
@@ -1809,6 +1810,7 @@ a {
 
 .modals .btn_close {
   float: right;
+  cursor: pointer;
 }
 
 .modals {
