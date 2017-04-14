@@ -89,7 +89,7 @@ export const {
                 </div>
             </div>
           {% endif %}
-          <a href="#services" class="btn js-go-to">Заказать услуги</a>
+          <a href="#services" class="btn js-go-to" onclick="if (window.isNonLocalRequest) { ga('send', 'event', 'click', 'order_catalog'); if (typeof yaCounter44092294 !== 'undefined') { yaCounter44092294.reachGoal('click_order_catalog'); } }; return true;">Заказать услуги</a>
           <script>
             $(document).ready(function(){
 	let goToBtn = $(".js-go-to"),
