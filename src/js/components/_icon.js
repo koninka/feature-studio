@@ -1,15 +1,15 @@
-import {WIN} from './../_constants';
+import { WIN } from './../_constants';
 
 export const ICON = () => {
-  let iconWrapper = $('.whywe');
+	let iconWrapper = $('.whywe');
 	let icons = $('.quality__item');
 	let counting = () => {
-		if (iconWrapper.offset().top - 550 <= WIN.scrollTop() ) {
+		if (iconWrapper.offset().top - 550 <= WIN.scrollTop()) {
 			WIN.off('scroll', counting);
-			icons.each(function() {
+			icons.each(function () {
 				let _this = $(this);
 
-        _this.addClass('quality__item--animate');
+				_this.addClass('quality__item--animate');
 			});
 		};
 	};
@@ -19,4 +19,13 @@ export const ICON = () => {
 
 	WIN.on('scroll', counting);
 
+	$('.btn--fade_modal').on('click', function(){
+		event.preventDefault();
+		$('.modals').fadeIn();
+	})
+
+	$('.btn_close').on('click', function(){
+		event.preventDefault();
+		$('.modals').fadeOut();
+	});
 };

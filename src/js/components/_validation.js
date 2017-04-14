@@ -48,6 +48,9 @@ const VALIDATION = () => {
 		window.handlers.service(data, function (response) {
 			e.preventDefault();
 			$('.okay__wrap').fadeIn();
+			var inputAll = form.find('.js-form-field');
+			inputAll.prop('disabled', true);
+			form.find('.btn').text('Отправлено');
 			setTimeout(function(){
 				$('.okay__wrap').fadeOut();
 			}, 1500);
