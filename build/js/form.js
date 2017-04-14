@@ -1,2 +1,2 @@
-!function(n){function r(o){if(e[o])return e[o].exports;var t=e[o]={exports:{},id:o,loaded:!1};return n[o].call(t.exports,t,t.exports,r),t.loaded=!0,t.exports}var e={};return r.m=n,r.c=e,r.p="js/",r(0)}([function(n,r){"use strict";window.handlers={},window.handlers.service=function(n,r){n()},window.handlers.price=function(n,r){n()}}]);
+!function(e){function n(o){if(r[o])return r[o].exports;var i=r[o]={exports:{},id:o,loaded:!1};return e[o].call(i.exports,i,i.exports,n),i.loaded=!0,i.exports}var r={};return n.m=e,n.c=r,n.p="js/",n(0)}([function(e,n){"use strict";window.handlers={},window.handlers.service=function(e,n,r){console.log("service handler",e),n()},window.handlers.price=function(e,n,r){console.log("price handler",e),n()}}]);
 //# sourceMappingURL=form.js.map

@@ -1,6 +1,5 @@
 import './../lib/jquery.form-validator.min';
 
-
 const VALIDATION = () => {
 	let form = $('.js-form');
 	let errorClass = 'has-error';
@@ -40,7 +39,13 @@ const VALIDATION = () => {
 			return;
 		};
 
-		window.handlers.service(function (response) {
+		let data = $(this).serializeArray().reduce(function(m,o){
+			m[o.name] = $(m).hasClass('phone-field') ? o.value.replace(/([\s()-])/g, '') : o.value;
+
+			return m;
+		}, {});
+
+		window.handlers.service(data, function (response) {
 			e.preventDefault();
 			$('.okay__wrap').fadeIn();
 			setTimeout(function(){

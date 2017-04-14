@@ -11,35 +11,30 @@
 				<div class="services__container">
 					<div class="services__error js-error-msg"></div>
 					<div class="services__row">
-						<!--{% for item in services.fields %}
-							<div class="services__col services__col_sm">
-								{{mixins.input(item)}}
-							</div>
-						{% endfor %}-->
 						<div class="services__col services__col_sm">
 							<label class="form-control js-form-parent">
-								<input type="text" class="form-control__input js-form-field" placeholder="ФИО"
+								<input type="text" name="name" class="form-control__input js-form-field" placeholder="ФИО"
 								data-validation="required" data-validation-error-msg="Не указано ФИО">
 							</label>
 						</div>
 						<div class="services__col services__col_sm">
 							<label class="form-control js-form-parent">
-								<input type="text" id="phone_mask" class="form-control__input js-form-field" placeholder="Телефон:"
+								<input type="text" name="phone" id="phone_mask" class="form-control__input js-form-field phone-field" placeholder="Телефон:"
 								data-validation="custom" data-validation-regexp="([/+0-9]+)$" data-validation-error-msg="Не указан телефон">
 							</label>
 						</div>
 						<div class="services__col services__col_sm">
 							<label class="form-control js-form-parent">
-								<input type="text" class="form-control__input js-form-field" placeholder="E-mail:"
-								data-validation="email" data-validation-error-msg="Не указан e-mail">
+								<input type="text" name="email" class="form-control__input js-form-field" placeholder="E-mail:"
+								data-validation="email" data-validation-error-msg="Неправильный e-mail" data-validation-optional="true">
 							</label>
 						</div>
 					</div>
 					<div class="services__row">
 						<div class="services__col">
 							<label class="form-control js-form-parent">
-								<textarea class="form-control__textarea js-form-field" placeholder="Комментарий:"
-								data-validation="required" data-validation-error-msg="Не указан комментарий"></textarea>
+								<textarea name="comment" class="form-control__textarea js-form-field" placeholder="Комментарий:"
+								data-validation="required" data-validation-error-msg="Не указан комментарий" data-validation-optional="true"></textarea>
 							</label>
 							<!--{{mixins.textarea(services.textarea)}}-->
 						</div>
