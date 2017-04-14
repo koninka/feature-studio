@@ -763,7 +763,7 @@ a { text-decoration: none; color: inherit; }
 
 .client:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 
-.client img { display: inline-block; vertical-align: middle; max-width: 100%; max-height: 50px; }
+.client img { display: inline-block; vertical-align: middle; max-width: 100%; max-height: 100px; }
 
 .clients-background { position: absolute; top: 65%; left: 0; right: 0; }
 
