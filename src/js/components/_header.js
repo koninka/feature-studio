@@ -4,8 +4,8 @@ import './../lib/mask.min';
 export const HEADER = () => {
   let headerVisible = $('.tel--hidden');
   let headerHidden = $('.tel--visible');
-  $('#phone_mask').mask("+7(999) 999-9999");
-  $('#phone_mask_modal').mask("+7(999) 999-9999");
+  $('#phone_mask').mask("+7(999) 999-99-99");
+  $('#phone_mask_modal').mask("+7(999) 999-99-99");
   $(document).mouseup(function (e) {
     var container = $(".modals");
     if (container.has(e.target).length === 0){
