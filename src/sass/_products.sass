@@ -6,7 +6,7 @@
 	position: relative
 	padding: 45px 0 65px
 	text-align: center
-	z-index: 10
+	//z-index: 10
 	&__list
 		font-size: 0
 	.btn
@@ -180,6 +180,7 @@
 	border-radius: 4px
 	padding: 8px 10px
 	font-size: 16px
+	min-width: 100px
 	&::-webkit-input-placeholder
 		color: #fff
 		font-size: 1.1rem
@@ -189,3 +190,8 @@
 	&:-ms-input-placeholder
 		color: #fff
 		font-size: 1.1rem
+
+@only screen and (max-width: 930px) {
+	.modals
+		top: 45%
+}
