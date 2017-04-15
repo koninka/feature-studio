@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6, strong, em, i, cite, th { font-weight: normal; font-styl
 
 a { text-decoration: none; color: inherit; }
 
-.header { position: relative; z-index: 1000; padding: 40px 0 20px; }
+.header { position: relative; z-index: 10; padding: 40px 0 20px; }
 
 .header__social { padding: 20px 0; }
 
@@ -273,6 +273,8 @@ a { text-decoration: none; color: inherit; }
 
 .no-touch .btn_fill:hover { color: #fc0; background: transparent; }
 
+.btn--not_hover:hover { color: #fc0 !important; background: transparent !important; }
+
 .btn-scrolldown { display: inline-block; vertical-align: top; padding-top: 34px; border-radius: 50%; width: 154px; height: 154px; background: rgba(23, 67, 112, 0.4); text-align: center; font-size: 0; transition: background 0.25s ease; }
 
 .btn-scrolldown:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -395,7 +397,7 @@ a { text-decoration: none; color: inherit; }
 
 .steps__nlo img { max-width: 100%; display: block; }
 
-.map { position: relative; z-index: 10; min-height: 675px; }
+.map { position: relative; z-index: 9; min-height: 675px; }
 
 .map__img { position: absolute; z-index: 5; top: 0; right: 0; bottom: 0; left: 0; }
 
@@ -463,7 +465,7 @@ a { text-decoration: none; color: inherit; }
 
 .tel--border { border: 1px dotted #a18101; padding: 5px 10px; background-color: #fc0; }
 
-.team { position: relative; z-index: 10; padding-bottom: 70px; }
+.team { position: relative; z-index: 9; padding-bottom: 70px; }
 
 .team__content { margin: 0 -10px; *zoom: 1; }
 
@@ -487,7 +489,7 @@ a { text-decoration: none; color: inherit; }
 
 #services { position: relative; visibility: hidden; top: -35px; }
 
-.services { position: relative; z-index: 10; }
+.services { position: relative; z-index: 9; }
 
 .services__form { padding: 65px 138px 51px; position: relative; background: rgba(23, 67, 112, 0.4); }
 
@@ -529,11 +531,11 @@ a { text-decoration: none; color: inherit; }
 
 #products { position: relative; visibility: hidden; top: -35px; }
 
-.products { position: relative; padding: 45px 0 65px; text-align: center; z-index: 10; }
+.products { position: relative; padding: 45px 0 65px; text-align: center; }
 
 .products__list { font-size: 0; }
 
-.products .btn { margin-top: 28px; }
+.products .btn { margin-top: 28px; cursor: pointer; }
 
 .product { position: relative; padding: 35px 0; width: 20%; min-height: 270px; font-size: 18px; text-align: center; vertical-align: top; display: inline-block; }
 
@@ -583,7 +585,7 @@ a { text-decoration: none; color: inherit; }
 
 .modals section, .modals .headers, .modals .footers { padding: 15px; z-index: 200; }
 
-.modals .btn_close { float: right; }
+.modals .btn_close { float: right; cursor: pointer; }
 
 .modals { background-color: #174370; padding: 25px; z-index: 200; top: 50% !important; display: none; }
 
@@ -597,13 +599,15 @@ a { text-decoration: none; color: inherit; }
 
 .wrapper_inp input:last-child { margin-right: 0px; }
 
-.modals__inp { width: 100%; background-color: #174370; color: #ffffff; border: 3px solid #fc0; border-radius: 4px; padding: 8px 10px; font-size: 16px; }
+.modals__inp { width: 100%; background-color: #174370; color: #ffffff; border: 3px solid #fc0; border-radius: 4px; padding: 8px 10px; font-size: 16px; min-width: 100px; }
 
 .modals__inp::-webkit-input-placeholder { color: #fff; font-size: 1.1rem; }
 
 .modals__inp::-moz-placeholder { color: #fff; font-size: 1.1rem; }
 
 .modals__inp:-ms-input-placeholder { color: #fff; font-size: 1.1rem; }
+
+@only screen and (max-width: 930px) { .modals { top: 45%; } }
 
 .modal { padding: 87px 0 74px; font-size: 18px; border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06); display: none; *zoom: 1; }
 
@@ -685,7 +689,7 @@ a { text-decoration: none; color: inherit; }
 
 .slider-nav-wrap:before, .slider-nav-wrap:after { width: 0 !important; }
 
-.counters { position: relative; z-index: 10; margin: 40px 0; }
+.counters { position: relative; z-index: 9; margin: 40px 0; }
 
 .counters__heading { margin-bottom: 75px; }
 

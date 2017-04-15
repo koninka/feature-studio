@@ -4,6 +4,7 @@ const VALIDATION = () => {
 	let form = $('.js-form');
 	let errorClass = 'has-error';
 	let formField = $('.js-form-field');
+	let inputAll = form.find('.js-form-field');
 
 	formField.on({
 		focus(e) {
@@ -45,11 +46,17 @@ const VALIDATION = () => {
 			return m;
 		}, {});
 
+		form.find('.btn').addClass('btn--not_hover');
+
+		inputAll.css('opacity','0.3');
+		inputAll.prop('disabled', true);
+
+		e.preventDefault();
+
 		window.handlers.service(data, function (response) {
+			e.preventDefault();
 			$('.okay__wrap').fadeIn();
-			var inputAll = form.find('.js-form-field');
-			inputAll.css('opacity','0.3');
-			inputAll.prop('disabled', true);
+
 			form.find('.btn_text--hide').html('Отправлено');
 			form.find('.galka').fadeIn();
 			setTimeout(function(){
