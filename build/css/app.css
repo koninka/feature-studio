@@ -273,6 +273,8 @@ a { text-decoration: none; color: inherit; }
 
 .no-touch .btn_fill:hover { color: #fc0; background: transparent; }
 
+.btn--not_hover { cursor: not-allowed; }
+
 .btn--not_hover:hover { color: #fc0 !important; background: transparent !important; }
 
 .btn-scrolldown { display: inline-block; vertical-align: top; padding-top: 34px; border-radius: 50%; width: 154px; height: 154px; background: rgba(23, 67, 112, 0.4); text-align: center; font-size: 0; transition: background 0.25s ease; }

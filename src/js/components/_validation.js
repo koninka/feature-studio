@@ -37,8 +37,14 @@ const VALIDATION = () => {
 	});
 	form.submit(function(e) {
 		if ( form.find('.has-error').length !== 0 ) {
-			return;
+			return false;
 		};
+
+		e.preventDefault();
+
+		if (form.find('.btn').hasClass('btn--not_hover')) {
+			return false;
+		}
 
 		let data = $(this).serializeArray().reduce(function(m,o){
 			m[o.name] = $(m).hasClass('phone-field') ? o.value.replace(/([\s()-])/g, '') : o.value;
@@ -50,11 +56,9 @@ const VALIDATION = () => {
 
 		inputAll.css('opacity','0.3');
 		inputAll.prop('disabled', true);
-
-		e.preventDefault();
+		form.find('.btn_text--hide').html('Отправляется...');
 
 		window.handlers.service(data, function (response) {
-			e.preventDefault();
 			$('.okay__wrap').fadeIn();
 
 			form.find('.btn_text--hide').html('Отправлено');
@@ -63,8 +67,6 @@ const VALIDATION = () => {
 				$('.okay__wrap').fadeOut();
 			}, 1500);
 		});
-
-		e.preventDefault();
 	});
 };
 
