@@ -4,7 +4,6 @@ const VALIDATION = () => {
 	let form = $('.js-form');
 	let errorClass = 'has-error';
 	let formField = $('.js-form-field');
-	let inputAll = form.find('.js-form-field');
 
 	formField.on({
 		focus(e) {
@@ -14,6 +13,48 @@ const VALIDATION = () => {
 			$(this).parents('.js-form-parent').removeClass('has-focus');
 		}
 	});
+
+	function serializeForm($form) {
+			return $form.serializeArray().reduce(function(m,o){
+			m[o.name] = $(m).hasClass('phone-field') ? o.value.replace(/([\s()-])/g, '') : o.value;
+
+			return m;
+		}, {});
+	}
+
+	function beforeFormSubmit($form) {
+		$form.find('.btn').addClass('btn--not_hover');
+
+		$form.find('.js-form-field').css('opacity','0.3').prop('disabled', true);
+		$form.find('.btn_text--hide').html('Отправляется...');
+	};
+
+	function successFormSubmit($form) {
+			var $okayWrap = $form.find('.okay__wrap');
+			$okayWrap.fadeIn();
+
+			$form.find('.btn_text--hide').html('Отправлено');
+			$form.find('.galka').fadeIn();
+			setTimeout(function(){
+				$okayWrap.fadeOut();
+			}, 1500);
+	};
+
+	function formSubmit($form, handler) {
+		if ($form.find('.has-error').length !== 0 ) {
+			return false;
+		};
+
+		if ($form.find('.btn').hasClass('btn--not_hover')) {
+			return false;
+		}
+
+		let data = serializeForm($form);
+
+		beforeFormSubmit($form);
+
+		handler(data);
+	}
 
 	form.each(function() {
 		let errorContainer = $(this).find('.js-error-msg');
@@ -35,38 +76,31 @@ const VALIDATION = () => {
 			}
 		});
 	});
-	form.submit(function(e) {
-		if ( form.find('.has-error').length !== 0 ) {
-			return false;
-		};
 
+	$('.service-form').submit(function(e) {
 		e.preventDefault();
 
-		if (form.find('.btn').hasClass('btn--not_hover')) {
-			return false;
-		}
+		var $form = $(this);
 
-		let data = $(this).serializeArray().reduce(function(m,o){
-			m[o.name] = $(m).hasClass('phone-field') ? o.value.replace(/([\s()-])/g, '') : o.value;
-
-			return m;
-		}, {});
-
-		form.find('.btn').addClass('btn--not_hover');
-
-		inputAll.css('opacity','0.3');
-		inputAll.prop('disabled', true);
-		form.find('.btn_text--hide').html('Отправляется...');
-
-		window.handlers.service(data, function (response) {
-			$('.okay__wrap').fadeIn();
-
-			form.find('.btn_text--hide').html('Отправлено');
-			form.find('.galka').fadeIn();
-			setTimeout(function(){
-				$('.okay__wrap').fadeOut();
-			}, 1500);
+		formSubmit($form, function (data) {
+			window.handlers.service(data, function (response) {
+				successFormSubmit($form);
+			});
 		});
+
+	});
+
+	$('.price-form').submit(function(e) {
+		e.preventDefault();
+
+		var $form = $(this);
+
+		formSubmit($form, function (data) {
+			window.handlers.price(data, function (response) {
+				successFormSubmit($form);
+			});
+		});
+
 	});
 };
 

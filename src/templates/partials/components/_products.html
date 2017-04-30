@@ -9,21 +9,17 @@
       <a class="btn btn--fade_modal">Скачать оптовый прайс</a>
       <aside class="modals" id="modals">
         <div class="headers">
-          <h3 class="modals__title">Заголовок модального окна</h2>
+          <h3 class="modals__title">Получение оптового прайса</h2>
         </div>
         <section>
           <p class="modals__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis euismod tortor et pulvinar. 
-            Sed ac dapibus tellus. Morbi a tincidunt libero, ac luctus ex. Fusce ut pellentesque tortor. Nulla 
-            vehicula sed leo at ultricies. Duis ultricies iaculis ante ac convallis. Aliquam ac nunc sit amet 
-            enim vulputate mollis. Suspendisse maximus ante purus, vitae malesuada leo laoreet a. Integer vulputate, 
-            turpis vitae sollicitudin laoreet, dui neque pharetra sem
+            Мы пришлем вам прайс по почте
           </p>
-          <form name="download_price">
+          <form name="download_price" class="js-form price-form">
             <div class="wrapper_inp">
-              <input type="text" class="modals__inp" placeholder="Имя">
-              <input type="text" class="modals__inp" placeholder="Email">
-              <input type="text" id="phone_mask_modal" class="modals__inp" placeholder="Телефон">
+              <input type="text" class="modals__inp" name="name" placeholder="Имя">
+              <input type="text" class="modals__inp" name="email" placeholder="Email">
+              <input type="text" id="phone_mask_modal" name="phone" class="modals__inp phone-field" placeholder="Телефон">
             </div>
             <button type="submit" class="btn">Получить</button>
           </form>
