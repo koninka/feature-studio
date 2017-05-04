@@ -2089,13 +2089,13 @@ a {
 
 .slider-nav-wrap .slider-nav-prev {
   left: -22px;
-  /*background: url(../img/slider-nav-prev.svg) no-repeat;*/
+  /*background: url(../img/slider-nav-prev.svg) no-repeat;*//* Классы в верстке не используются */
   background-size: contain;
 }
 
 .slider-nav-wrap .slider-nav-next {
   right: -22px;
-  /*background: url(../img/slider-nav-next.svg) no-repeat;*/
+  /*background: url(../img/slider-nav-next.svg) no-repeat;*//* Классы в верстке не используются */
   background-size: contain;
 }
 
