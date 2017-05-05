@@ -129,7 +129,7 @@ const MODAL = (link) => {
 			loaded = 'is-loaded',
 
 			sliderForOptions = {
-				lazyLoad: 'ondemand',
+				// lazyLoad: 'ondemand',
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				arrows: false,
@@ -138,7 +138,7 @@ const MODAL = (link) => {
 			},
 
 			sliderNavOptions = {
-				lazyLoad: 'ondemand',
+				// lazyLoad: 'ondemand',
 				slidesToShow: 4,
 				slidesToScroll: 1,
 				asNavFor: '.js-product-list .js-modal-slider-for',

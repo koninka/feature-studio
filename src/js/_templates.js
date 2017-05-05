@@ -7,7 +7,7 @@ export const {
             <div class="slider-for js-modal-slider-for">
               {% for image in images %}
                 <div class="slider-for__slide">
-                    <img data-lazy="{{ image }}" alt="{{ title }}" title="{{ title }}">
+                    <img src="{{ image }}" alt="{{ title }}" title="{{ title }}">
                 </div>
               {% endfor %}
             </div>
@@ -18,7 +18,7 @@ export const {
                     <div class="slider-nav js-modal-slider-nav">
                     {% for image in images %}
                       <div class="slider-nav__slide">
-                          <img data-lazy="{{ image }}" alt="{{ title }}" title="{{ title }}">
+                          <img src="{{ image }}" alt="{{ title }}" title="{{ title }}">
                       </div>
                     {% endfor %}
                     </div>
@@ -70,7 +70,7 @@ export const {
                 <div class="slider-for js-modal-slider-for">
                  {% for image in images %}
                    <div class="slider-for__slide">
-                       <img data-lazy="{{ image }}" alt="{{ title }}" title="{{ title }}">
+                       <img src="{{ image }}" alt="{{ title }}" title="{{ title }}">
                    </div>
                  {% endfor %}
                 </div>
@@ -81,7 +81,7 @@ export const {
                       <div class="slider-nav js-modal-slider-nav">
                          {% for image in images %}
                            <div class="slider-nav__slide">
-                               <img data-lazy="{{ image }}" alt="{{ title }}" title="{{ title }}">
+                               <img src="{{ image }}" alt="{{ title }}" title="{{ title }}">
                            </div>
                          {% endfor %}
                        </div>
