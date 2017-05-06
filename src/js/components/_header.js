@@ -2,8 +2,9 @@ import {WIN} from './../_constants';
 import './../lib/mask.min';
 
 export const HEADER = () => {
-  $('#phone_mask').mask("+7(999) 999-99-99");
+  $('.phone-field').mask("+7(999) 999-99-99");
   $('#phone_mask_modal').mask("+7(999) 999-99-99");
+
   $(document).mouseup(function (e) {
     var container = $(".modals");
     if (container.has(e.target).length === 0){
