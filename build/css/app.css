@@ -580,7 +580,7 @@ a {
 
 .nav .tel--mobile a {
   color: #fc0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .nav .menu__link {
@@ -2429,7 +2429,7 @@ a {
 
 .souvenirs__prev, .souvenirs__next {
   position: absolute;
-  z-index: 10;
+  z-index: 9;
   top: 230px;
   opacity: 0.35;
   background: none;
