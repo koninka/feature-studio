@@ -1,4 +1,5 @@
-import {touch} from './../_constants';
+/*import {touch} from './../_constants';
+
 
 const MAP = () => {
 	ymaps.ready(function () {
@@ -20,5 +21,4 @@ const MAP = () => {
 		map.geoObjects.add(marker);
 	});
 };
-
-export default MAP;
+export default MAP;*/

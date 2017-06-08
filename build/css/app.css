@@ -1425,6 +1425,14 @@ a {
   background-color: #fc0;
 }
 
+.map__img {
+  background-image: url(../img/map.png);
+  background-repeat: no-repeat;
+  background-position: 30% 0;
+  background-size: cover;
+  background-position: 20% 0;
+}
+
 .team {
   position: relative;
   z-index: 9;
@@ -2387,7 +2395,7 @@ a {
 }
 
 .souvenirs {
-  margin-bottom: 175px;
+  /*margin-bottom: 175px*/
 }
 
 .souvenirs__content {
