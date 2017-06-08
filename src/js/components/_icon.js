@@ -19,7 +19,7 @@ export const ICON = () => {
 
 	WIN.on('scroll', counting);
 
-	$('.btn--fade_modal').on('click', function(){
+	$(document).on('click', '.btn--fade_modal', function(){
 		// event.preventDefault();
 		$('.modals').fadeIn();
 	})

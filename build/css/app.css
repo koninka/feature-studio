@@ -3541,7 +3541,7 @@ a {
   .product {
     padding: 40px 0;
     min-height: 0;
-    width: 100%;
+    width: 50%;
   }
 
   .modal__left {
