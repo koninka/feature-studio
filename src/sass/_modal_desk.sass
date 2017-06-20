@@ -1,0 +1,26 @@
+.modal
+	padding: 87px 0 74px
+	&__left
+		float: left
+		padding-right: 50px
+		width: 476px
+		&--mobile
+			display: none
+	&__right
+		float: right
+		width: calc(100% - 476px)
+		text-align: left
+	&__title
+		padding: 7px 20px 7px 30px
+		&:before
+			position: absolute
+			content: ""
+			top: 0
+			left: 100%
+			+arr(12, 50, $yellow, tl)
+.characteristics	
+	&__color
+		&:not(:first-child)
+			margin-left: 9px
+.slider-nav-wrap
+	margin-top: 15px

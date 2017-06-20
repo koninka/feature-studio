@@ -1,0 +1,109 @@
+#whywe
+	position: relative
+	visibility: hidden
+	top: -35px
+.whywe
+	position: relative
+	&__planet
+		position: absolute
+		img
+			max-width: 100%
+			display: block
+.quality
+	font-size: 0
+	text-align: center
+	&__item
+		position: relative;
+		top: 350px
+		vertical-align: top
+		display: inline-block
+		&--animate
+			top: 0px
+			transition: all 1s ease
+	&__picture
+		height: 108px
+		line-height: 108px 
+	&__img
+		vertical-align: middle
+		display: inline-block
+		img
+			display: block
+	&__text
+		strong
+			+f('black')
+
+.steps	
+	.btn
+		margin-top: 30px
+	&__wrap
+		position: relative		
+	&__list
+		list-style-type: none
+		counter-reset: list
+	&__item
+		+f('lli', 15, 24)		
+		&_first
+			top: 243px
+			left: 37px
+		&_second
+			top: 143px
+			left: 222px
+		&_third
+			top: 155px
+			left: 667px
+		&_fourth
+			top: 30px
+			left: 847px
+	&__logo
+		padding-left: 0
+		text-align: center
+		&:before
+			display: none
+	&__numb
+		position: absolute
+		top: 0
+		left: 0
+		color: $black
+		line-height: 1
+		text-transform: uppercase
+		background-color: $lightBlue 
+		&:before
+			position: absolute
+			content: ""
+			top: 100%
+			left: 0
+		&:after
+			position: absolute
+			content: ""
+			top: 0
+			left: 100%
+	&__arr 
+		position: absolute
+	&__title
+		padding-top: 2px
+		+f('ll', 18, 24)
+		&_lg
+			color: #fc0
+			text-transform: uppercase
+		.steps__logo &
+			&:before
+				display: none
+	&__link
+		line-height: 20px
+		transition: border-color .2s ease-in-out
+		border-bottom: 1px solid rgba($white, 0.5)
+		display: inline-block
+		+hover
+			border-color: transparent
+	&__img
+		margin: 0 auto 12px
+		img
+			width: 100%
+			display: block
+	&__nlo
+		position: absolute
+		width: 575px
+		img
+			max-width: 100%
+			display: block
+		

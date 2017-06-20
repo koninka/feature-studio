@@ -1,0 +1,66 @@
+#services
+	position: relative
+	visibility: hidden
+.services
+	position: relative
+	z-index: 9
+	&__form
+		position: relative
+	&__subtitle
+		text-align: center
+	&__row
+		+clr
+	&__col
+		float: left
+		width: 100%
+	&__submit
+		text-align: center
+	&__container
+		position: relative
+	&__error
+		position: absolute
+		top: 0
+		left: 100%
+		padding: 6px 0 0 20px
+		margin-left: 5px
+		width: 95px
+		color: $red
+		+f('lli', 15, 20)
+.form-error
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 13px
+		height: 30px
+		background: url(../img/error-arrow.svg) no-repeat center center
+		background-size: contain
+	strong
+		display: none
+	li
+		&:not(:first-child)
+			display: none
+.form-control__input,
+.form-control__textarea
+	&::-webkit-input-placeholder
+		color: #ffffff
+	&::-moz-placeholder
+		color: #ffffff
+	&:-ms-input-placeholder
+		color: #ffffff
+.okay__wrap
+	text-align: center
+	padding: 40px 20px
+	border-radius: 5px
+	background-color: #0b1c2d
+	position: absolute
+	top: 26%
+	box-shadow: 0 0 10px 0 #000
+	display: none
+	.okay__item
+		width: 150px
+		fill: $yellow
+	p
+		color: #fff
+		font-size: 24px

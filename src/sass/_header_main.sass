@@ -1,0 +1,276 @@
+.header
+	position: relative
+	z-index: 10
+	padding: 40px 0 20px
+	&__main
+		overflow: hidden
+	&__logo
+		position: relative
+		margin: 0 auto
+		font-size: 0
+		text-align: center
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 70px
+			margin: 0 20px
+			width: 3000px
+			border-bottom: 2px dashed $white
+			opacity: 0.2
+		&:before
+			right: 100%
+		&:after
+			left: 100%
+		&-circle
+			position: absolute
+			left: 0
+			right: 0
+			overflow: hidden
+			transform: translate3d(0,0,0)
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				right: 0
+				border: 2px solid $white
+				border-radius: 50%
+				opacity: 0.09
+				transform: translate3d(0,-50%,0)
+.logo
+	position: relative
+	z-index: 2
+	display: inline-block
+	vertical-align: top
+	width: 170px
+	top: 4px
+	img
+		width: 100%
+.logo_sm
+	width: 80px
+.btn-nav
+	position: relative
+	vertical-align: top
+	padding: 5px 10px 5px 40px
+	margin-top: 10px
+	background: none
+	+hover
+		.btn-nav
+			&__icon
+				&:before,
+				&:after,
+				i
+					border-color: $yellow
+				&:before
+					transform: translate3d(0, -3px, 0)
+				&:after
+					transform: translate3d(0, 3px, 0)
+			&__text
+				color: $yellow
+	&.is-active
+		+hover
+			.btn-nav
+				&__icon
+					&:before
+						transform: translate3d(4px, -3px, 0) rotate(45deg)
+					&:after
+						transform: translate3d(4px, 3px, 0) rotate(-45deg)
+		.btn-nav
+			&__icon
+				&:before
+					transform: translate3d(4px, -3px, 0) rotate(45deg)
+				&:after
+					transform: translate3d(4px, 3px, 0) rotate(-45deg)
+				i
+					transform: scaleX(0)
+	&__icon
+		position: absolute
+		top: 16px
+		left: 0
+		height: 15px
+		&:before,
+		&:after,
+		i
+			position: absolute
+			left: 0
+			width: 28px
+			border-bottom: 1px solid $white
+			transition: transform 0.175s ease, border-color 0.25s ease
+		&:before,
+		&:after
+			content: ""
+			+gpu
+		&:before
+			top: 0
+			transform-origin: top left
+		&:after
+			bottom: 0
+			transform-origin: bottom left
+		i
+			top: 7px
+	&__text
+		display: block
+		color: $white
+		+f('lt', 18, 40)
+		text-transform: uppercase
+		+t(color)
+.menu
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	right: 0
+	min-width: 320px
+	color: $white
+	background: $gray
+	+f('ll', 18, 40)
+	text-transform: uppercase
+	a
+		color: #fc0
+	&__link
+		float: right
+		padding: 5px 0
+		line-height: .7
+		font-weight: 600
+		border: 2px solid #fc0
+		border-radius: 4px
+		margin: 5px 0
+		padding: 10px 10px
+		color: #fc0
+		&:hover
+			color: #fff
+			border: 0
+.nav	
+	&__list
+		font-size: 0.1px
+		text-align: justify
+		&:after
+			content: ""
+			display: inline-block
+			width: 100%
+		li,
+		a			
+			vertical-align: top
+		a
+			padding: 5px 0
+			font-size: 1rem
+			line-height: 1.8
+			color: inherit
+			+t(color)
+			+hover
+				color: $yellow
+.nav
+	.tel--mobile
+		display: none
+		a
+			color: #fc0
+			font-size: 1rem
+			p:first-child
+				font-size: 14px
+				line-height: 1
+				margin-top: 10px
+			.tel__text--hidden
+				line-height: 1.4
+.social
+	float: right
+	font-size: 0	
+	&__mail
+		position: relative
+		float: left
+		+t(color)
+		+hover
+			color: $yellow
+			&:before
+				border-color: $yellow
+		&:before
+			content: ""
+			position: absolute
+			bottom: 3px
+			left: 0
+			right: 0
+			border-bottom: 1px solid $white
+			opacity: 0.3
+			+t(border-color)
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+	&__list
+		float: right
+		padding-left: 14px
+	&__item
+		padding-left: 10px
+	&__link
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		opacity: 0.25
+		background: $white
+		+vertical
+		transition: background 0.2s ease, opacity 0.2s ease
+		+hover
+			opacity: 1
+			.icon
+				fill: $white
+		&_fb
+			+hover
+				background: #38569a
+			.icon
+				font-size: 19px
+		&_vk
+			+hover
+				background: #41658b
+			.icon
+				font-size: 14px
+		&_inst
+			+hover
+				background: #3d6b92
+			.icon
+				font-size: 17px
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $black
+			transition: fill 0.2s ease
+.phones
+	float: left
+	&__item,
+	&__link
+		vertical-align: top
+	&__item
+		padding-right: 5px
+		&:not(:last-child)
+			&:after
+				content: ","
+				vertical-align: top
+				+f('ll', 18, 30)
+	&__link
+		+t(color)
+		+hover
+			color: $yellow
+.tel
+	&--hidden,
+	&--visible
+		margin: 8px 0
+		padding: 3px 10px
+		transition: all .4s ease
+	&--hidden
+		background-color: rgba(255, 255, 255, .1)
+		border-radius: 4px
+		border: 1px dotted #fff
+		&:hover
+			cursor: pointer
+	&--visible
+		display: none
+.hidden__content
+	display: block
+	text-align: center
+	color: #ffffff
+	font-size: 1.2rem
+	text-transform: uppercase
+
+.tel__text--hidden
+	font-size: 1.2rem
+	text-transform: uppercase
+	color: $yellow

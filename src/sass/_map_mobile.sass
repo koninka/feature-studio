@@ -1,0 +1,54 @@
+.map
+	&__img        
+		position: relative
+		height: 420px
+	&__content
+		padding: 0
+		background: $gray
+.contacts
+	padding: 50px 0 45px
+	width: 100%
+	background: none
+	&__btn
+		text-align: center
+.contacts-phones
+	margin-bottom: 34px
+	color: $white
+	text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		font-size: 0
+		&:not(:last-child)
+			&:after
+				display: inline-block
+	&__link
+		+f(null, 25, 30)
+.contacts-info
+	float: right
+	margin-bottom: 50px
+	width: 360px
+	&__item
+		color: $white
+		+f('ll', 18, 30)
+.contacts-social
+	padding-top: 3px
+	width: 210px
+	text-align: center
+	&__link
+		background: rgba($white, 0.3)
+		.icon
+			fill: #2a2e33
+.tel--black
+	background-color: transparent
+	border: 1px dotted #fff
+	padding: 0px 15px
+	p:first-child
+		font-size: 20px
+	.tel__text--hidden
+		color: $yellow
+	.hidden__content
+		color: $yellow
+.map__img
+    background-position: 20% 0
+    

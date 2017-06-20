@@ -90,6 +90,19 @@ export const {
             </div>
           {% endif %}
           <a {# href="#services" #} class="btn btn--fade_modal" onclick="if (window.isNonLocalRequest) { ga('send', 'event', 'click', 'order_catalog'); if (typeof yaCounter44092294 !== 'undefined') { yaCounter44092294.reachGoal('click_order_catalog'); } }; return true;">Узнать цену</a>
+            <script>
+                $('body').on('click', '.btn--fade_modal', function(){
+		console.log('test');
+		// event.preventDefault();
+		$('.modals').fadeIn();
+	})
+
+	$('.btn_close').on('click', function(){
+		// event.preventDefault();
+		$('.modals').fadeOut();
+	});
+};
+            </script>
 {#
           <script>
             $(document).ready(function(){

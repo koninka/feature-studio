@@ -1,0 +1,46 @@
+.map
+	&__img        
+		position: relative
+		height: 420px
+	&__content
+		padding: 0
+		background: $gray
+.contacts
+	padding: 50px 0 45px
+	width: 100%
+	background: none
+	&__btn
+		text-align: center
+.contacts-phones
+	margin-bottom: 34px
+	color: $white
+	text-align: center
+	&__item
+		display: block
+		vertical-align: top
+		font-size: 0
+		&:not(:last-child)
+			&:after
+				display: none
+	&__link
+		+f(null, 25, 30)
+.contacts-info
+	float: none
+	margin: 0 auto 25px
+	width: 100%
+	max-width: 300px
+	&__item
+		color: $white
+		+f(null, 15, 30)
+.contacts-social
+	padding-top: 3px
+	width: 100%
+	text-align: center
+	clear: both
+	&__link
+		background: rgba($white, 0.3)
+		.icon
+			fill: #2a2e33
+.map__img
+    background-position: 20% 0
+    

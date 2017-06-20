@@ -1,0 +1,118 @@
+.modal
+	font-size: 18px
+	border-top: 1px solid rgba($white, 0.06) 
+	border-bottom: 1px solid rgba($white, 0.06) 
+	display: none
+	+clr
+	&__right
+		.btn
+			margin-top: 38px
+	&__right--w100
+		width: 100%
+	&__title
+		position: relative
+		margin: 0 12px 26px 0
+		color: $black
+		+f('black', 30)
+		line-height: 1.2
+		text-transform: uppercase
+		vertical-align: top
+		background: $yellow 
+		display: inline-block
+		&:before
+			position: absolute
+			content: ""
+			top: 0
+			left: 100%
+			+arr(12, 50, $yellow, tl)
+.characteristics
+	margin-top: 35px
+	&__row
+		+clr
+		&:not(:first-child)
+			margin-top: 12px
+	&__name
+		float: left
+		width: 175px
+		+f('black')
+	&__data
+		float: right
+		width: calc(100% - 175px) 
+		+clr
+	&__color
+		float: left
+		width: 26px
+		height: 24px
+.slider-for,
+.slider-nav
+	overflow: hidden
+	transition: opacity .2s ease-in-out
+	transition-delay: .5s 
+	&.is-loaded
+		opacity: 1
+	&__slide
+		width: 33%
+		&:not(:first-child)
+			display: none
+			.is-loaded &
+				display: block
+		img
+			margin: 0 auto
+			display: block
+.slider-nav-out
+	overflow: hidden
+.slider-nav-wrap
+	position: relative
+	opacity: 0
+	transition: opacity .2s ease-in-out
+	transition-delay: .5s
+	&.is-loaded
+			opacity: 1
+	&:before,
+	&:after
+		position: absolute
+		content: ""
+		top: -9px
+		bottom: -9px
+		width: 1px
+		background: #5B6772  
+	&:before
+		left: 0
+	&:after
+		right: 0
+	.slider-nav-prev,
+	.slider-nav-next
+		position: absolute
+		top: 50%
+		margin-top: -17px
+		width: 14px
+		height: 34px
+		font-size: 0
+		z-index: 2
+		transition: opacity .2s ease-in-out
+		background-color: transparent 
+		+hover
+			opacity: 0.7
+	.slider-nav-prev
+		left: -22px
+		background: url(../img/slider-nav-prev.svg) no-repeat 
+		background-size: contain
+	.slider-nav-next
+		right: -22px
+		background: url(../img/slider-nav-next.svg) no-repeat 
+		background-size: contain
+.slider-for
+	opacity: 0
+	img
+		max-width: 100%
+.slider-nav
+	margin: 0 -5px
+	&__slide
+		padding: 0 5px
+	img
+		height: 100px;
+		width: 100%
+.slider-nav-wrap
+	&:before,
+	&:after
+		width: 0 !important

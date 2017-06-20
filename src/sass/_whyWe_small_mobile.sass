@@ -1,0 +1,122 @@
+.whywe
+	padding: 65px 0 70px
+	&__planet
+		display: none
+.quality
+	margin: 50px -3% 0
+	&__item
+		+f('ll', 20)
+		line-height: (24/20)
+		margin-top: 65px 
+		padding: 0 20%
+		width: 100%
+		&:first-child,
+		&:nth-child(2)
+			margin-top: 0
+	&__text
+		margin-top: 20px
+.steps
+	padding-top: 60px
+	&__topic
+		max-width: 335px
+		+f('lt', 18) 
+		line-height: (30/18)
+	&__title-lg
+		margin-bottom: 4px
+	&__wrap
+		font-size: 0
+		text-align: center
+		padding-top: 60px
+	&__item
+		position: static
+		margin-top: 35px 
+		padding-left: 35px
+		width: 33%
+		vertical-align: top
+		text-align: left
+		display: inline-block
+		&:first-child,
+		&:nth-child(2)
+			margin-top: 0
+		&:nth-child(odd)
+			margin-left: 1%
+			padding-right: 16%
+			width: 100%
+		&:nth-child(even)
+			margin-left: 0
+			padding-right: 0
+			margin-top: 35px
+			width: 100%
+		&:nth-child(-n+9)
+			.steps__title
+				&:before
+					content: "0" (counter(list) ".")
+		br
+			display: none
+		&_fourth
+			min-width: 0
+	&__logo
+		display: none
+	&__numb
+		display: none
+		&:before
+			+arr(4,16,$lightBlue, tl)
+		&:after
+			+arr(8,32,$lightBlue, tl)
+		.steps__item_first &
+			top: 158px
+			left: 9px
+		.steps__item_second &
+			top: 96px
+			left: 120px
+		.steps__item_third &
+			top: 106px
+			left: 404px
+		.steps__item_fourth &
+			top: 30px
+			left: 506px
+	&__arr 
+		display: none
+		&_1
+			width: 45px
+			top: 211px
+			left: -41px
+		&_2
+			width: 40px
+			top: 140px
+			left: 72px
+		&_3
+			width: 145px
+			top: 140px
+			left: 134px
+		&_4
+			width: 63px 
+			top: 161px
+			left: 338px
+		&_5
+			width: 75px 
+			top: 80px
+			left: 427px
+		&_6
+			width: 21px 
+			top: -52px
+			left: 536px
+	&__title
+		position: relative
+		&_lg
+			+f('black', 13, 24)
+			line-height: (18/13)
+		&:before
+			position: absolute
+			top: 0
+			left: -36px
+			color: $yellow 
+			+f('black', 20)
+			counter-increment: list
+			content: (counter(list) ".")
+	&__link
+		margin-top: 4px 
+	&__img
+		width: 70px
+	&__nlo
+		display: none

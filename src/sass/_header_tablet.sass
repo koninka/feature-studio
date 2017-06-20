@@ -1,0 +1,49 @@
+.header
+	&__social
+		padding: 20px 0
+	&__main
+		.header__logo
+			&:before,
+			&:after
+				display: none
+	&__inner
+		overflow: hidden
+	&__logo
+		padding: 25px 0 5px
+		max-width: 216px
+		&-circle
+			top: 40px
+			height: 60px
+			display: none
+			&:before
+				height: 216px
+
+.logo
+	display: inline-block
+.logo_sm
+	display: none
+.btn-nav
+	display: none
+.menu	
+	&__link
+		display: none !important
+		margin-right: 140px
+.nav
+	&__list
+		li,
+		a
+			display: inline-block
+.nav
+	.tel--mobile
+		display: none
+	.menu__link
+		display: none
+.social
+	&__mail
+		+f(null, 20, 24)
+.phones
+	&__item,
+	&__link
+		display: inline-block
+	&__link
+		+f(null, 16, 24)

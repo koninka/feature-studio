@@ -1,0 +1,36 @@
+.team
+	padding-bottom: 35px
+	&__content
+		margin: 0
+	&__item
+		float: none
+		padding: 35px 0
+		margin: 0 auto
+		width: 100%
+		max-width: 500px
+	&__heading
+		margin-bottom: 65px
+
+.member
+	padding-left: 0
+	&__img
+		position: relative
+		float: left
+		width: 100px
+		height: 100px
+	&__content
+		max-width: 100%
+	&__name,
+	&__position
+		padding-left: 120px
+	&__name
+		+f('black', 18, 30)
+		padding-top: 10px
+		font-size: 18px
+	&__position
+		margin-bottom: 0
+		+f('ll', 16, 30)
+	&__description
+		clear: both
+		padding: 20px 0 0
+		+f(null, 14, 24)

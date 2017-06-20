@@ -8,7 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="stylesheet" media="all" href="css/main_app.css">
+    <link rel="stylesheet" media="(min-width: 1202px)" href="css/desk_app.css">
+    <link rel="stylesheet" media="(min-width: 931px) and (max-width: 1201px)" href="css/tablet_app.css">
+    <link rel="stylesheet" media="(min-width: 590px) and (max-width: 930px)" href="css/mobile_app.css">
+    <link rel="stylesheet" media="(min-width: 319px) and (max-width: 589px)" href="css/small_mobile_app.css">
+
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body>
@@ -22,9 +27,11 @@
 
 
     <!-- BEGIN scripts -->
-    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
     <script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+   
+
     <!-- END scripts -->
 
   </body>

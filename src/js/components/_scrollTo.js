@@ -1,4 +1,4 @@
-;(function(){
+(function(){
 	let goToBtn = $(".js-go-to"),
 		htmlBody = $('html, body');
 	goToBtn.click(function() {

@@ -1,0 +1,172 @@
+#products
+	position: relative
+	visibility: hidden
+	top: -35px
+.products
+	position: relative
+	padding: 45px 0 65px
+	text-align: center
+	&__list
+		font-size: 0
+	.btn
+		margin-top: 28px
+		cursor: pointer
+.product
+	position: relative
+	font-size: 18px
+	text-align: center
+	vertical-align: top
+	display: inline-block
+	&__link
+		display: inline-block
+		&:before,
+		&:after
+			position: absolute
+			content: ""
+			bottom: 0
+			opacity: 0
+		&:before
+			left: 0
+			right: 0
+			height: 3px
+			background: $yellow
+		&:after
+			left: 50%
+			bottom: -12px
+			margin-left: -14px
+			+arr(28,15,$yellow,b)
+		&.is-active
+			svg path,
+			svg line,
+			svg polyline
+				stroke: $white
+			svg
+				filter: drop-shadow( 0 0 8px #7eebfb)
+			.product__name:before,
+			&:before,
+			&:after
+				visibility: visible
+				opacity: 1
+		+hover
+			svg path,
+			svg line,
+			svg polyline
+				stroke: $white
+			svg
+				filter: drop-shadow( 0 0 8px #7eebfb)
+	&__picture
+		position: relative
+		height: 145px
+		line-height: 145px
+		display: block
+		&:before
+			position: absolute
+			content: "" 
+			z-index: -1
+			top: 50%
+			left: 50%
+			margin: -159px 0 0 -145px
+			width: 291px
+			height: 318px
+			opacity: 0
+			transition: opacity .2s ease-in-out, transform .2s ease-in-out
+			transform: scale(0.5)
+			background: url("../img/shadow-product.png") no-repeat
+			background-position: 50% 50% 
+			background-size: contain
+			.is-active &
+				opacity: 1
+				transform: scale(1)
+	&__img
+		line-height: 1
+		vertical-align: middle
+		display: inline-block
+		svg, img
+			transition: filter .2s ease-in-out
+			display: block
+		svg path,
+		svg line,
+		svg polyline
+			stroke: $yellow
+			stroke-width: 1.6px
+			transition: stroke .2s ease-in-out
+	&__name
+		margin-top: 5px
+		max-width: 155px
+		font-size: 1rem
+		vertical-align: top
+		display: inline-block
+		&:before
+			position: absolute
+			content: "" 
+			left: 50%
+			bottom: -8px
+			margin-left: -12px
+			z-index: 1
+			opacity: 0
+			+arr(24,12,$bodyBg,b)
+.products-modal
+	display: none
+.slider-for
+	img
+		height: 100%
+.modals
+  left: 50%
+  margin: -250px 0 0 -40%
+  position: fixed
+  width: 80%
+  border-radius: 5px
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25)
+  box-sizing: border-box
+  transition: all 0.4s ease-in-out
+  .headers
+    border-radius: 5px 5px 0 0
+  .footers
+    border-bottom: 1px solid #e7e7e7
+    border-radius: 5px 5px 0 0
+    border: none
+    border-radius: 0 0 5px 5px
+  section, .headers, .footers
+    padding: 15px
+    z-index: 200
+  .btn_close
+    float: right
+    cursor: pointer
+.modals
+	background-color: rgba(23, 67, 112, 1)
+	padding: 25px
+	z-index: 200
+	display: none
+	&__title
+		font-size: 1.8rem
+		font-weight: 600
+		text-transform: uppercase
+	&__text
+		font-size: 1.1rem
+		font-weight: 600
+		text-align: center
+		margin-bottom: 1.5em
+.wrapper_inp
+	display: flex
+	margin: 0 4.5em 1.5em
+	input
+		&:last-child
+			margin-right: 0px
+.modals__inp
+	width: 100%
+	background-color: rgba(23, 67, 112, 1)
+	color: #ffffff
+	border: 3px solid #fc0
+	border-radius: 4px
+	padding: 8px 10px
+	font-size: 16px
+	min-width: 100px
+	&::-webkit-input-placeholder
+		color: #fff
+		font-size: 1.1rem
+	&::-moz-placeholder
+		color: #fff
+		font-size: 1.1rem
+	&:-ms-input-placeholder
+		color: #fff
+		font-size: 1.1rem

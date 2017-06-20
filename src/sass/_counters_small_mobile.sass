@@ -1,0 +1,17 @@
+.counters
+	margin: 0
+	&__heading
+		margin-bottom: 25px
+	&__row
+		margin: 0 -10px 20px
+	&__col
+		padding: 40px 10px 20px
+		width: 100%
+	&__btn
+		display: none
+.counter
+	&__numbers
+		+f('lt', 100, 100)
+	&__description
+		max-width: 190px
+		+f(null, 20, 24)

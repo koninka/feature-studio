@@ -1,0 +1,33 @@
+.map	
+	&__img        
+		position: absolute
+	&__content
+		padding: 110px 0 0
+.contacts
+	padding: 75px 50px 55px
+	width: 455px
+	background: rgba($white, 0.85)
+.contacts-phones
+	margin-bottom: 14px
+	color: $black
+	&__item		
+		&:not(:last-child)
+			&:after
+				display: none
+	&__link		
+		+f('black', 30, 36)
+.contacts-info
+	margin-bottom: 12px
+	&__item		
+		color: $black
+		+f('ll', 18, 30)		
+.contacts-social	
+	&__link		
+		background: #cecece
+		.icon
+			fill: $white
+.tel--black
+	border: 0
+	padding-left: 0
+.map__img
+    background-position: 30% 0

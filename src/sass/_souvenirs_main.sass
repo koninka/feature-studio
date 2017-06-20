@@ -1,0 +1,97 @@
+.souvenirs
+	&__content
+		position: relative
+		z-index: 2
+		text-align: left
+	&__items
+		position: relative
+		top: -45px
+	&__items-in
+		position: relative
+		max-width: 500px
+	&__slider
+	&__title
+		margin-bottom: 10px
+		text-align: left
+		font-size: 26px
+	&__description
+		margin-bottom: 32px
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 9
+		opacity: 0.35
+		background: none
+		+t(opacity)
+		+hover
+			opacity: 1
+		.icon
+			fill: $white
+	&__prev
+		left: 0
+	&__next
+		right: 0
+	&__down
+		text-align: center
+		margin-top: 110px
+.souvenir
+	position: relative
+	&__img
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 65%
+			max-height: 100%
+			animation: fly 4s infinite ease
+	&__content
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		text-align: center
+	&__title,
+	&__description
+		max-width: 400px
+		margin: 0 auto
+		text-align: center
+	&__title
+		+f('black', 14, 36)
+		text-transform: uppercase
+	&__description
+		+f('ll', 18, 24)
+
+@keyframes fly
+	0%, 100%
+		transform: translate3d(0,-15px,0) rotate(0)
+	50%
+		transform: translate3d(0,15px,0) rotate(-5deg)
+
+.souvenirs-bg
+	position: absolute
+	z-index: -1
+	width: 2000px
+.souvenirs-background
+	position: absolute
+	top: -100px
+	left: 0
+	right: 0
+	display: none
+	img
+		position: absolute
+		left: 50%
+		transform: translate3d(-50%,0,0)
+		// opacity: 0.5
+	&__shining2
+		top: -230px
+	&__shining1
+		top: 45px
+	&__light2
+		top: 65px
+	&__light1
+		top: 55px
+	&__shadow
+		top: 277px
+	&__light1,
+	&__light2
+		opacity: 0.5
