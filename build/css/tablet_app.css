@@ -129,7 +129,7 @@ html {
   padding: 20px 0;
 }
 
-.header__main .header__logo:before, .header__main .header__logo:after {
+.header__social .header__logo:before, .header__social .header__logo:after {
   display: none;
 }
 
@@ -194,6 +194,25 @@ html {
 .phones__link {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.hidden__content {
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+}
+
+.tel__text--hidden {
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+}
+
+.tel__eye {
+  top: 7px;
+  right: 0;
+  width: 40px;
+  height: 25px;
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(43, 61, 77, 0), rgba(43, 61, 77, 0.96) 32%, #2b3d4d);
+  background-size: 40px;
 }
 
 .title-lg {

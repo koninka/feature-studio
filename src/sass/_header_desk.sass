@@ -1,11 +1,12 @@
 .header
 	&__social
-		padding: 20px 0		
+		margin: 30px 0
+		padding: 17px 0
 	&__logo
 		padding: 5px 0
 		max-width: 360px
 		&-circle
-			top: 20px
+			top: 70px
 			height: 100px
 			&:before
 				height: 360px
@@ -16,6 +17,7 @@
 .btn-nav
 	display: none
 .menu
+	height: 50px
 	&__link
 		display: none !important
 		margin-right: 140px
@@ -24,9 +26,13 @@
 		li,
 		a
 			display: inline-block
-.social	
-	&__mail		
-		+f('ll', 18, 30)
+		a
+		letter-spacing: 0.08em
+.social
+	&__mail
+		+f(null, 24, 30)
+		font-weight: bold
+		letter-spacing: -0.03em
 .phones
 	&__item,
 	&__link
@@ -37,3 +43,17 @@
 				display: inline-block
 	&__link
 		+f('ll', 18, 30)
+.tel--hiden p
+	font-size: 20px
+.hidden__content
+	font-size: 2.1rem
+	letter-spacing: 0.03em
+.tel__text--hidden
+	font-size: 2.1rem
+	letter-spacing: 0.02em
+.tel__eye
+	top: 7px
+	right: 0
+	width: 60px
+	height: 30px
+	background-image: url(../img/block__phone__eye.svg), linear-gradient(to right,rgba(36, 51, 67,0),rgba(36, 51, 67,0.96) 32%, rgb(36, 51, 67))

@@ -45,7 +45,7 @@
 	transition: transform 0.25s ease
 	&.is-active
 		+gpu
-	&__list		
+	&__list
 		li,
 		a
 			display: block
@@ -65,7 +65,7 @@
 	.menu__link
 		display: block
 		position: absolute
-		bottom: 120px
+		bottom: 100px
 		color: $yellow
 		width: 210px
 .social
@@ -74,10 +74,10 @@
 	justify-content: center
 	margin-top: 50px
 	&__mail
-		+f(null, 20, 24)	
+		+f(null, 20, 24)
 	&__list
-		display: none	
-.phones	
+		display: none
+.phones
 	&__item,
 	&__link
 		display: block
@@ -87,3 +87,11 @@
 				display: none
 	&__link
 		+f(null, 16, 24)
+.tel__eye
+	top: 2px
+	right: 40px
+	width: 30px
+	height: 25px
+	background-image: url(../img/block__phone__eye.svg), linear-gradient(to right,rgba(74, 80, 86,0),rgba(74, 80, 86,0.96) 32%, rgb(74, 80, 86))
+	background-size: 30px
+

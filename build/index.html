@@ -14,6 +14,22 @@
     <link rel="stylesheet" media="(min-width: 590px) and (max-width: 930px)" href="css/mobile_app.css">
     <link rel="stylesheet" media="(min-width: 319px) and (max-width: 589px)" href="css/small_mobile_app.css">
 
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("img/future5.png");
+      }
+
+
+      BODY {
+        opacity: .5;
+      }
+
+    </style>
+    <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+    <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
 
   <body>
@@ -66,9 +82,10 @@
                     <p>
                       Посмотреть и позвонить
                     </p>
-                    <p class="tel__text--hidden">
-                      +7 (914) xxx-xx-xx
-                    </p>
+                    <div class="tel__text--hidden">
+                      +7 (914) 700-68-77
+                      <div class="tel__text--hidden tel__eye"></div>
+                    </div>
                   </div>
                   <div class="tel--visible">
                     <p>
@@ -84,7 +101,7 @@
         <div class="header__main">
           <div class="inner">
             <div class="header__inner">
-              <ul class="phones header__phones">
+              <div class="phones header__phones">
                 <!--
 						<li class="phones__item">
 							<a href="tel:+79147006877" class="phones__link">+7 (914) 700-68-77</a>
@@ -92,21 +109,22 @@
 					-->
                 <li class="phones__item">
                   <div class="tel--hidden">
-                    <p>
+                    <p class="tel__title">
                       Посмотреть и позвонить
                     </p>
-                    <p class="tel__text--hidden">
-                      +7 (914) xxx-xx-xx
-                    </p>
+                    <div class="tel__text--hidden">
+                      +7 (914) 700-68-77
+                      <div class="tel__text--hidden tel__eye"></div>
+                    </div>
                   </div>
                   <div class="tel--visible">
-                    <p>
-                      Звоните прямо сейчас!
+                    <p class="tel__title">
+                      Звоните прямо сейчас
                     </p>
                     <a href="tel:+79147006877" class="hidden__content">+7 (914) 700-68-77</a>
                   </div>
                 </li>
-              </ul>
+              </div>
               <div class="social header__social">
                 <a href="mailto:contact@studiofuture.ru" class="social__mail">contact@studiofuture.ru</a>
                 <ul class="social__list">
@@ -134,7 +152,7 @@
               <div class="header__logo">
                 <div class="header__logo-circle"></div>
                 <a href="#" class="logo">
-						<img src="img/logo.png" alt="Featur-Studio">
+						<img src="img/logo_new.png" alt="Featur-Studio">
 					</a>
               </div>
             </div>
@@ -149,8 +167,27 @@
           <div class="inner">
             <img src="img/hero-bg-2.png" alt="" class="souvenirs-bg">
             <div class="souvenirs__content">
-              <h2 class="souvenirs__title title-md title-md_thin">наши <strong>космические Технологии</strong> для создания вашего идеального сувенира</h2>
-              <div class="souvenirs__description">Подберите товар в нашем каталоге и напечатайте на нем уникальный фирменный подарок для ваших клиентов, партнеров, сотрудников</div>
+              <h2 class="souvenirs__title title-md title-md_thin"> <strong>Новые технологии</strong> для создания идеального сувенира</h2>
+              <div class="souvenirs__description">Изготовим фирменный подарок для ваших клиентовб партнеров или сотрудников. Подберите товар в нашем каталоге и напечатайте на нем свой уникальный принт</div>
+              <div class="souvenirs__form">
+                <form class="js-form souvenirs-form">
+                  <div class="souvenirs-form__container">
+                    <div class="souvenirs__error js-error-msg"></div>
+                    <div class="souvenirs__row">
+                      <div class="souvenirs__col souvenirs__col_xs">
+                        <label class="form-control js-form-parent">
+										<input type="text" name="name" class="form-control__input js-form-field" placeholder="ФИО" data-validation="required" data-validation-error-msg="Не указано ФИО">
+									</label>
+                      </div>
+                      <div class="souvenirs__col souvenirs__col_xs">
+                        <label class="form-control js-form-parent">
+										<input type="text" name="phone" id="phone_mask" class="form-control__input js-form-field phone-field" placeholder="Телефон:" data-validation="custom" data-validation-regexp="([/+0-9]+)$" data-validation-error-msg="Не указан телефон">
+									</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
               <div class="souvenirs__button">
                 <a href="#services" class="btn js-go-to">Заказать услуги</a>
               </div>

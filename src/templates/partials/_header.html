@@ -25,9 +25,10 @@
 							<p>
 								Посмотреть и позвонить
 							</p>
-							<p class="tel__text--hidden">
-								+7 (914) xxx-xx-xx
-							</p>
+							<div class="tel__text--hidden">
+								+7 (914) 700-68-77
+								<div class="tel__text--hidden tel__eye"></div>
+							</div>
 						</div>
 						<div class="tel--visible">
 							<p>
@@ -43,7 +44,7 @@
 	<div class="header__main">
 		<div class="inner">
 			<div class="header__inner">
-				<ul class="phones header__phones">
+				<div class="phones header__phones">
 					<!--{% for item in header.phones %}
 						<li class="phones__item">
 							<a href="{{item.link}}" class="phones__link">{{item.text}}</a>
@@ -51,21 +52,22 @@
 					{% endfor %}-->
 					<li class="phones__item">
 						<div class="tel--hidden">
-							<p>
-								Посмотреть и позвонить
+							<p class="tel__title">
+							Посмотреть и позвонить
 							</p>
-							<p class="tel__text--hidden">
-								+7 (914) xxx-xx-xx
-							</p>
+							<div class="tel__text--hidden">
+								+7 (914) 700-68-77
+								<div class="tel__text--hidden tel__eye"></div>
+							</div>
 						</div>
 						<div class="tel--visible">
-							<p>
-								Звоните прямо сейчас!
-							</p>
+						<p class="tel__title">
+						Звоните прямо сейчас
+						</p>
 							<a href="tel:+79147006877" class="hidden__content">+7 (914) 700-68-77</a>
 						</div>
 					</li>
-				</ul>
+				</div>
 				<div class="social header__social">
 					<a href="mailto:{{header.mail}}" class="social__mail">{{header.mail}}</a>
 					<ul class="social__list">
@@ -79,7 +81,7 @@
 				<div class="header__logo">
 					<div class="header__logo-circle"></div>
 					<a href="#" class="logo">
-						<img src="img/logo.png" alt="Featur-Studio">
+						<img src="img/logo_new.png" alt="Featur-Studio">
 					</a>
 				</div>
 			</div>

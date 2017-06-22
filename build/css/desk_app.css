@@ -122,11 +122,12 @@ html {
 }
 
 .inner {
-  max-width: 1140px;
+  max-width: 1120px;
 }
 
 .header__social {
-  padding: 20px 0;
+  margin: 30px 0;
+  padding: 17px 0;
 }
 
 .header__logo {
@@ -135,7 +136,7 @@ html {
 }
 
 .header__logo-circle {
-  top: 20px;
+  top: 70px;
   height: 100px;
 }
 
@@ -155,9 +156,17 @@ html {
   display: none;
 }
 
+.menu {
+  height: 50px;
+}
+
 .menu__link {
   display: none !important;
   margin-right: 140px;
+}
+
+.nav__list {
+  letter-spacing: 0.08em;
 }
 
 .nav__list li,
@@ -166,9 +175,10 @@ html {
 }
 
 .social__mail {
-  font-family: "Lato Light", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: bold;
+  letter-spacing: -0.03em;
 }
 
 .phones__item, .phones__link {
@@ -183,6 +193,28 @@ html {
   font-family: "Lato Light", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.67;
+}
+
+.tel--hiden p {
+  font-size: 20px;
+}
+
+.hidden__content {
+  font-size: 2.1rem;
+  letter-spacing: 0.03em;
+}
+
+.tel__text--hidden {
+  font-size: 2.1rem;
+  letter-spacing: 0.02em;
+}
+
+.tel__eye {
+  top: 7px;
+  right: 0;
+  width: 60px;
+  height: 30px;
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(36, 51, 67, 0), rgba(36, 51, 67, 0.96) 32%, #243343);
 }
 
 .title-lg {
@@ -592,9 +624,9 @@ html {
 
 .souvenirs__content {
   float: right;
-  padding-top: 45px;
   width: 54%;
-  margin-top: 50px;
+  margin-top: 35px;
+  padding-left: 7px;
 }
 
 .souvenirs__items {

@@ -13,9 +13,9 @@
 		&:after
 			content: ""
 			position: absolute
-			top: 70px
-			margin: 0 20px
+			top: 120px
 			width: 3000px
+			margin: 0 20px
 			border-bottom: 2px dashed $white
 			opacity: 0.2
 		&:before
@@ -24,27 +24,28 @@
 			left: 100%
 		&-circle
 			position: absolute
-			left: 0
 			right: 0
+			left: 0
 			overflow: hidden
 			transform: translate3d(0,0,0)
 			&:before
 				content: ""
 				position: absolute
 				top: 50%
-				left: 0
 				right: 0
+				left: 0
 				border: 2px solid $white
 				border-radius: 50%
 				opacity: 0.09
 				transform: translate3d(0,-50%,0)
 .logo
 	position: relative
+	top: 10px
+	left: 4px
 	z-index: 2
 	display: inline-block
 	vertical-align: top
 	width: 170px
-	top: 4px
 	img
 		width: 100%
 .logo_sm
@@ -52,8 +53,8 @@
 .btn-nav
 	position: relative
 	vertical-align: top
-	padding: 5px 10px 5px 40px
 	margin-top: 10px
+	padding: 5px 10px 5px 40px
 	background: none
 	+hover
 		.btn-nav
@@ -87,7 +88,7 @@
 	&__icon
 		position: absolute
 		top: 16px
-		left: 0
+		left: 15px
 		height: 15px
 		&:before,
 		&:after,
@@ -117,43 +118,43 @@
 		+t(color)
 .menu
 	position: fixed
-	z-index: 1000
 	top: 0
-	left: 0
 	right: 0
+	left: 0
+	z-index: 1000
 	min-width: 320px
-	color: $white
-	background: $gray
 	+f('ll', 18, 40)
 	text-transform: uppercase
+	color: $white
+	background: $gray
 	a
 		color: #fc0
 	&__link
 		float: right
-		padding: 5px 0
-		line-height: .7
-		font-weight: 600
-		border: 2px solid #fc0
-		border-radius: 4px
 		margin: 5px 0
 		padding: 10px 10px
+		line-height: .7
+		font-weight: 600
 		color: #fc0
+		border: 2px solid #fc0
+		border-radius: 4px
 		&:hover
 			color: #fff
 			border: 0
-.nav	
+.nav
 	&__list
-		font-size: 0.1px
+		height: 50px
 		text-align: justify
 		&:after
 			content: ""
 			display: inline-block
 			width: 100%
 		li,
-		a			
-			vertical-align: top
 		a
-			padding: 5px 0
+			vertical-align: bottom
+		a
+			padding: 0
+			padding-bottom: 2px
 			font-size: 1rem
 			line-height: 1.8
 			color: inherit
@@ -174,23 +175,25 @@
 				line-height: 1.4
 .social
 	float: right
-	font-size: 0	
+	font-size: 0
 	&__mail
 		position: relative
 		float: left
+		left: 5px
+		color: $yellow
 		+t(color)
 		+hover
-			color: $yellow
+			color: $white
 			&:before
-				border-color: $yellow
+				border-color: $white
 		&:before
 			content: ""
 			position: absolute
+			right: 0
 			bottom: 3px
 			left: 0
-			right: 0
 			border-bottom: 1px solid $white
-			opacity: 0.3
+			opacity: 0.3ti
 			+t(border-color)
 	&__item,
 	&__link
@@ -198,15 +201,16 @@
 		vertical-align: top
 	&__list
 		float: right
-		padding-left: 14px
+		padding-top: 2px
+		padding-left: 12px
 	&__item
-		padding-left: 10px
+		padding-left: 11px
 	&__link
-		border-radius: 50%
 		width: 30px
 		height: 30px
 		opacity: 0.25
 		background: $white
+		border-radius: 50%
 		+vertical
 		transition: background 0.2s ease, opacity 0.2s ease
 		+hover
@@ -250,27 +254,35 @@
 		+hover
 			color: $yellow
 .tel
+	&__title
+		font-size: 20px
 	&--hidden,
 	&--visible
-		margin: 8px 0
-		padding: 3px 10px
+		margin: 12px 0
+		padding: 9px 3px
 		transition: all .4s ease
 	&--hidden
 		background-color: rgba(255, 255, 255, .1)
-		border-radius: 4px
 		border: 1px dotted #fff
+		border-radius: 4px
 		&:hover
 			cursor: pointer
 	&--visible
 		display: none
 .hidden__content
 	display: block
+	font-weight: bold
 	text-align: center
-	color: #ffffff
-	font-size: 1.2rem
 	text-transform: uppercase
+	color: #ffffff
 
 .tel__text--hidden
-	font-size: 1.2rem
+	position: relative
+	font-weight: bold
 	text-transform: uppercase
 	color: $yellow
+.tel__eye
+	position: absolute
+	background-repeat: no-repeat
+	background-position: top right
+	float: right
