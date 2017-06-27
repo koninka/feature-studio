@@ -275,7 +275,7 @@ body {
   min-width: 320px;
   color: #fff;
   background: #0b1c2d;
-  font-family: "Lato Bold", Arial, sans-serif;
+  font-family: "Lato Light", Arial, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -585,6 +585,7 @@ a {
 }
 
 .social__mail {
+  font-family: "Lato Black", Arial, sans-serif;
   position: relative;
   float: left;
   left: 5px;
@@ -722,12 +723,6 @@ a {
   transition: all .4s ease;
 }
 
-.tel--hidden {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px dotted #fff;
-  border-radius: 4px;
-}
-
 .tel--hidden:hover {
   cursor: pointer;
 }
@@ -738,13 +733,14 @@ a {
 
 .hidden__content {
   display: block;
-  font-weight: bold;
+  font-family: "Lato Black", Arial, sans-serif;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fc0;
 }
 
 .tel__text--hidden {
+  font-family: "Lato Black", Arial, sans-serif;
   position: relative;
   font-weight: bold;
   text-transform: uppercase;
@@ -770,10 +766,6 @@ a {
 .title-md {
   text-align: center;
   text-transform: uppercase;
-}
-
-.title-md_thin {
-  font-family: "Lato Thin", Arial, sans-serif;
 }
 
 .title-md_thin strong {
@@ -1003,6 +995,36 @@ a {
 
 .quality__text strong {
   font-family: "Lato Black", Arial, sans-serif;
+}
+
+.phone {
+  text-align: center;
+}
+
+.phone__header {
+  text-transform: uppercase;
+}
+
+.phone__tel {
+  position: relative;
+  margin: auto;
+  z-index: 5;
+}
+
+.phone__text--hidden {
+  position: absolute;
+}
+
+.phone__eye {
+  float: right;
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(13, 30, 47, 0), rgba(13, 30, 47, 0.96) 32%, #0d1e2f);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.hidden__content {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-size: 64px;
 }
 
 .steps .btn {
@@ -1386,6 +1408,12 @@ a {
   font-family: "Lato Light Italic", Arial, sans-serif;
   font-size: 15px;
   line-height: 1.34;
+}
+
+.services__phone {
+  padding-top: 63px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .form-error:before {
@@ -2159,7 +2187,7 @@ a {
 }
 
 .souvenirs__title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: left;
   font-size: 26px;
 }
@@ -2204,6 +2232,20 @@ a {
 .souvenirs__down {
   text-align: center;
   margin-top: 110px;
+}
+
+.souvenirs__error {
+  top: 0;
+  padding: 6px 0 0 20px;
+  margin-left: 5px;
+  color: #fff;
+  font-family: "Lato Light Italic", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.34;
+}
+
+.souvenirs__error :before {
+  background: center center;
 }
 
 .souvenir {

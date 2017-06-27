@@ -1,7 +1,9 @@
 .title-lg
-	font-size: 36px
+	+f('black', 36, 72)
 	line-height: 1.4
 	text-align: center
 .title-md
-	font-size: 30px
-	line-height: 1.4	
+	+f('black', 30, 60)
+	line-height: 1.4
+	&_thin
+		+f('lt')

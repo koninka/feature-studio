@@ -263,14 +263,22 @@ html {
 }
 
 .title-lg {
+  font-family: "Lato Black", Arial, sans-serif;
   font-size: 36px;
+  line-height: 2;
   line-height: 1.4;
   text-align: center;
 }
 
 .title-md {
+  font-family: "Lato Black", Arial, sans-serif;
   font-size: 30px;
+  line-height: 2;
   line-height: 1.4;
+}
+
+.title-md_thin {
+  font-family: "Lato Thin", Arial, sans-serif;
 }
 
 .heading {
@@ -306,6 +314,40 @@ html {
 
 .quality__text {
   margin-top: 20px;
+}
+
+.phone {
+  padding-top: 65px;
+}
+
+.phone__header {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 0.8;
+  line-height: 60px;
+}
+
+.phone__tel {
+  width: 460px;
+}
+
+.phone__tel a {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-size: 50px;
+  line-height: 0.48;
+  line-height: 80px;
+}
+
+.phone__text--hidden {
+  top: 15px;
+  right: 0;
+  width: 480px;
+}
+
+.phone__eye {
+  width: 100px;
+  height: 50px;
+  background-size: 80px;
 }
 
 .steps {
@@ -839,9 +881,7 @@ html {
 }
 
 .souvenirs__form {
-  float: left;
   width: 560px;
-  margin-bottom: 15px;
 }
 
 .souvenirs__col {
@@ -850,6 +890,11 @@ html {
 
 .souvenirs__col:first-child {
   margin-right: 12px;
+}
+
+.souvenirs__submit {
+  margin-top: 15px;
+  text-align: right;
 }
 
 .souvenirs__prev, .souvenirs__next {

@@ -214,15 +214,23 @@ html {
   right: 0;
   width: 60px;
   height: 30px;
-  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(36, 51, 67, 0), rgba(36, 51, 67, 0.96) 32%, #243343);
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(13, 30, 47, 0), rgba(13, 30, 47, 0.96) 32%, #0d1e2f);
 }
 
 .title-lg {
+  font-family: "Lato Black", Arial, sans-serif;
   font-size: 48px;
+  line-height: 1.5;
 }
 
 .title-md {
+  font-family: "Lato Black", Arial, sans-serif;
   font-size: 36px;
+  line-height: 1.67;
+}
+
+.title-md_thin {
+  font-family: "Lato Thin", Arial, sans-serif;
 }
 
 .heading {
@@ -254,8 +262,42 @@ html {
   margin-top: 30px;
 }
 
+.phone {
+  padding-top: 65px;
+}
+
+.phone__header {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 0.67;
+  line-height: 60px;
+}
+
+.phone__tel {
+  width: 620px;
+}
+
+.phone__tel a {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-size: 64px;
+  line-height: 0.38;
+  line-height: 107px;
+}
+
+.phone__text--hidden {
+  top: 20px;
+  right: 0;
+  width: 600px;
+}
+
+.phone__eye {
+  width: 120px;
+  height: 70px;
+  background-size: 100px;
+}
+
 .steps {
-  padding-top: 155px;
+  padding-top: 90px;
 }
 
 .steps__topic {
@@ -587,7 +629,7 @@ html {
 .counter__numbers {
   font-family: "Lato Thin", Arial, sans-serif;
   font-size: 100px;
-  line-height: 0.72;
+  line-height: 1;
 }
 
 .counter__description {
@@ -641,14 +683,14 @@ html {
 
 .souvenirs__description {
   font-family: "Lato Thin", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 2;
+  font-size: 22px;
+  line-height: 1.64;
 }
 
 .souvenirs__form {
   float: right;
   width: 560px;
-  margin-top: 23px;
+  margin-top: 15px;
   margin-right: 37px;
   margin-bottom: 15px;
 }
@@ -661,9 +703,9 @@ html {
   margin-right: 12px;
 }
 
-.souvenirs__button {
-  float: right;
-  margin-right: 38px;
+.souvenirs__submit {
+  margin-top: 15px;
+  text-align: right;
 }
 
 .souvenirs__prev, .souvenirs__next {

@@ -177,6 +177,7 @@
 	float: right
 	font-size: 0
 	&__mail
+		+f('black')
 		position: relative
 		float: left
 		left: 5px
@@ -268,12 +269,13 @@
 		display: none
 .hidden__content
 	display: block
-	font-weight: bold
+	+f('black')
 	text-align: center
 	text-transform: uppercase
 	color: $yellow
 
 .tel__text--hidden
+	+f('black')
 	position: relative
 	font-weight: bold
 	text-transform: uppercase
