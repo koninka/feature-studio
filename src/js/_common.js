@@ -7,6 +7,7 @@ import {COUNTER} from './components/_counter';
 import './components/_modal-slider';
 import {CLIENTS} from './components/_clients';
 import {SOUVENIRS} from './components/_souvenirs';
+import {PHONE} from './components/_whyWe';
 import './components/_scrollTo';
 import {ICON} from './components/_icon';
 
@@ -15,6 +16,7 @@ $(document).ready(e => {
 	NAV.init();
 	HEADER();
 //	MAP();
+    PHONE();
 	VALIDATION();
 	ICON();
 	COUNTER();

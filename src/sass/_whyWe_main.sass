@@ -22,7 +22,7 @@
 			transition: all 1s ease
 	&__picture
 		height: 108px
-		line-height: 108px 
+		line-height: 108px
 	&__img
 		vertical-align: middle
 		display: inline-block
@@ -31,17 +31,36 @@
 	&__text
 		strong
 			+f('black')
+.phone
+	text-align: center
 
-.steps	
+	&__header
+		text-transform: uppercase
+	&__tel
+		position: relative
+		margin: auto
+		z-index: 5
+	&__text--hidden
+		position: absolute
+	&__eye
+		float: right
+		background-image: url(../img/block__phone__eye.svg), linear-gradient(to right,rgba(13, 30, 47,0),rgba(13, 30, 47,0.96) 32%, #0d1e2f)
+		background-repeat: no-repeat
+		background-position: top center
+.hidden__content
+		+f('black', 64)
+
+
+.steps
 	.btn
 		margin-top: 30px
 	&__wrap
-		position: relative		
+		position: relative
 	&__list
 		list-style-type: none
 		counter-reset: list
 	&__item
-		+f('lli', 15, 24)		
+		+f('lli', 15, 24)
 		&_first
 			top: 243px
 			left: 37px
@@ -66,7 +85,7 @@
 		color: $black
 		line-height: 1
 		text-transform: uppercase
-		background-color: $lightBlue 
+		background-color: $lightBlue
 		&:before
 			position: absolute
 			content: ""
@@ -77,7 +96,7 @@
 			content: ""
 			top: 0
 			left: 100%
-	&__arr 
+	&__arr
 		position: absolute
 	&__title
 		padding-top: 2px
@@ -106,4 +125,4 @@
 		img
 			max-width: 100%
 			display: block
-		
+
