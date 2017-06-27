@@ -840,6 +840,23 @@ html {
   line-height: 1.8;
 }
 
+.souvenirs__form {
+  margin: 10px 10px;
+}
+
+.souvenirs__row {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.souvenirs__col:first-child {
+  margin-bottom: 10px;
+}
+
+.souvenirs__button {
+  margin-left: 10px;
+}
+
 .souvenirs__prev, .souvenirs__next {
   top: 240px;
 }

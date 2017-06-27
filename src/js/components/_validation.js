@@ -51,6 +51,8 @@ const VALIDATION = () => {
 
 		let data = serializeForm($form);
 
+		console.log('test', data);
+
 		beforeFormSubmit($form);
 
 		handler(data);
@@ -102,6 +104,20 @@ const VALIDATION = () => {
 		});
 
 	});
+
+	$('.souvenirs-form').submit(function(e) {
+		e.preventDefault();
+
+		var $form = $(this);
+
+		formSubmit($form, function (data) {
+			window.handlers.discount(data, function (response) {
+				successFormSubmit($form);
+			});
+		});
+
+	});
 };
+
 
 export default VALIDATION;

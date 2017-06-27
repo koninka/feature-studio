@@ -11,3 +11,9 @@ window.handlers.price = function (data, successCallback, errorCallback) {
     console.log("price handler", data);
     successCallback();
 };
+
+//souvenirs form handlers
+window.handlers.discount = function (data, successCallback, errorCallback) {
+    console.log("discount handler", data);
+    successCallback();
+};

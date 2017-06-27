@@ -11,11 +11,15 @@
 		max-width: 500px
 	&__slider
 	&__title
-		margin-bottom: 10px
+		margin-bottom: 20px
 		text-align: left
 		font-size: 26px
 	&__description
 		margin-bottom: 32px
+	&__form
+		position: relative
+	&__row
+		display: flex
 	&__prev,
 	&__next
 		position: absolute
@@ -34,6 +38,14 @@
 	&__down
 		text-align: center
 		margin-top: 110px
+	&__error
+		top: 0
+		padding: 6px 0 0 20px
+		margin-left: 5px
+		color: $white
+		+f('lli', 15, 20)
+		:before
+			background: center center
 .souvenir
 	position: relative
 	&__img
