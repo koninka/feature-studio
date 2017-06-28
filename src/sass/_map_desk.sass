@@ -1,5 +1,5 @@
-.map	
-	&__img        
+.map
+	&__img
 		position: absolute
 	&__content
 		padding: 110px 0 0
@@ -10,24 +10,29 @@
 .contacts-phones
 	margin-bottom: 14px
 	color: $black
-	&__item		
+	&__item
 		&:not(:last-child)
 			&:after
 				display: none
-	&__link		
+	&__link
 		+f('black', 30, 36)
 .contacts-info
 	margin-bottom: 12px
-	&__item		
+	&__item
 		color: $black
-		+f('ll', 18, 30)		
-.contacts-social	
-	&__link		
+		+f('ll', 18, 30)
+.contacts-social
+	&__link
 		background: #cecece
 		.icon
 			fill: $white
-.tel--black
-	border: 0
-	padding-left: 0
 .map__img
-    background-position: 30% 0
+	background-position: 30% 0
+.tel--black
+	.tel__text--hidden
+		.tel__eye
+			top: 7px
+			right: 50px
+			width: 50px
+			height: 30px
+			background-image: url(../img/block__phone__eye_w.svg), linear-gradient(to right,rgba(255, 204, 0, 0),rgba(255, 204, 0, 0.96) 32%, #ffcc00)
