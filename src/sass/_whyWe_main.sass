@@ -33,24 +33,19 @@
 			+f('black')
 .phone
 	text-align: center
-
-	&__header
-		text-transform: uppercase
 	&__tel
 		position: relative
 		margin: auto
 		z-index: 5
 	&__text--hidden
 		position: absolute
+		&:hover
+			cursor: pointer
 	&__eye
 		float: right
 		background-image: url(../img/block__phone__eye.svg), linear-gradient(to right,rgba(13, 30, 47,0),rgba(13, 30, 47,0.96) 32%, #0d1e2f)
 		background-repeat: no-repeat
 		background-position: top center
-.hidden__content
-		+f('black', 64)
-
-
 .steps
 	.btn
 		margin-top: 30px
