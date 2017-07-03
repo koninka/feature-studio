@@ -51,8 +51,6 @@ const VALIDATION = () => {
 
 		let data = serializeForm($form);
 
-		console.log('test', data);
-
 		beforeFormSubmit($form);
 
 		handler(data);

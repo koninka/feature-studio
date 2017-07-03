@@ -50,7 +50,7 @@ const MODAL = (link) => {
 	let counter = () => {
 		if (windowWidth > 900) {
 			return 5;
-		}        
+		}
 		else if (windowWidth > 589) {
 			return 4;
 		}
@@ -63,8 +63,6 @@ const MODAL = (link) => {
 		return ( Math.floor( productPrevAll/counter() + 1 ) * counter() ) - 1;
         //return Math.floor(productPrevAll/counter())+counter() - 1;
 	};
-    
-    console.log(getIndex());
 
 	let createModal = () => {
 		let wrapper = '.js-modal-wrap',

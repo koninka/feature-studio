@@ -8,9 +8,14 @@ export const HEADER = () => {
   $(document).mouseup(function (e) {
     var container = $(".modals");
     if (container.has(e.target).length === 0){
+      if ($(window).width() > 589) {
         $(".modals").css('top', '-50%');
+      }
     }
+    if ($(e.target).closest('.modals').length == 0)
+      $('.modals').css('display', 'none');
   });
+
   $('.tel--hidden').on('click', function () {
     let $this = $(this);
     $this.css('display', 'none');

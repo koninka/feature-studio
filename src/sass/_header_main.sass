@@ -256,7 +256,19 @@
 			color: $yellow
 .tel
 	&__title
+		display: inline-flex
+		max-width: 260px
+		margin-bottom: 5px
 		font-size: 20px
+		.icon_arrow_up_holder
+			margin-top: 0.25rem
+			margin-left: 0.5rem
+			animation: slideBottom 1.5s infinite
+			svg
+				fill: $white
+				width: 0.857em
+				height: 0.857em
+				transform: rotate(180deg)
 	&--hidden,
 	&--visible
 		margin: 12px 0
@@ -270,12 +282,14 @@
 .hidden__content
 	display: block
 	+f('black')
+	line-height: 1.6
 	text-align: center
 	text-transform: uppercase
 	color: $yellow
 
 .tel__text--hidden
 	+f('black')
+	line-height: 1.6
 	position: relative
 	font-weight: bold
 	text-transform: uppercase
