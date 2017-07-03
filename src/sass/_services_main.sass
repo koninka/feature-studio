@@ -27,6 +27,17 @@
 		color: $red
 		+f('lli', 15, 20)
 	&__phone
+		&__header
+			display: inline-flex
+		.icon_arrow_up_holder
+			margin-top: 0.25rem
+			margin-left: 0.5rem
+			animation: slideBottom 1.5s infinite
+			svg
+				width: 0.857em
+				height: 0.857em
+				transform: rotate(180deg)
+				fill: $white
 		padding-top: 63px
 		padding-bottom: 30px
 		text-align: center
