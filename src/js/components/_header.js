@@ -21,4 +21,9 @@ export const HEADER = () => {
     $this.css('display', 'none');
     $this.parent().find('.tel--visible').css('display', 'block');
   });
+
+  $(document).on('click', '.tel__text--hidden', function () {
+    $(this).closest('.tel--black').find('.tel__eye').fadeOut(300);
+    $(this).closest('.tel--black').find('.icon_arrow_up_holder').css('visibility', 'hidden');
+  });
 };
