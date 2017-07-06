@@ -152,27 +152,30 @@
 		li,
 		a
 			vertical-align: bottom
+			.hidden__content
+				padding: 0
 		a
 			padding: 0
 			padding-bottom: 2px
 			font-size: 1rem
-			line-height: 1.8
+			line-height: 1.6
 			color: inherit
 			+t(color)
 			+hover
 				color: $yellow
+
 .nav
 	.tel--mobile
 		display: none
 		a
 			color: #fc0
-			font-size: 1rem
+			font-size: 18px
 			p:first-child
 				font-size: 14px
 				line-height: 1
 				margin-top: 10px
 			.tel__text--hidden
-				line-height: 1.4
+				line-height: 1.6
 .social
 	float: right
 	font-size: 0
@@ -258,7 +261,7 @@
 	&__title
 		display: inline-flex
 		max-width: 260px
-		margin-bottom: 5px
+		height: 2.25rem
 		font-size: 20px
 		.icon_arrow_up_holder
 			margin-top: 0.25rem
@@ -283,7 +286,6 @@
 	display: block
 	+f('black')
 	line-height: 1.6
-	text-align: center
 	text-transform: uppercase
 	color: $yellow
 

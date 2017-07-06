@@ -10,9 +10,9 @@
 					{% for item in map.phones %}
 						<li class="contacts-phones__item">
 							{#<a href="{{item.link}}" class="contacts-phones__link">{{item.text}}</a>#}
-							<div class="tel--hidden tel--border tel--black">
+							<div class="tel--border tel--black">
 								<p class="tel__title">
-									<span>Посмотреть и позвонить</span>
+									<span>Звоните прямо сейчас!</span>
 									<span class="icon_arrow_up_holder">
 										<svg class="tel--arrow">
 											<use xlink:href="#arrow-up"></use>
@@ -23,12 +23,6 @@
 									+7 (914) 700-68-77
 									<div class="tel__text--hidden tel__eye"></div>
 								</div>
-							</div>
-							<div class="tel--visible  tel--black">
-								<p>
-									Звоните прямо сейчас!
-								</p>
-								<a href="tel:+79147006877" class="hidden__content">+7 (914) 700-68-77</a>
 							</div>
 						</li>
 					{% endfor %}
