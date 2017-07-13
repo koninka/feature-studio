@@ -1,0 +1,86 @@
+.promo_wrap
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	display: none
+	height: 100vmax
+	background-color: rgba(0, 0, 0, .5)
+
+.promo
+	position: fixed
+	top: calc((100% - 600px)/2)
+	left: calc((100% - 1120px)/2)
+	z-index: 200
+	display: flex
+	justify-content: space-between
+	width: 1120px
+	background-color: #2f2d2d
+	overflow: auto
+	box-sizing: border-box
+	&-request
+		width: 40%
+		margin: 60px 75px 10px
+		&__header
+			+f(black, 36, 47)
+			font-weight: 900
+			text-transform: uppercase
+			span
+				font-size: 51px
+		&__description
+			+f(lr, 22, 28)
+			color: $yellow
+			text-transform: uppercase
+		&__footer
+			width: 310px
+			padding-top: 25px
+			+f(ll, 11, 13)
+			text-transform: uppercase
+			color: #a0ccea
+			span
+				+f(black)
+			.btn_close
+				cursor: pointer
+
+	&-form
+		display: flex
+		flex-direction: column
+		margin-top: 20px
+		&__label
+			display: block
+			margin-right: calc(100% - 275px)
+			border: 2px solid rgba(255, 255, 255, .33)
+			&.has-focus
+				border-color: $white
+				box-shadow: 0 0 21px rgba(0, 222, 255, 0.09)
+			&.has-error
+				border-color: $red
+		&__input
+			display: block
+			height: 42px
+			padding-left: 10px
+			border: none
+			background-color: #2f2d2d
+			+f(lr, 16, 12)
+			color: #ffffff
+			&::-webkit-input-placeholder
+				+f(lr, 16, 12)
+				color: #ffffff
+			&::-moz-placeholder
+				+f(lr, 16, 12)
+				color: #ffffff
+			&:-ms-input-placeholder
+				+f(lr, 16, 12)
+				color: #ffffff
+		&__description
+			margin: 5px 0 40px
+			+f(ll, 11, 13)
+			color: #a0ccea
+			text-transform: uppercase
+		&__footer
+			+f(ll, 11, 86)
+			text-transform: uppercase
+			color: #a0ccea;
+
+
