@@ -18,8 +18,8 @@ $(document).ready(e => {
 //	MAP();
     PHONE();
 	VALIDATION();
-	ICON();
 	COUNTER();
 	CLIENTS();
 	SOUVENIRS();
+    ICON();
 });

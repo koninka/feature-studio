@@ -69,7 +69,9 @@ const VALIDATION = () => {
 				let input = form.find(`.js-form-field.${errorClass}`);
 				let parent = input.parents('.js-form-parent');
 				let firstErrorField = parent.get(parent.length-1);
+				console.log(firstErrorField);
 				let top = $(firstErrorField).position().top;
+				console.log(top);
 
 				errorContainer.css('top', top);
 				parent.addClass(errorClass);
@@ -110,6 +112,20 @@ const VALIDATION = () => {
 
 		formSubmit($form, function (data) {
 			window.handlers.discount(data, function (response) {
+				successFormSubmit($form);
+			});
+		});
+
+	});
+
+
+$('.promo-form').submit(function(e) {
+		e.preventDefault();
+
+		var $form = $(this);
+
+		formSubmit($form, function (data) {
+			window.handlers.promo(data, function (response) {
 				successFormSubmit($form);
 			});
 		});

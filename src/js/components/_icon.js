@@ -8,7 +8,6 @@ export const ICON = () => {
 			WIN.off('scroll', counting);
 			icons.each(function () {
 				let _this = $(this);
-
 				_this.addClass('quality__item--animate');
 			});
 		};

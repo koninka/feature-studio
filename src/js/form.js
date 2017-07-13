@@ -17,3 +17,9 @@ window.handlers.discount = function (data, successCallback, errorCallback) {
     console.log("discount handler", data);
     successCallback();
 };
+
+//promo form handlers
+window.handlers.promo = function (data, successCallback, errorCallback) {
+    console.log("promo handler", data);
+    successCallback();
+};
