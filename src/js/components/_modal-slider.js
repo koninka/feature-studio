@@ -5,7 +5,7 @@ import nunjucks from 'nunjucks';
 
 var template = nunjucks.compile(productModalContent);
 
-;(function(){
+(function(){
 	let productLink = $('.js-product-link'),
 		slickNav = $('.js-product-link .js-modal-slider-nav'),
 		sliderPrev = $('.js-slider-nav-prev'),
@@ -78,9 +78,22 @@ const MODAL = (link) => {
 		data.images = images;
 
 		let content = modal.clone().html(template.render(data)).appendTo(wrapper);
+		console.log(openModal.length);
 
 		if (openModal.length <= 2) {
 			content.show();
+			$('.js-product-link').on('click', function (e) {
+				$('html, body').on('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function(){
+					$('html, body').stop();
+				});
+				$('html, body').animate({
+					scrollTop: $(this).offset().top - 50
+				}, 1500, function(){
+					$('html, body').off('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove');
+				});
+				return false;
+			});
+
 		}
 		else {
 			if(openModal.length > 2) {
@@ -91,8 +104,10 @@ const MODAL = (link) => {
 		}
 
 		if (modal.length === 2) {
+			console.log(modal.length);
 			let modalsJs = $('[data-modal="product-modal"]');
-			modalsJs[1].remove();
+			console.log(modalsJs);
+			modalsJs[0].remove();
 		}
 	}
 
