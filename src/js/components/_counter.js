@@ -5,7 +5,7 @@ export const COUNTER = () => {
 	let counter = $('.js-counter');
 	let counters = $('.js-counters');
 	let counting = () => {
-		if (counters.offset().top + counters.outerHeight() <= WIN.scrollTop() + WIN.outerHeight()) {
+		if (counter.offset().top + counter.outerHeight() <= WIN.scrollTop() + WIN.outerHeight()) {
 			WIN.off('scroll', counting);
 			WIN.odometerOptions = {
  				auto: true,
