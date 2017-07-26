@@ -1,122 +1,48 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
-h6, p, blockquote, pre, a, abbr, acronym, address, big,
-cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
-strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
-dd, ol, ul, li, fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
-embed, figure, figcaption, footer, header, hgroup, menu, nav,
-output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-}
-
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-img, fieldset, a img {
-  border: none;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  -webkit-appearance: none;
-}
-
-input[type="submit"],
-button {
-  cursor: pointer;
-}
-
-input[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-textarea {
-  overflow: auto;
-}
-
-input, button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-div, input, textarea, select, button,
-h1, h2, h3, h4, h5, h6, a, span, a:focus {
-  outline: none;
-}
-
-ul, ol {
-  list-style-type: none;
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 @font-face {
   font-family: "Lato Thin";
-  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff");
+  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff"), url("fonts/lato-thin.eot") format("eot"), url("fonts/lato-thin.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light";
-  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff");
+  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff"), url("fonts/lato-light.eot") format("eot"), url("fonts/lato-light.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light Italic";
-  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff");
+  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff"), url("fonts/Lato-LightItalic.eot") format("eot"), url("fonts/Lato-LightItalic.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Hairline";
-  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff");
+  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff"), url("fonts/lato-hairline.eot") format("eot"), url("fonts/lato-hairline.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Bold";
-  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff");
+  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff"), url("fonts/lato-bold.eot") format("eot"), url("fonts/lato-bold.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Black";
-  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff");
+  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff"), url("fonts/lato-black.eot") format("eot"), url("fonts/lato-black.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff");
+  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.eot") format("eot"), url("fonts/Lato-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -126,7 +52,7 @@ html {
 }
 
 .header__social {
-  margin: 30px 0;
+  margin: 40px 0;
   padding: 17px 0;
 }
 
@@ -146,6 +72,7 @@ html {
 
 .logo {
   display: inline-block;
+  top: 50px;
 }
 
 .logo_sm {
@@ -177,7 +104,6 @@ html {
 .social__mail {
   font-size: 24px;
   line-height: 1.25;
-  font-weight: bold;
   letter-spacing: -0.03em;
 }
 
@@ -213,7 +139,7 @@ html {
   top: 7px;
   right: 0;
   width: 60px;
-  height: 30px;
+  height: 40px;
   background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(13, 30, 47, 0), rgba(13, 30, 47, 0.96) 32%, #0d1e2f);
 }
 
@@ -263,37 +189,37 @@ html {
 }
 
 .phone {
+  margin: 0 300px;
   padding-top: 65px;
 }
 
 .phone__header {
-  font-family: "Lato Black", Arial, sans-serif;
-  font-size: 36px;
-  line-height: 0.67;
-  line-height: 60px;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 25px;
+  line-height: 0.96;
 }
 
 .phone__tel {
-  width: 620px;
+  width: 500px;
 }
 
 .phone__tel a {
   font-family: "Lato Black", Arial, sans-serif;
-  font-size: 64px;
-  line-height: 0.38;
+  font-size: 50px;
+  line-height: 0.48;
   line-height: 107px;
 }
 
 .phone__text--hidden {
   top: 20px;
   right: 0;
-  width: 600px;
+  width: 500px;
 }
 
 .phone__eye {
-  width: 120px;
+  width: 100px;
   height: 70px;
-  background-size: 100px;
+  background-size: 90px;
 }
 
 .steps {
@@ -454,13 +380,24 @@ html {
   fill: #fff;
 }
 
-.tel--black {
-  border: 0;
-  padding-left: 0;
-}
-
 .map__img {
   background-position: 30% 0;
+}
+
+.tel--black .icon_arrow_up_holder svg {
+  fill: #000;
+}
+
+.tel--black .tel__text--hidden {
+  font-size: 30px;
+}
+
+.tel--black .tel__text--hidden .tel__eye {
+  top: 7px;
+  right: 47px;
+  width: 60px;
+  height: 30px;
+  background-image: url(../img/block__phone__eye_w.svg), linear-gradient(to right, rgba(255, 204, 0, 0), rgba(255, 204, 0, 0.96) 32%, #ffcc00);
 }
 
 .team {
@@ -727,6 +664,50 @@ html {
 .souvenirs-bg {
   top: -290px;
   left: -444px;
+}
+
+.promo {
+  height: 565px;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 1120px;
+}
+
+.promo-request {
+  width: 40%;
+  margin: 60px 75px 10px;
+}
+
+.promo-request__header {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1.31;
+}
+
+.promo-request__header span {
+  font-size: 51px;
+}
+
+.promo-request__description {
+  font-family: "Lato Regular", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.28;
+}
+
+.promo-request__footer {
+  width: 310px;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.19;
+}
+
+.promo-form__description {
+  margin-bottom: 40px;
+}
+
+.promo-img {
+  position: absolute;
+  left: calc((100% - 1430px)/2);
 }
 
 /*# sourceMappingURL=desk_app.css.map */

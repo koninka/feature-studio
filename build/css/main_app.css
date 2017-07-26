@@ -72,51 +72,55 @@ html {
   box-sizing: inherit;
 }
 
+.global-wrapper {
+  width: 100%;
+}
+
 @font-face {
   font-family: "Lato Thin";
-  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff");
+  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff"), url("fonts/lato-thin.eot") format("eot"), url("fonts/lato-thin.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light";
-  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff");
+  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff"), url("fonts/lato-light.eot") format("eot"), url("fonts/lato-light.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light Italic";
-  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff");
+  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff"), url("fonts/Lato-LightItalic.eot") format("eot"), url("fonts/Lato-LightItalic.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Hairline";
-  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff");
+  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff"), url("fonts/lato-hairline.eot") format("eot"), url("fonts/lato-hairline.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Bold";
-  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff");
+  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff"), url("fonts/lato-bold.eot") format("eot"), url("fonts/lato-bold.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Black";
-  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff");
+  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff"), url("fonts/lato-black.eot") format("eot"), url("fonts/lato-black.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff");
+  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.eot") format("eot"), url("fonts/Lato-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -279,7 +283,7 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .out {
@@ -342,7 +346,7 @@ a {
 
 .header__logo {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   font-size: 0;
   text-align: center;
 }
@@ -387,10 +391,8 @@ a {
 
 .logo {
   position: relative;
-  top: 10px;
   left: 4px;
   z-index: 2;
-  display: inline-block;
   vertical-align: top;
   width: 170px;
 }
@@ -520,7 +522,6 @@ a {
   margin: 5px 0;
   padding: 10px 10px;
   line-height: .7;
-  font-weight: 600;
   color: #fc0;
   border: 2px solid #fc0;
   border-radius: 4px;
@@ -547,11 +548,16 @@ a {
   vertical-align: bottom;
 }
 
+.nav__list li .hidden__content,
+.nav__list a .hidden__content {
+  padding: 0;
+}
+
 .nav__list a {
   padding: 0;
   padding-bottom: 2px;
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.6;
   color: inherit;
   transition: color 0.25s ease;
 }
@@ -566,7 +572,7 @@ a {
 
 .nav .tel--mobile a {
   color: #fc0;
-  font-size: 1rem;
+  font-size: 18px;
 }
 
 .nav .tel--mobile a p:first-child {
@@ -576,7 +582,7 @@ a {
 }
 
 .nav .tel--mobile a .tel__text--hidden {
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .social {
@@ -588,7 +594,7 @@ a {
   font-family: "Lato Black", Arial, sans-serif;
   position: relative;
   float: left;
-  left: 5px;
+  left: 10px;
   color: #fc0;
   transition: color 0.25s ease;
 }
@@ -608,7 +614,7 @@ a {
   bottom: 3px;
   left: 0;
   border-bottom: 1px solid #fff;
-  opacity: 0.3ti;
+  opacity: 0.3;
   transition: border-color 0.25s ease;
 }
 
@@ -714,7 +720,25 @@ a {
 }
 
 .tel__title {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 260px;
+  height: 2.25rem;
   font-size: 20px;
+}
+
+.tel__title .icon_arrow_up_holder {
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  animation: slideBottom 1.5s infinite;
+}
+
+.tel__title .icon_arrow_up_holder svg {
+  fill: #fff;
+  width: 0.857em;
+  height: 0.857em;
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .tel--hidden, .tel--visible {
@@ -734,15 +758,15 @@ a {
 .hidden__content {
   display: block;
   font-family: "Lato Black", Arial, sans-serif;
-  text-align: center;
+  line-height: 1.6;
   text-transform: uppercase;
   color: #fc0;
 }
 
 .tel__text--hidden {
   font-family: "Lato Black", Arial, sans-serif;
+  line-height: 1.6;
   position: relative;
-  font-weight: bold;
   text-transform: uppercase;
   color: #fc0;
 }
@@ -858,6 +882,15 @@ a {
   }
   100% {
     transform: translateY(8px);
+  }
+}
+
+@keyframes slideBottom {
+  0%, 100% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
 
@@ -1002,7 +1035,23 @@ a {
 }
 
 .phone__header {
-  text-transform: uppercase;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2.25rem;
+}
+
+.phone__header .icon_arrow_up_holder {
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  animation: slideBottom 1.5s infinite;
+}
+
+.phone__header .icon_arrow_up_holder svg {
+  width: 0.857em;
+  height: 0.857em;
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #fff;
 }
 
 .phone__tel {
@@ -1015,16 +1064,15 @@ a {
   position: absolute;
 }
 
+.phone__text--hidden:hover {
+  cursor: pointer;
+}
+
 .phone__eye {
   float: right;
   background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(13, 30, 47, 0), rgba(13, 30, 47, 0.96) 32%, #0d1e2f);
   background-repeat: no-repeat;
   background-position: top center;
-}
-
-.hidden__content {
-  font-family: "Lato Black", Arial, sans-serif;
-  font-size: 64px;
 }
 
 .steps .btn {
@@ -1298,17 +1346,22 @@ a {
   transition: fill 0.2s ease;
 }
 
-.tel--black .tel__text--hidden {
-  font-size: 30px;
-  color: #fff;
-  font-weight: 600;
+.tel--black {
+  border: 0;
+  padding-left: 0;
 }
 
-.tel--black .hidden__content {
-  font-size: 30px;
-  color: #000;
-  font-weight: 600;
-  text-align: left;
+.tel--black .tel__text--hidden {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+}
+
+.tel--black .tel__text--hidden .tel__eye {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: top center;
+  float: right;
 }
 
 .tel--border {
@@ -1318,7 +1371,7 @@ a {
 }
 
 .map__img {
-  background-image: url(../img/map.png);
+  background-image: url(../img/map.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1414,6 +1467,25 @@ a {
   padding-top: 63px;
   padding-bottom: 30px;
   text-align: center;
+}
+
+.services__phone__header {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.services__phone .icon_arrow_up_holder {
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  animation: slideBottom 1.5s infinite;
+}
+
+.services__phone .icon_arrow_up_holder svg {
+  width: 0.857em;
+  height: 0.857em;
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #fff;
 }
 
 .form-error:before {
@@ -1647,7 +1719,7 @@ a {
   border-radius: 5px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  transition: all 0.4s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .modals .headers {
@@ -2186,6 +2258,16 @@ a {
   max-width: 500px;
 }
 
+.souvenirs__link {
+  font-style: italic;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: border-color .2s ease-in-out;
+}
+
+.no-touch .souvenirs__link:hover {
+  border-color: transparent;
+}
+
 .souvenirs__title {
   margin-bottom: 20px;
   text-align: left;
@@ -2351,6 +2433,134 @@ a {
 
 .souvenirs-background__light1, .souvenirs-background__light2 {
   opacity: 0.5;
+}
+
+.promo_wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.promo-wrapper {
+  height: 100vh;
+  position: fixed;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 210;
+  box-sizing: border-box;
+}
+
+.promo {
+  -webkit-overflow-scrolling: touch;
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #2f2d2d;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.promo-request__header {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1.31;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.promo-request__header span {
+  font-size: 51px;
+}
+
+.promo-request__description {
+  font-family: "Lato Regular", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.28;
+  color: #fc0;
+  text-transform: uppercase;
+}
+
+.promo-request__footer {
+  padding-top: 25px;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  color: #a0ccea;
+}
+
+.promo-request__footer span {
+  font-family: Arial, sans-serif;
+}
+
+.promo-request__footer .btn_close {
+  cursor: pointer;
+}
+
+.promo-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.promo-form__label {
+  display: block;
+  margin-right: calc(100% - 275px);
+  border: 2px solid rgba(255, 255, 255, 0.33);
+}
+
+.promo-form__label.has-focus {
+  border-color: #fff;
+  box-shadow: 0 0 21px rgba(0, 222, 255, 0.09);
+}
+
+.promo-form__label.has-error {
+  border-color: #e94f4f;
+}
+
+.promo-form__input {
+  display: block;
+  height: 42px;
+  padding-left: 10px;
+  border: none;
+  background-color: #2f2d2d;
+  font-family: "Lato Regular", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.promo-form__description {
+  margin-top: 5px;
+  margin-right: 0;
+  margin-left: 0;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.19;
+  color: #a0ccea;
+  text-transform: uppercase;
+}
+
+.promo-form__footer {
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 7.82;
+  text-transform: uppercase;
+  color: #a0ccea;
 }
 
 /*# sourceMappingURL=main_app.css.map */

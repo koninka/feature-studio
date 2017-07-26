@@ -1,122 +1,48 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
-h6, p, blockquote, pre, a, abbr, acronym, address, big,
-cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
-strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
-dd, ol, ul, li, fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
-embed, figure, figcaption, footer, header, hgroup, menu, nav,
-output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-}
-
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-img, fieldset, a img {
-  border: none;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  -webkit-appearance: none;
-}
-
-input[type="submit"],
-button {
-  cursor: pointer;
-}
-
-input[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-textarea {
-  overflow: auto;
-}
-
-input, button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-div, input, textarea, select, button,
-h1, h2, h3, h4, h5, h6, a, span, a:focus {
-  outline: none;
-}
-
-ul, ol {
-  list-style-type: none;
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 @font-face {
   font-family: "Lato Thin";
-  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff");
+  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff"), url("fonts/lato-thin.eot") format("eot"), url("fonts/lato-thin.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light";
-  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff");
+  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff"), url("fonts/lato-light.eot") format("eot"), url("fonts/lato-light.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light Italic";
-  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff");
+  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff"), url("fonts/Lato-LightItalic.eot") format("eot"), url("fonts/Lato-LightItalic.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Hairline";
-  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff");
+  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff"), url("fonts/lato-hairline.eot") format("eot"), url("fonts/lato-hairline.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Bold";
-  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff");
+  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff"), url("fonts/lato-bold.eot") format("eot"), url("fonts/lato-bold.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Black";
-  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff");
+  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff"), url("fonts/lato-black.eot") format("eot"), url("fonts/lato-black.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff");
+  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.eot") format("eot"), url("fonts/Lato-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -210,10 +136,6 @@ html {
   margin-top: 10px;
 }
 
-.nav .tel--mobile .tel__text--hidden {
-  line-height: 1.4;
-}
-
 .nav .menu__link {
   display: block;
   position: absolute;
@@ -254,11 +176,11 @@ html {
 }
 
 .tel__eye {
-  top: 2px;
-  right: 40px;
+  top: 5px;
+  right: 45px;
   width: 30px;
-  height: 25px;
-  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(74, 80, 86, 0), rgba(74, 80, 86, 0.96) 32%, #4a5056);
+  height: 30px;
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(53, 60, 67, 0), rgba(53, 60, 67, 0.96) 32%, #353c43);
   background-size: 30px;
 }
 
@@ -321,10 +243,9 @@ html {
 }
 
 .phone__header {
-  font-family: "Lato Black", Arial, sans-serif;
-  font-size: 30px;
-  line-height: 0.8;
-  line-height: 60px;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 25px;
+  line-height: 0.96;
 }
 
 .phone__tel {
@@ -334,8 +255,7 @@ html {
 .phone__tel a {
   font-family: "Lato Black", Arial, sans-serif;
   font-size: 50px;
-  line-height: 0.48;
-  line-height: 80px;
+  line-height: 1.6;
 }
 
 .phone__text--hidden {
@@ -346,7 +266,7 @@ html {
 
 .phone__eye {
   width: 100px;
-  height: 50px;
+  height: 60px;
   background-size: 80px;
 }
 
@@ -607,12 +527,23 @@ html {
   font-size: 20px;
 }
 
-.tel--black .tel__text--hidden {
-  color: #fc0;
+.tel--black .tel__title {
+  margin: 10px 20px 0;
 }
 
-.tel--black .hidden__content {
+.tel--black .tel__text--hidden {
+  width: 300px;
   color: #fc0;
+  font-size: 30px;
+}
+
+.tel--black .tel__text--hidden .tel__eye {
+  top: 8px;
+  right: 0;
+  width: 70px;
+  height: 40px;
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(53, 60, 67, 0), rgba(53, 60, 67, 0.96) 32%, #353c43);
+  background-size: 50px;
 }
 
 .map__img {
@@ -708,6 +639,14 @@ html {
   padding: 24px 10px 0;
 }
 
+.services__phone {
+  margin: 0 20px;
+}
+
+.services__phone .icon_arrow_up_holder {
+  margin: 0 20px 5px;
+}
+
 .services__error {
   display: none;
 }
@@ -756,6 +695,7 @@ html {
 }
 
 .modal__right {
+  text-align: left;
   float: none;
   margin-top: 97px;
   width: 100%;
@@ -920,6 +860,53 @@ html {
 .souvenirs-bg {
   top: -205px;
   left: -350px;
+}
+
+.promo {
+  height: 927px;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  width: 330px;
+}
+
+.promo-request {
+  width: 100%;
+  padding: 30px 25px 10px;
+}
+
+.promo-request__header {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1.28;
+}
+
+.promo-request__header span {
+  font-size: 35px;
+}
+
+.promo-request__description {
+  font-family: "Lato Regular", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.27;
+}
+
+.promo-request__footer {
+  width: 90%;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.11;
+}
+
+.promo-form__description {
+  margin-bottom: 20px;
+}
+
+.promo-info img {
+  width: 100%;
+}
+
+.promo-img {
+  display: none;
 }
 
 @media only screen and (max-width: 930px) {

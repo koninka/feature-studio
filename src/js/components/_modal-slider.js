@@ -17,10 +17,10 @@ var template = nunjucks.compile(productModalContent);
 	});
 
 	$('.js-product-list').on('click', '.js-slider-nav-prev', function(){
-	    $('.js-product-list .js-modal-slider-for').slick('slickPrev');
+			$('.js-product-list .js-modal-slider-for').slick('slickPrev');
 	});
 	$('.js-product-list').on('click', '.js-slider-nav-next', function(){
-	    $('.js-product-list .js-modal-slider-for').slick('slickNext');
+			$('.js-product-list .js-modal-slider-for').slick('slickNext');
 	});
 
 })();
@@ -60,8 +60,8 @@ const MODAL = (link) => {
 	};
 
 	let getIndex = () => {
-		return ( Math.floor( productPrevAll/counter() + 1 ) * counter() ) - 1;
-        //return Math.floor(productPrevAll/counter())+counter() - 1;
+			return ( Math.floor( productPrevAll /counter() + 1 ) * counter() ) - 1;
+				//return Math.floor(productPrevAll/counter())+counter() - 1;
 	};
 
 	let createModal = () => {
@@ -70,7 +70,7 @@ const MODAL = (link) => {
 
 
 		modalWrap.remove();
-		item.eq( getIndex() ).after(tamplate);
+		item.eq( getIndex() > 14 ? 14 : getIndex() ).after(tamplate);
 
 		let data = typeof products[type] !== 'undefined' ? products[type] : {};
 		let images = typeof window.productImages[type] !== 'undefined' ? window.productImages[type] : {};
@@ -78,7 +78,7 @@ const MODAL = (link) => {
 		data.images = images;
 
 		let content = modal.clone().html(template.render(data)).appendTo(wrapper);
-		console.log(openModal.length);
+
 
 		if (openModal.length <= 2) {
 			content.show();
@@ -87,27 +87,18 @@ const MODAL = (link) => {
 					$('html, body').stop();
 				});
 				$('html, body').animate({
-					scrollTop: $(this).offset().top - 50
-				}, 1500, function(){
+					scrollTop: $(this).offset().top - 60
+				}, 700, function(){
 					$('html, body').off('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove');
 				});
 				return false;
 			});
 
 		}
-		else {
-			if(openModal.length > 2) {
 
-			} else {
-				content.slideDown(delay);
-			}
-		}
-
-		if (modal.length === 2) {
-			console.log(modal.length);
+		if (modal.length === 2){
 			let modalsJs = $('[data-modal="product-modal"]');
-			console.log(modalsJs);
-			modalsJs[0].remove();
+			modalsJs[1].remove();
 		}
 	}
 

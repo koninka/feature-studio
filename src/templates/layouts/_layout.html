@@ -13,23 +13,7 @@
     <link rel="stylesheet" media="(min-width: 931px) and (max-width: 1201px)" href="css/tablet_app.css">
     <link rel="stylesheet" media="(min-width: 590px) and (max-width: 930px)" href="css/mobile_app.css">
     <link rel="stylesheet" media="(min-width: 319px) and (max-width: 589px)" href="css/small_mobile_app.css">
-
     {# {% include "../partials/_media-tags.html" %} #}
-   <!--<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* По умолчанию мобильный макет */
-    background-image: url( "img/future5.png" );
-  }
-
-
-  BODY {
-    opacity: .5;
-  }
-</style>
-<link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-<script src="../node_modules/pixel-glass/script.js"></script>-->
   </head>
   <body>
   <div class="global-wrapper">
@@ -39,21 +23,15 @@
     <path d="M5.158.165L.183 4.848a.586.586 0 0 0-.023.828c.205.228.605.233.828.022L4.976 1.94v12.476a.585.585 0 1 0 1.17 0V1.939l3.988 3.76c.223.21.613.195.828-.023a.586.586 0 0 0-.023-.828L5.963.165A.52.52 0 0 0 5.561 0a.68.68 0 0 0-.403.165z"></path>
   </symbol>
   </svg>
-
     <!-- BEGIN content -->
     <div class="out">
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
     {% include "../partials/components/_products-modal.html" %}
-
-
     <!-- BEGIN scripts -->
-
     <script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-
-
     <!-- END scripts -->
   </div>
   </body>

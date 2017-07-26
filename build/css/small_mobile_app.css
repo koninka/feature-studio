@@ -1,128 +1,55 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
-h6, p, blockquote, pre, a, abbr, acronym, address, big,
-cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
-strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
-dd, ol, ul, li, fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
-embed, figure, figcaption, footer, header, hgroup, menu, nav,
-output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-}
-
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-img, fieldset, a img {
-  border: none;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  -webkit-appearance: none;
-}
-
-input[type="submit"],
-button {
-  cursor: pointer;
-}
-
-input[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-textarea {
-  overflow: auto;
-}
-
-input, button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-div, input, textarea, select, button,
-h1, h2, h3, h4, h5, h6, a, span, a:focus {
-  outline: none;
-}
-
-ul, ol {
-  list-style-type: none;
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 @font-face {
   font-family: "Lato Thin";
-  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff");
+  src: url("fonts/lato-thin.woff2") format("woff2"), url("fonts/lato-thin.woff") format("woff"), url("fonts/lato-thin.eot") format("eot"), url("fonts/lato-thin.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light";
-  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff");
+  src: url("fonts/lato-light.woff2") format("woff2"), url("fonts/lato-light.woff") format("woff"), url("fonts/lato-light.eot") format("eot"), url("fonts/lato-light.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Light Italic";
-  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff");
+  src: url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff"), url("fonts/Lato-LightItalic.eot") format("eot"), url("fonts/Lato-LightItalic.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Hairline";
-  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff");
+  src: url("fonts/lato-hairline.woff2") format("woff2"), url("fonts/lato-hairline.woff") format("woff"), url("fonts/lato-hairline.eot") format("eot"), url("fonts/lato-hairline.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Bold";
-  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff");
+  src: url("fonts/lato-bold.woff2") format("woff2"), url("fonts/lato-bold.woff") format("woff"), url("fonts/lato-bold.eot") format("eot"), url("fonts/lato-bold.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Black";
-  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff");
+  src: url("fonts/lato-black.woff2") format("woff2"), url("fonts/lato-black.woff") format("woff"), url("fonts/lato-black.eot") format("eot"), url("fonts/lato-black.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff");
+  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.eot") format("eot"), url("fonts/Lato-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 .inner {
   max-width: 590px;
+  padding: 0 10px;
 }
 
 .header__social {
@@ -215,10 +142,6 @@ html {
   margin-top: 10px;
 }
 
-.nav .tel--mobile .tel__text--hidden {
-  line-height: 1.4;
-}
-
 .nav .menu__link {
   display: block;
   position: absolute;
@@ -263,7 +186,7 @@ html {
   right: 40px;
   width: 30px;
   height: 25px;
-  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(74, 80, 86, 0), rgba(74, 80, 86, 0.96) 32%, #4a5056);
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(53, 60, 67, 0), rgba(53, 60, 67, 0.96) 32%, #353c43);
   background-size: 30px;
 }
 
@@ -324,10 +247,9 @@ html {
 }
 
 .phone__header {
-  font-family: "Lato Black", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.2;
-  line-height: 30px;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
 }
 
 .phone__tel {
@@ -337,12 +259,11 @@ html {
 .phone__tel a {
   font-family: "Lato Black", Arial, sans-serif;
   font-size: 30px;
-  line-height: 0.8;
-  line-height: 80px;
+  line-height: 1.67;
 }
 
 .phone__text--hidden {
-  top: 25px;
+  top: 10px;
   right: 0;
   width: 300px;
 }
@@ -604,6 +525,42 @@ html {
   background-position: 20% 0;
 }
 
+.tel--black {
+  background-color: transparent;
+  border: 1px dotted #fff;
+  padding: 0px 15px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tel--black p:first-child {
+  font-size: 20px;
+}
+
+.tel--black .tel__title {
+  height: 2.25rem;
+  margin-top: 5px;
+}
+
+.tel--black .tel__text--hidden {
+  font-size: 25px;
+  color: #fc0;
+}
+
+.tel--black .tel__text--hidden .tel__eye {
+  top: 5px;
+  right: 0;
+  width: 40px;
+  height: 30px;
+  background-image: url(../img/block__phone__eye.svg), linear-gradient(to right, rgba(53, 60, 67, 0), rgba(53, 60, 67, 0.96) 32%, #353c43);
+  background-size: 40px;
+}
+
 .team {
   padding-bottom: 35px;
 }
@@ -749,6 +706,7 @@ html {
 }
 
 .modal__right {
+  text-align: left;
   float: none;
   margin-top: 97px;
   width: 100%;
@@ -756,6 +714,7 @@ html {
 
 .modal__title {
   padding: 7px 20px;
+  margin: 0 0 26px;
 }
 
 .modal__title:before {
@@ -766,7 +725,7 @@ html {
   float: left;
   width: 26px;
   height: 24px;
-  height-margin: 5px 5px 0 0;
+  margin: 5px 5px 0 0;
 }
 
 .characteristics__color:not(:first-child) {
@@ -882,7 +841,7 @@ html {
 }
 
 .souvenirs__form {
-  margin: 10px 10px;
+  margin: 10px 0;
 }
 
 .souvenirs__row {
@@ -920,6 +879,53 @@ html {
 }
 
 .souvenirs-bg {
+  display: none;
+}
+
+.promo {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 300px;
+  height: 450px;
+}
+
+.promo-request {
+  width: 100%;
+  margin: 30px 10px 10px;
+}
+
+.promo-request__header {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1.28;
+}
+
+.promo-request__header span {
+  font-size: 35px;
+}
+
+.promo-request__description {
+  font-family: "Lato Regular", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.27;
+}
+
+.promo-request__footer {
+  width: 90%;
+  font-family: "Lato Light", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.11;
+}
+
+.promo-form__description {
+  margin-bottom: 20px;
+}
+
+.promo-info {
+  display: none;
+}
+
+.promo-img {
   display: none;
 }
 
