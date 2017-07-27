@@ -98,7 +98,7 @@ const MODAL = (link) => {
 
 		if (modal.length === 2){
 			let modalsJs = $('[data-modal="product-modal"]');
-			modalsJs[1].remove();
+			modalsJs[1].outerHTML='';
 		}
 	}
 
