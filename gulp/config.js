@@ -21,7 +21,7 @@ var config = {
         // path to png sources for sprite:png task
         iconsPng     : 'src/icons',
         // path to svg sources for sprite:svg task
-        iconsSvg     : 'src/icons',
+        // iconsSvg     : 'src/icons',
         // path to svg sources for iconfont task
         iconsFont    : 'src/icons',
         fonts        : 'src/fonts',
