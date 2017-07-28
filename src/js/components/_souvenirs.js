@@ -72,7 +72,7 @@ function fetchModalWin () {
 };
 
 
-$(".souvenirs__link").click(function (event) {
+$(".souvenirs__link, .steps__link").click(function (event) {
 	 event.preventDefault();
 	 var idElement  = $(this).attr('href'),
 		 topElement = $(idElement).offset().top;
