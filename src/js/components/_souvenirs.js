@@ -76,5 +76,5 @@ $(".souvenirs__link, .steps__link").click(function (event) {
 	 event.preventDefault();
 	 var idElement  = $(this).attr('href'),
 		 topElement = $(idElement).offset().top;
-	 $('body').animate({scrollTop: topElement}, 1500);
+	 $('html, body').animate({scrollTop: topElement}, 1500);
  });
