@@ -185,6 +185,7 @@ html {
   display: block;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2224,7 +2225,7 @@ a {
 .client img {
   display: inline-block;
   vertical-align: middle;
-  max-width: 100%;
+  width: 100%;
   max-height: 100px;
 }
 
