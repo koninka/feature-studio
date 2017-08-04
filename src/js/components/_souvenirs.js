@@ -32,6 +32,9 @@ export const SOUVENIRS = () => {
 
 
 function fetchModalWin () {
+	if(!$('.promo_wrap').length) {
+		return;
+	}
 	var top_scroll = $(this).scrollTop();
 	if (top_scroll > souv_height) {
 		$('.promo_wrap').fadeIn(600);
