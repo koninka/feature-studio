@@ -35,6 +35,7 @@ function fetchModalWin () {
 	if(!$('.promo_wrap').length) {
 		return;
 	}
+
 	var top_scroll = $(this).scrollTop();
 	if (top_scroll > souv_height) {
 		$('.promo_wrap').fadeIn(600);
@@ -57,7 +58,11 @@ function fetchModalWin () {
 	}
 };
 		let souv_height = $('.souvenirs').height()/2;
-		$(window).on('scroll', fetchModalWin);
+
+		if($('.promo_wrap').length) {
+			$(window).on('scroll', fetchModalWin);
+		}
+
 		$('.btn_close').click(function(){
 			$('.promo_wrap').fadeOut();
 			$('body').css('overflow', 'auto');
