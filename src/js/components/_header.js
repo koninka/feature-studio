@@ -2,7 +2,29 @@ import {WIN} from './../_constants';
 import './../lib/mask.min';
 
 export const HEADER = () => {
-  $('.phone-field').mask("+7(999) 999-99-99");
+
+  function serializeForm($form) {
+    return $form.serializeArray().reduce(function(m,o){
+      m[o.name] = $(m).hasClass('phone-field') ? o.value.replace(/([\s()-])/g, '') : o.value;
+
+      return m;
+    }, {});
+  }
+
+  $('.phone-field').mask("+7(999) 999-99-99",{
+    completed:function(){
+      var leadForm = $(this).closest("form");
+      var formData = serializeForm(leadForm);
+
+      var data = {};
+
+      data.phone = formData['phone'];
+      delete formData.phone;
+      data.data = formData;
+
+      window.handlers.lead(data);
+    }
+  });
   $('#phone_mask_modal').mask("+7(999) 999-99-99");
 
   $(document).mouseup(function (e) {
