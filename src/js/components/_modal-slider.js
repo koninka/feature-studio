@@ -83,13 +83,13 @@ const MODAL = (link) => {
 		if (openModal.length <= 2) {
 			content.show();
 			$('.js-product-link').on('click', function (e) {
-				$('html, body').on('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function(){
+				$('html, body').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function(){
 					$('html, body').stop();
 				});
 				$('html, body').animate({
 					scrollTop: $(this).offset().top - 60
 				}, 700, function(){
-					$('html, body').off('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove');
+					$('html, body').unbind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove');
 				});
 				return false;
 			});
